@@ -5,12 +5,10 @@ import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/Dashboard";
 import UserOverview from "./scenes/UserOverview";
-import VehicleIntake from "./scenes/VehicleIntake";
 import VehicleOverview from "./scenes/VehicleOverview";
 import FAQ from "./scenes/Guide";
 import Calendar from "./scenes/Calendar";
 import IncomingVehicle from "./scenes/IncomingVehicle";
-import Login from "./scenes/login";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
@@ -41,11 +39,9 @@ function App() {
             <main className="content">
               <Topbar setIsSidebar={setIsSidebar} />
               <Routes>
-                <Route path="/" element={<Login />} />
-                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/" element={<Dashboard />} />
                 <Route path="/userOverview" element={<UserOverview />} />
                 <Route path="/vehicleOverview" element={<VehicleOverview />} />
-                <Route path="/vehicleIntake" element={<VehicleIntake />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/incomingVehicle" element={<IncomingVehicle />}/>

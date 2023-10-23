@@ -12,6 +12,8 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import DepartureBoardIcon from '@mui/icons-material/DepartureBoard';
 import ViewTimelineOutlinedIcon from '@mui/icons-material/ViewTimelineOutlined';
+import PlaylistAddOutlinedIcon from '@mui/icons-material/PlaylistAddOutlined';
+import HistoryIcon from '@mui/icons-material/History';
 import { NavigationContext } from "../../App";
 
 const Item = ({ title, to, icon }) => {
@@ -77,7 +79,7 @@ const Sidebar = () => {
                 ml="15px"
               >
                 <Typography variant="h4" color={colors.grey[100]}>
-                  User Name
+                  Meik Grünholz
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
@@ -90,29 +92,24 @@ const Sidebar = () => {
           <Box>
             <Item
               title="Dashboard"
-              to="/dashboard"
+              to="/"
               icon={<HomeOutlinedIcon />}
               style={{ fontSize: '20px' }} 
             />
             <Item
-              title="User List"
-              to="userOverview"
-              icon={<PeopleOutlinedIcon />}
-            />
-            <Item
-              title="Vehicle Overview"
+              title="Leitstand"
               to="vehicleOverview"
-              icon={<LocalShippingOutlinedIcon />}
-            />
-            <Item
-              title="Vehicle Intake"
-              to="vehicleIntake"
-              icon={<DepartureBoardIcon />}
-            />
-            <Item
-              title="Incoming Vehicle"
-              to="incomingVehicle"
               icon={<ViewTimelineOutlinedIcon />}
+            />
+            <Item
+              title="History"
+              to="vehicleIntake"
+              icon={<HistoryIcon />}
+            />
+            <Item
+              title="Zulauf"
+              to="incomingVehicle"
+              icon={<PlaylistAddOutlinedIcon />}
             />
             <Item
               title="Calendar"
@@ -120,9 +117,9 @@ const Sidebar = () => {
               icon={<CalendarTodayOutlinedIcon />}
             />
             <Item
-              title="Guide"
-              to="faq"
-              icon={<HelpOutlineOutlinedIcon />}
+              title="User List"
+              to="userOverview"
+              icon={<PeopleOutlinedIcon />}
             />
           </Box>
         </Menu>
