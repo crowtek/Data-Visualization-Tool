@@ -7,7 +7,7 @@ import CarDamaged from "./components/CarDamaged";
 import CarToday from "./components/CarToday";
 import EventToday from "./components/EventToday";
 import SalesQuantity from "./components/SalesQuantity";
-import CarList from "./components/CarList";
+import CarList from "./components/Liste";
 
 const Dashboard = () => {
   const theme = useTheme();
