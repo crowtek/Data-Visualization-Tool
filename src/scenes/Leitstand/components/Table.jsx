@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { TableStyle as TableStyleImport} from "../../../styles/TableStyle";
 import VehicalModal from "./Modal";
-import VehicleInfo from "../../../components/VehicleInfo";
+import VehicleInfo from "../../../components/TableInfo";
 import VehicleStatus from "./VehicleStatus";
 
 
