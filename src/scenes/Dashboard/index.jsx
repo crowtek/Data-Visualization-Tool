@@ -2,7 +2,6 @@
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { mockDataVehicles } from "../../data/mockData";
 
-import Header from "./components/Header";
 import CarTotal from "./components/CarTotal";
 import CarDamaged from "./components/CarDamaged";
 import CarToday from "./components/CarToday";
@@ -15,7 +14,7 @@ const Dashboard = () => {
   const isScreenSmall = useMediaQuery(theme.breakpoints.down("xl"));
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
 
-  let gridAutoRows = "150px";
+  let gridAutoRows = "160px";
 
   if (isScreenLg) {
     gridAutoRows = "120px";
@@ -24,7 +23,6 @@ const Dashboard = () => {
   }
   return (
     <Box m="20px">
-      <Header />
 
       <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" 
         gridAutoRows={gridAutoRows} 

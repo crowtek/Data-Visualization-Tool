@@ -22,6 +22,7 @@ const BarChart = () => {
     barChartWidth = "700px";
     barChartHeight = "400px";
   }
+  
 
   useEffect(() => {
     const ctx = chartRef.current.getContext('2d');

@@ -4,11 +4,11 @@ import { Routes, Route } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/Dashboard";
-import UserOverview from "./scenes/UserOverview";
-import VehicleOverview from "./scenes/VehicleOverview";
+import UserOverview from "./scenes/User";
+import VehicleOverview from "./scenes/Leitstand";
 import FAQ from "./scenes/Guide";
 import Calendar from "./scenes/Calendar";
-import IncomingVehicle from "./scenes/IncomingVehicle";
+import IncomingVehicle from "./scenes/Zulauf";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
