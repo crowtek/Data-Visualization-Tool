@@ -12,8 +12,8 @@ const BarChart = () => {
   const isScreenSmall = useMediaQuery(theme.breakpoints.down("xl"));
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
 
-  let barChartWidth = "1000px";
-  let barChartHeight = "500px";
+  let barChartWidth = "1100px";
+  let barChartHeight = "360px";
 
   if (isScreenLg) {
     barChartWidth = "600px";

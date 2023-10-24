@@ -16,10 +16,9 @@ const StatBox = ({ title, subtitle, icon, progress, increase, link }) => {
   };
 
   return (
-    <Box width="100%" m="0 25px">
-      <Box display="flex" justifyContent="space-between">
+    <Box width="100%" m="0 15px"display="flex">
+      <Box display="flex"  justifyContent="space-between">
         <Box>
-          {icon}
           <Typography variant="h4" fontWeight="bold" sx={{ color: colors.grey[100], fontSize: "18px", whiteSpace: "nowrap" }}>
             {title}
           </Typography>
@@ -40,11 +39,6 @@ const StatBox = ({ title, subtitle, icon, progress, increase, link }) => {
 
       </Box>
 
-      <Box >
-        <Typography variant="h4" sx={{ color: colors.blueAccent[300], marginTop: progress ? "-30px" : "0" }}>
-          {subtitle}
-        </Typography>
-      </Box>
     </Box>
   );
 };

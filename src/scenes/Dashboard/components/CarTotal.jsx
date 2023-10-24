@@ -21,7 +21,7 @@ const CarCount = ({ vehicleData }) => {
     }, [Cars, vehicleData]);
 
     return (
-        <Box gridColumn="span 3" sx={{ display: "flex", alignItems: "center", justifyContent: "center" }} backgroundColor={colors.primary[400]}>
+        <Box gridColumn="span 3" gridRow="span 2" sx={{ display: "flex", alignItems: "center", justifyContent: "center" }} backgroundColor={colors.primary[400]}>
             <StatBox
                 title="Cars Available"
                 subtitle={Cars.length + " Cars"}
