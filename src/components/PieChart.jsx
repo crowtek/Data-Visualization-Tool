@@ -19,7 +19,7 @@ const PieChart = ({ progress = 0.75, size = 50 }) => {
         // Data aus parametern übernehmen ( 3 variablen )
         const data = {
             labels: [
-                'Red',
+                'Redasdasd',
                 'Blue',
                 'Yellow'
             ],
@@ -37,18 +37,24 @@ const PieChart = ({ progress = 0.75, size = 50 }) => {
             data: data,
             
             options: {
-                cutoutPercentage: 70, // Adjust the cutout percentage as neede
                 layout: {
-                    padding: 2,
+                    autoPadding: true,
                 },
                 plugins: {
                     legend: {
-                        position: "left", // Disable the default legend
-                        align: "left",
+                        position: "left",
+                        labels: {
+                            color: colors.primary[100],
+                            padding:20,
+                            boxWidth: 20,
+                            font: {
+                                size: 18,
+                            }
+                        }
                     },
                     tooltip:{
                         backgroundColor: "white"
-                    }
+                    },
                 }
             },
         });
@@ -59,8 +65,8 @@ const PieChart = ({ progress = 0.75, size = 50 }) => {
     }, [colors,progress]);
 
     return (
-        <div style={{width:"200px",height:"200px", display:"flex", position:"re"}} >
-            <canvas ref={chartRef} width={50} height={50}/>
+        <div style={{width:"330px", display:"flex", position:"re"}} >
+            <canvas ref={chartRef}/>
         </div>
     );
 };
