@@ -7,7 +7,8 @@ const SalesQuantity = () => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box gridColumn="span 8" gridRow="span 3" backgroundColor={colors.primary[400]}>
+    <Box gridColumn="span 8" gridRow="span 3" backgroundColor={colors.primary[400]}
+    borderRadius="5px" border="2px solid gray">
       <Typography variant="h4" fontWeight="600" sx={{ padding: "20px" }}>
         Monthly Overview
       </Typography>

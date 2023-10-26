@@ -9,8 +9,9 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box gridColumn="span 4" gridRow="span 3" backgroundColor={colors.primary[400]} overflow="auto" className="custom-scrollbar">
-
+    <Box gridColumn="span 4" gridRow="span 3" backgroundColor={colors.primary[400]} overflow="auto" className="custom-scrollbar"
+    borderRadius="5px" border="2px solid gray">
+      
       <Box p={2}>
         <Typography color={colors.grey[100]} variant="h3" fontWeight="bold">
           Neue Ladeeinheit

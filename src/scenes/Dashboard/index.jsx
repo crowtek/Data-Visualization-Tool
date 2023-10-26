@@ -14,14 +14,10 @@ const Dashboard = () => {
   const isScreenSmall = useMediaQuery(theme.breakpoints.down("xl"));
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
 
-  let gridAutoRows = "repeat(3, 1fr)";
-
   return (
-    <Box m="20px">
+    <Box m="20px" mt="10px">
 
-      <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" 
-        gridAutoRows="repeat(3, 1fr)"
-        gap={isScreenLg ? "10px":"20px"}
+      <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="repeat(3, 1fr)" gap="10px"
         >
         <CarTotal vehicleData={mockDataVehicles} />
         <CarDamaged vehicleData={mockDataVehicles} />
