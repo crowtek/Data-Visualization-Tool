@@ -4,11 +4,11 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Link } from 'react-router-dom';
 import { useContext } from "react";
 import { NavigationContext } from "../App";
-import { PieChart } from '@mui/x-charts/PieChart';
+import PieChart from "./PieChart";
 
 
 
-const StatBox = ({ title, subtitle, icon, progress, increase, link }) => {
+const StatBox = ({ title, labels,chartValues, icon, progress, increase, link }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -18,37 +18,15 @@ const StatBox = ({ title, subtitle, icon, progress, increase, link }) => {
   };
 
   return (
-    <Box width="100%" m="0 15px">
+    <Box width="100%" p="15px">
       <Box>
-        <Box p={2}>
-          <Typography variant="h3" fontWeight="bold">
-            {title}
-          </Typography>
-        </Box>
+        <Typography variant="h3" fontWeight="bold">
+          {title}
+        </Typography>
 
         {progress &&
           <Box>
-            <PieChart
-              series={[
-                {
-                  data: [
-                    { id: 0,color: colors.blueAccent[400], value: 10, label: 'series A' },
-                    { id: 1,color: colors.greenAccent[500], value: 15, label: 'series B' },
-                    { id: 2,color: colors.redAccent[400], value: 20, label: 'series C' },
-                  ],
-                  innerRadius: 30,
-                  outerRadius: 80,
-                  paddingAngle: 5,
-                  cornerRadius: 5,
-                  startAngle: -90,
-                  endAngle: 220,
-                  cx: 150,
-                  cy: 90,
-                },
-              ]}
-              width={400}
-              height={200}
-            />
+            <PieChart labels={labels} chartValues={chartValues}/>
           </Box>
         }
         {link &&

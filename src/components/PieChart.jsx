@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import Chart from 'chart.js/auto';
+import { PieChart } from '@mui/x-charts/PieChart';
 
 import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
@@ -7,68 +7,51 @@ import { tokens } from "../theme";
 // 2. Title Anpassen
 // 3. icon hinzufügen
 
-const PieChart = ({ progress = 0.75, size = 50 }) => {
+const PieChartComponent = ({labels, chartValues}) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    const chartRef = useRef(null);
 
-    useEffect(() => {
-        const ctx = chartRef.current.getContext('2d');
-        const angle = progress * 360;
-
-        // Data aus parametern übernehmen ( 3 variablen )
-        const data = {
-            labels: [
-                'Redasdasd',
-                'Blue',
-                'Yellow'
-            ],
-            datasets: [
-                {
-                    data: [angle, 360 - angle, 100] ,
-                    backgroundColor: [colors.blueAccent[600], colors.primary[100],colors.primary[300]],
-                    borderColor: colors.primary[400]
-                },
-            ],
-        };
-
-        const pieChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: data,
-            
-            options: {
-                layout: {
-                    autoPadding: true,
-                },
-                plugins: {
-                    legend: {
-                        position: "left",
-                        labels: {
-                            color: colors.primary[100],
-                            padding:20,
-                            boxWidth: 20,
-                            font: {
-                                size: 18,
-                            }
-                        }
-                    },
-                    tooltip:{
-                        backgroundColor: "white"
-                    },
-                }
-            },
-        });
-
-        return () => {
-            pieChart.destroy();
-        };
-    }, [colors,progress]);
+    let label_1;
+    let label_2;
+    let label_3;
+    if(labels){
+        label_1 = labels.first;
+        label_2 = labels.second;
+        label_3 = labels.third;
+    }
+    let chartValues_1;
+    let chartValues_2;
+    let chartValues_3;
+    if(chartValues){
+        chartValues_1 = chartValues.first;
+        chartValues_2 = chartValues.second;
+        chartValues_3 = chartValues.third;
+    }
+    
 
     return (
-        <div style={{width:"330px", display:"flex", position:"re"}} >
-            <canvas ref={chartRef}/>
-        </div>
+        <PieChart
+              series={[
+                {
+                  data: [
+                    { id: 0,color: colors.blueAccent[400], value: chartValues_1, label: label_1 },
+                    { id: 1,color: colors.greenAccent[500], value: chartValues_2, label: label_2 },
+                    { id: 2,color: colors.redAccent[400], value: chartValues_3, label: label_3 },
+                  ],
+                  innerRadius: 20,
+                  outerRadius: 60,
+                  paddingAngle: 5,
+                  cornerRadius: 5,
+                  startAngle: -90,
+                  endAngle: 220,
+                  cx: 150,
+                  cy: 90,
+                },
+              ]}
+              width={400}
+              height={160}
+            />
     );
 };
 
-export default PieChart;
+export default PieChartComponent;
