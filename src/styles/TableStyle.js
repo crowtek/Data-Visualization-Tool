@@ -29,7 +29,7 @@ export const TableStyle = () => {
       color: `${colors.greenAccent[200]} !important`,
     },
     '& .css-3jf6oj-MuiButtonBase-root-MuiButton-root': {
-      color: `${colors.primary[300]} !important`,
+      color: `${colors.primary[600]} !important`,
     },
     'MuiDataGrid-panelWrapper.Mui-checked': {
       color: `${colors.primary[300]} !important`,
