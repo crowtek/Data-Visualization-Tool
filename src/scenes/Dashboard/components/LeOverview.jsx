@@ -21,10 +21,6 @@ const CountDamageCar = ({vehicleData}) => {
                 title="Ladeeinheiten Übersicht"
                 labels={{first:"Volle LE", second:"Leere LE", third:"Teilbeladen LE"}}
                 chartValues={{first:20, second:30, third:40}}
-                subtitle={damagedCars.length + " Cars" }
-                progress={progress}
-                increase={percentage+"%"}
-                icon={<CarCrashIcon sx={{ color: colors.redAccent[400], fontSize: "30px" }} />}
             />
             
         </Box>

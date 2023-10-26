@@ -8,7 +8,7 @@ import PieChart from "./PieChart";
 
 
 
-const StatBox = ({ title, labels,chartValues, icon, progress, increase, link }) => {
+const StatBox = ({ title, labels,chartValues, icon, link }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -20,11 +20,11 @@ const StatBox = ({ title, labels,chartValues, icon, progress, increase, link }) 
   return (
     <Box width="100%" p="15px">
       <Box>
-        <Typography variant="h3" fontWeight="bold">
+        <Typography variant="h3" fontWeight="bold" >
           {title}
         </Typography>
 
-        {progress &&
+        {labels &&
           <Box>
             <PieChart labels={labels} chartValues={chartValues}/>
           </Box>

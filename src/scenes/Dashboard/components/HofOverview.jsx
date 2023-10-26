@@ -27,9 +27,6 @@ const CarCount = ({ vehicleData }) => {
                 title="Hof Übersicht"
                 labels={{first:"LE auf Hof", second:"LE in Zulauf", third:"LE verlassen"}}
                 chartValues={{first:120, second:10, third:60}}
-                subtitle={Cars.length + " Cars"}
-                progress={progress}
-                increase={percentage + " %"}
             />
         </Box>
     )
