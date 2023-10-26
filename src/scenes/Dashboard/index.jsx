@@ -2,7 +2,7 @@
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { mockDataVehicles } from "../../data/mockData";
 
-import CarTotal from "./components/CarTotal";
+import CarTotal from "./components/HofOverview";
 import CarDamaged from "./components/LeOverview";
 import CarToday from "./components/CarToday";
 import EventToday from "./components/EventToday";
