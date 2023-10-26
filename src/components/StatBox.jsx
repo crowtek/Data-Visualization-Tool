@@ -34,7 +34,7 @@ const StatBox = ({ title, subtitle, icon, progress, increase, link }) => {
                   data: [
                     { id: 0,color: colors.blueAccent[400], value: 10, label: 'series A' },
                     { id: 1,color: colors.greenAccent[500], value: 15, label: 'series B' },
-                    { id: 2,color: colors.primary[300], value: 20, label: 'series C' },
+                    { id: 2,color: colors.redAccent[400], value: 20, label: 'series C' },
                   ],
                   innerRadius: 30,
                   outerRadius: 80,

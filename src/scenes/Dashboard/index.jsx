@@ -6,7 +6,7 @@ import CarTotal from "./components/CarTotal";
 import CarDamaged from "./components/CarDamaged";
 import CarToday from "./components/CarToday";
 import EventToday from "./components/EventToday";
-import SalesQuantity from "./components/SalesQuantity";
+import SalesQuantity from "./components/WeeklyOverview";
 import CarList from "./components/Liste";
 
 const Dashboard = () => {
