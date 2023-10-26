@@ -39,6 +39,7 @@ const Sidebar = () => {
   return (
     <Box
       sx={{
+        borderRadius:"5px", borderRight:"2px solid gray",
         fontSize:16,
         "& .pro-sidebar-inner": {
           background: `${colors.primary[400]} !important`,
