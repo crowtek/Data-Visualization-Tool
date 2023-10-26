@@ -12,15 +12,20 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
     <Box gridColumn="span 4" gridRow="span 3" backgroundColor={colors.primary[400]} overflow="auto" className="custom-scrollbar"
     borderRadius="5px" border="2px solid gray">
       
-      <Box p={2}>
-        <Typography color={colors.grey[100]} variant="h3" fontWeight="bold">
+      <Box>
+        <Typography color={colors.grey[100]} variant="h3" fontWeight="bold"  p={2}>
           Neue Ladeeinheit
         </Typography>
       </Box>
 
+      <Box borderBottom={"solid 1px gray"} display={"flex"} justifyContent={"space-between"} p={2}> 
+        <Typography >Kennzeichen</Typography>
+        <Typography >Eingang</Typography>
+        <Typography >Standort</Typography>
+      </Box>
       {/* MAX. 10 Einbauen */}
       {vehicleData.map((car, i) => (
-        <Box key={i} display="flex" justifyContent="space-between" alignItems="center" p={1.2}>
+        <Box key={i} display="flex" justifyContent="space-between" alignItems="center" p={1.2} borderBottom={"solid 1px gray"}>
 
           {/* Kennzeichen */}
           <Typography color={colors.blueAccent[400]} variant="h4" fontWeight="600">

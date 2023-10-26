@@ -3,13 +3,13 @@ import Header from "../../components/Header";
 import { mockDataVehicles } from "../../data/mockData";
 import IncomingVehicleTable from "./components/Table";
 
-const Zulauf = () => {
+const History = () => {
   return (
     <Box m="20px">
-        <Header title="Zulauf" />
+        <Header title="History" />
         <IncomingVehicleTable userData={mockDataVehicles}/>
     </Box>
   );
 };
 
-export default Zulauf;
+export default History;

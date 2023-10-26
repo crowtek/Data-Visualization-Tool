@@ -96,17 +96,17 @@ const Sidebar = () => {
             />
             <Item
               title="Leitstand"
-              to="vehicleOverview"
+              to="leitstand"
               icon={<ViewTimelineOutlinedIcon />}
             />
             <Item
               title="History"
-              to="vehicleIntake"
+              to="history"
               icon={<HistoryIcon />}
             />
             <Item
               title="Zulauf"
-              to="incomingVehicle"
+              to="zulauf"
               icon={<PlaylistAddOutlinedIcon />}
             />
             <Item

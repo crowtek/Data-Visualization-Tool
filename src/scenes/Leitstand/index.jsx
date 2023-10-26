@@ -3,14 +3,14 @@ import { mockDataVehicles } from "../../data/mockData";
 import Header from "../../components/Header";
 import VehicleOverviewTable from "./components/Table";
 
-const VehicleOverview = () => {
+const Leistand = () => {
 
   return (
     <Box m="20px">
-      <Header title="Vehical Data" />
+      <Header title="Leistand" />
       <VehicleOverviewTable userData={mockDataVehicles}/>
     </Box>
   );
 };
 
-export default VehicleOverview;
+export default Leistand;
