@@ -8,13 +8,13 @@ const IncomingCarsCount = () => {
     const colors = tokens(theme.palette.mode);
 
     return (
-        <Box gridColumn="span 3"  sx={{display:"flex", alignItems:"center", justifyContent:"center"}} backgroundColor={colors.primary[400]}
-        borderRadius="5px" border="2px solid gray">
+        <Box gridColumn="span 3" backgroundColor={colors.primary[400]} borderRadius="5px" border="2px solid gray">
             <StatBox
-                title="Incoming Cars Today"
-                subtitle= {"14 Cars"}
+                title="Ladeeinheiten mit Schaden"
+                subtitle= {"14 Ladeeinheiten"}
+                subtitleColor={colors.redAccent[400]}
                 link="vehicleOverview"
-                icon={<DepartureBoardIcon sx={{ color: colors.primary[200], fontSize: "30px" }} />}
+                icon={<DepartureBoardIcon sx={{ color: colors.redAccent[300], fontSize: "6vh" }} />}
             />
         </Box>
     )

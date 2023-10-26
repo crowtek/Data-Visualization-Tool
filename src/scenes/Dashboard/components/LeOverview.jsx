@@ -5,14 +5,7 @@ import { tokens } from "../../../theme";
 
 const CountDamageCar = ({vehicleData}) => {
     const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
-
-    const damagedCars = vehicleData.filter((car) => {
-        return car.status === "fail";
-    })
-    const percentage = (damagedCars.length ? Math.round((damagedCars.length / vehicleData.length) * 100 ) : 0)
-    const progress =  damagedCars.length / vehicleData.length;
-
+    const colors = tokens(theme.palette.mode)
 
     return (
         <Box gridColumn="span 3" sx={{display:"flex", alignItems:"center", justifyContent:"center"}} backgroundColor={colors.primary[400]}

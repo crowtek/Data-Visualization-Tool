@@ -4,7 +4,7 @@ import { mockDataVehicles } from "../../data/mockData";
 
 import CarTotal from "./components/HofOverview";
 import CarDamaged from "./components/LeOverview";
-import CarToday from "./components/CarToday";
+import CarToday from "./components/LeSchaden";
 import EventToday from "./components/EventToday";
 import SalesQuantity from "./components/WeeklyOverview";
 import CarList from "./components/Liste";

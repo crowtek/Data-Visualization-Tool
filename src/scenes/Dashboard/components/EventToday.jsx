@@ -15,13 +15,13 @@ const CountEventsToday = () => {
     },[currentDate])
 
     return (
-        <Box gridColumn="span 3"sx={{display:"flex", alignItems:"center", justifyContent:"center"}} backgroundColor={colors.primary[400]}
-        borderRadius="5px" border="2px solid gray">
+        <Box gridColumn="span 3" backgroundColor={colors.primary[400]} borderRadius="5px" border="2px solid gray">
             <StatBox
-                title="Events Today"
+                title="Termine Heute"
                 subtitle= {todayEvents.length + " Events"}
+                subtitleColor={colors.greenAccent[400]}
                 link = "calendar"
-                icon={<EventIcon sx={{ color: colors.greenAccent[400], fontSize: "30px" }} />}
+                icon={<EventIcon sx={{ color: colors.greenAccent[400], fontSize: "6vh" }} />}
             />
         </Box>
     )
