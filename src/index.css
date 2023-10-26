@@ -52,3 +52,16 @@ body,
 .custom-scrollbar::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
+
+
+/* Pie chart animation */
+.pie-chart-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+}
+
+.pie-chart-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}

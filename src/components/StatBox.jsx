@@ -8,7 +8,7 @@ import PieChart from "./PieChart";
 
 
 
-const StatBox = ({ title, labels,chartValues, icon, link }) => {
+const StatBox = ({ title, labels,chartValues, icon, link,animationTime }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -26,7 +26,7 @@ const StatBox = ({ title, labels,chartValues, icon, link }) => {
 
         {labels &&
           <Box>
-            <PieChart labels={labels} chartValues={chartValues}/>
+            <PieChart labels={labels} chartValues={chartValues} animationTime={animationTime}/>
           </Box>
         }
         {link &&

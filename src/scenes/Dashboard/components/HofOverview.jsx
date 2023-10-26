@@ -25,8 +25,9 @@ const CarCount = ({ vehicleData }) => {
         borderRadius="5px" border="2px solid gray">
             <StatBox
                 title="Hof Übersicht"
-                labels={{first:"LE auf Hof", second:"LE in Zulauf", third:"LE verlassen"}}
+                labels={{first:"LE auf Hof", second:"LE in Zulauf", third:"Hof verlassen"}}
                 chartValues={{first:120, second:10, third:60}}
+                animationTime={200}
             />
         </Box>
     )

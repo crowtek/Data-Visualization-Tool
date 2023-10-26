@@ -21,6 +21,7 @@ const CountDamageCar = ({vehicleData}) => {
                 title="Ladeeinheiten Übersicht"
                 labels={{first:"Volle LE", second:"Leere LE", third:"Teilbeladen LE"}}
                 chartValues={{first:20, second:30, third:40}}
+                animationTime={400}
             />
             
         </Box>
