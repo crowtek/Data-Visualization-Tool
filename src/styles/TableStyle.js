@@ -8,8 +8,9 @@ export const TableStyle = () => {
 
   return {
     "& .MuiDataGrid-root": {
-      border: "none",
-      letterSpacing: 0.7
+      letterSpacing: 0.7,
+      borderRadius:"5px",
+      border:"2px solid gray"
     },
     "& .name-column--cell": {
       color: colors.blueAccent[400],
@@ -18,21 +19,15 @@ export const TableStyle = () => {
       backgroundColor: colors.primary[400],
       fontSize: 16,
     },
+    "& .MuiDataGrid-toolbarContainer ":{
+      backgroundColor: colors.primary[400],
+    },
     "& .MuiDataGrid-virtualScroller": {
       backgroundColor: colors.primary[400],
     },
     "& .MuiDataGrid-footerContainer": {
       borderTop: "none",
       backgroundColor: colors.primary[400],
-    },
-    "& .MuiCheckbox-root": {
-      color: `${colors.greenAccent[200]} !important`,
-    },
-    '& .css-3jf6oj-MuiButtonBase-root-MuiButton-root': {
-      color: `${colors.primary[600]} !important`,
-    },
-    'MuiDataGrid-panelWrapper.Mui-checked': {
-      color: `${colors.primary[300]} !important`,
     },
   };
 };
