@@ -5,6 +5,10 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
+  const sortedData = vehicleData.sort((a,b)=>{
+    return new Date(a.incomingTime) - new Date(b.incomingTime)
+  })
+  
   return (
     <Box 
       gridColumn="span 4" 
@@ -27,7 +31,7 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-        {vehicleData.map((car, i) => {
+        {sortedData.map((car, i) => {
           if(i <= 9){
             return(
               <TableRow key={i}>
