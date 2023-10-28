@@ -1,11 +1,5 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme,Table ,TableBody,TableCell,TableHead,TableRow} from "@mui/material";
 import { tokens } from "../../../theme";
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-
 
 const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
   const theme = useTheme();
@@ -42,6 +36,8 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
                 <TableCell>{car.parkPlace}</TableCell>
               </TableRow>
             )
+          }else{
+            return (<TableRow key={i}></TableRow>)
           }
         })}
 
