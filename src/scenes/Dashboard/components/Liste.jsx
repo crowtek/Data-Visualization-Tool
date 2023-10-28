@@ -5,9 +5,9 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
-  const sortedData = vehicleData.sort((a,b)=>{
-    return new Date(a.incomingTime) - new Date(b.incomingTime)
-  })
+  const sortedData = vehicleData.slice().sort((a, b) => {
+    return new Date(b.incomingTime) - new Date(a.incomingTime);
+  });
   
   return (
     <Box 
