@@ -8,6 +8,7 @@ import CarToday from "./components/LeSchaden";
 import EventToday from "./components/EventToday";
 import WeeklyOverview from "./components/WeeklyOverview";
 import List from "./components/Liste";
+import UserOnline from "./components/UserOnline";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -23,7 +24,7 @@ const Dashboard = () => {
         <CarDamaged vehicleData={mockDataVehicles} />
         <CarToday />
         <EventToday />
-        <EventToday />
+        <UserOnline />
         <EventToday />
         <WeeklyOverview isScreenLg={isScreenLg}/>
         <List vehicleData={mockDataVehicles} screenSize={isScreenLg}/>
