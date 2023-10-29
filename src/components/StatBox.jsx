@@ -28,8 +28,16 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
           }
           </Typography>
           {subtitle &&
-            <Typography variant="h2" fontWeight="bold" color={subtitleColor}
-              display={"flex"} justifyContent={"center"} alignItems={"center"} p={5} gap={2}>
+            <Typography 
+              variant="h2" 
+              fontWeight="bold" 
+              color={subtitleColor}
+              display={"flex"} 
+              justifyContent={"center"} 
+              alignItems={"center"} 
+              p={5} 
+              gap={2}
+            >
               {icon}
               {subtitle}
             </Typography>
