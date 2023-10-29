@@ -5,7 +5,7 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
-  let numberOfListElements = screenSize ? 5 : 9;
+  let numberOfListElements = screenSize ? 3 : 9;
 
   const sortedData = vehicleData.slice().sort((a, b) => {
     return new Date(b.incomingTime) - new Date(a.incomingTime);
@@ -14,13 +14,13 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
   return (
     <Box 
       gridColumn="span 4" 
-      gridRow="span 3" 
+      gridRow="span 4" 
       backgroundColor={colors.primary[400]} 
       borderRadius="5px"
       border="2px solid gray"
     >
       
-      <Typography color={colors.grey[100]} variant="h3" fontWeight="bold"  p={2}>
+      <Typography fontSize={screenSize ? "18px": "22px"} fontWeight="bold"  p={2}>
         Neuste aufgenommene Ladeeinheiten
       </Typography>
 

@@ -6,7 +6,7 @@ import CarTotal from "./components/HofOverview";
 import CarDamaged from "./components/LeOverview";
 import CarToday from "./components/LeSchaden";
 import EventToday from "./components/EventToday";
-import SalesQuantity from "./components/WeeklyOverview";
+import WeeklyOverview from "./components/WeeklyOverview";
 import List from "./components/Liste";
 
 const Dashboard = () => {
@@ -17,13 +17,15 @@ const Dashboard = () => {
   return (
     <Box m="20px" mt="10px">
 
-      <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="repeat(3, 1fr)" gap="10px"
+      <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="repeat(6, 1fr)" gap="10px"
         >
         <CarTotal vehicleData={mockDataVehicles} />
         <CarDamaged vehicleData={mockDataVehicles} />
         <CarToday />
         <EventToday />
-        <SalesQuantity />
+        <EventToday />
+        <EventToday />
+        <WeeklyOverview isScreenLg={isScreenLg}/>
         <List vehicleData={mockDataVehicles} screenSize={isScreenLg}/>
       </Box>
 

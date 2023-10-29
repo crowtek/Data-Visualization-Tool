@@ -20,7 +20,7 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
   };
 
   return (
-    <Box width="100%" p="15px">
+    <Box width="100%" p="15px" overflow={"hidden"}>
           <Typography fontSize={isScreenLg ? "18px": "22px"} fontWeight="bold"  display={"flex"} justifyContent={"space-between"} alignContent={"center"}>
             {title}
             {link &&
@@ -30,14 +30,13 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
           }
           </Typography>
           {subtitle &&
-            <Typography 
-              variant="h2" 
+            <Typography
+              fontSize={isScreenLg ? "18px": "22px"} 
               fontWeight="bold" 
               color={subtitleColor}
               display={"flex"} 
-              justifyContent={"center"} 
+              justifyContent={"flex-start"} 
               alignItems={"center"} 
-              p={5} 
               gap={2}
             >
               {icon}
