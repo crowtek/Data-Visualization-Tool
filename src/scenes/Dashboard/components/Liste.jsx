@@ -5,6 +5,8 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
+  let numberOfListElements = screenSize ? 5 : 9;
+
   const sortedData = vehicleData.slice().sort((a, b) => {
     return new Date(b.incomingTime) - new Date(a.incomingTime);
   });
@@ -25,19 +27,19 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
       <Table>
         <TableHead>
           <TableRow > 
-            <TableCell sx={{fontSize:"20px",fontWeight:"bold"}}>Kennzeichen</TableCell>
-            <TableCell sx={{fontSize:"20px",fontWeight:"bold"}}>Eingang</TableCell>
-            <TableCell sx={{fontSize:"20px",fontWeight:"bold"}}>Standort</TableCell>
-            <TableCell sx={{fontSize:"20px",fontWeight:"bold"}}>Relation</TableCell>
+            <TableCell sx={{fontSize:screenSize ? "16":"20px",fontWeight:"bold"}}>Kennzeichen</TableCell>
+            <TableCell sx={{fontSize:screenSize ? "16":"20px",fontWeight:"bold"}}>{screenSize ? "" : "Eingang"}</TableCell>
+            <TableCell sx={{fontSize:screenSize ? "16":"20px",fontWeight:"bold"}}>Standort</TableCell>
+            <TableCell sx={{fontSize:screenSize ? "16":"20px",fontWeight:"bold"}}>Relation</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
         {sortedData.map((car, i) => {
-          if(i <= 9){
+          if(i <= numberOfListElements){
             return(
               <TableRow key={i}>
                 <TableCell >{car.vehicle}</TableCell>
-                <TableCell>{car.incomingTime}</TableCell>
+                <TableCell>{screenSize ? "" : car.incomingTime}</TableCell>
                 <TableCell>{car.parkPlace}</TableCell>
                 <TableCell>{car.relation}</TableCell>
               </TableRow>

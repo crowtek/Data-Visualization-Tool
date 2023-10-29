@@ -7,7 +7,7 @@ import CarDamaged from "./components/LeOverview";
 import CarToday from "./components/LeSchaden";
 import EventToday from "./components/EventToday";
 import SalesQuantity from "./components/WeeklyOverview";
-import CarList from "./components/Liste";
+import List from "./components/Liste";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -24,7 +24,7 @@ const Dashboard = () => {
         <CarToday />
         <EventToday />
         <SalesQuantity />
-        <CarList vehicleData={mockDataVehicles} screenSize={isScreenSmall}/>
+        <List vehicleData={mockDataVehicles} screenSize={isScreenLg}/>
       </Box>
 
     </Box>
