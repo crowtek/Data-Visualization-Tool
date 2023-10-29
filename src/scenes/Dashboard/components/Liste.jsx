@@ -28,6 +28,7 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
             <TableCell sx={{fontSize:"20px",fontWeight:"bold"}}>Kennzeichen</TableCell>
             <TableCell sx={{fontSize:"20px",fontWeight:"bold"}}>Eingang</TableCell>
             <TableCell sx={{fontSize:"20px",fontWeight:"bold"}}>Standort</TableCell>
+            <TableCell sx={{fontSize:"20px",fontWeight:"bold"}}>Relation</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -35,9 +36,10 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
           if(i <= 9){
             return(
               <TableRow key={i}>
-                <TableCell >{car.name}</TableCell>
+                <TableCell >{car.vehicle}</TableCell>
                 <TableCell>{car.incomingTime}</TableCell>
                 <TableCell>{car.parkPlace}</TableCell>
+                <TableCell>{car.relation}</TableCell>
               </TableRow>
             )
           }else{
