@@ -2,7 +2,7 @@ import { Box, Typography, useTheme,useMediaQuery } from "@mui/material";
 import { tokens } from "../theme";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Link } from 'react-router-dom';
-import { useContext } from "react";
+import { useContext,useEffect,useState } from "react";
 import { NavigationContext } from "../App";
 import PieChart from "./PieChart";
 
@@ -13,24 +13,43 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
   const colors = tokens(theme.palette.mode);
   const isScreenSmall = useMediaQuery(theme.breakpoints.down("xl"));
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
+  const [animate, setAnimate] = useState(false);
 
   const { setPage } = useContext(NavigationContext);
   const setNavigation = () => {
     setPage(link);
   };
 
+  useEffect(() => {
+      // Trigger the animation after a delay (e.g., 500ms)
+      setTimeout(() => {
+          setAnimate(true);
+      }, animationTime ? animationTime : 500);
+  }, []);
+
+
   return (
     <Box width="100%" p="15px" overflow={"hidden"}>
-          <Typography fontSize={isScreenLg ? "18px": "22px"} fontWeight="bold"  display={"flex"} justifyContent={"space-between"} alignContent={"center"}>
+          {/* Box Header */}
+          <Typography 
+            fontSize={isScreenLg ? "18px": "22px"} 
+            fontWeight="bold"  
+            display={"flex"} 
+            justifyContent={"space-between"} 
+            alignContent={"center"}
+          >
             {title}
             {link &&
               <Link to={link} onClick={setNavigation}>
                 <OpenInNewIcon sx={{ fontSize: 30, color: colors.primary[300] }} />
               </Link>
-          }
+            }
           </Typography>
+
+          {/* Box Body when Text*/}
           {subtitle &&
             <Typography
+              className={`subtitle-animation${animate ? ' subtitle-animation-fade-in' : ''}`}
               fontSize={isScreenLg ? "18px": "22px"} 
               fontWeight="bold" 
               color={subtitleColor}
@@ -44,11 +63,18 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
             </Typography>
           }
 
-        {labels &&
-          <Box>
-            <PieChart labels={labels} chartValues={chartValues} animationTime={animationTime} isScreenSmall={isScreenLg}/>
-          </Box>
-        }
+          {/* Box Body when Pie chart*/}
+          {labels &&
+            <Box>
+              <PieChart 
+                labels={labels} 
+                chartValues={chartValues} 
+                animationTime={animationTime} 
+                isScreenSmall={isScreenLg}
+              />
+            </Box>
+          }
+
     </Box>
   );
 };

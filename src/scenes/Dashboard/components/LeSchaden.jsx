@@ -15,6 +15,7 @@ const IncomingCarsCount = () => {
                 subtitleColor={colors.redAccent[400]}
                 link="vehicleOverview"
                 icon={<DepartureBoardIcon sx={{ color: colors.redAccent[300], fontSize: "30px" }} />}
+                animationTime="100"
             />
         </Box>
     )

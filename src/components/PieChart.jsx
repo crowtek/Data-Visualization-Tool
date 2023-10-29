@@ -8,7 +8,6 @@ const PieChartComponent = ({ labels, chartValues,animationTime,isScreenSmall }) 
     const colors = tokens(theme.palette.mode);
     const [animate, setAnimate] = useState(false);
 
-
     useEffect(() => {
         // Trigger the animation after a delay (e.g., 500ms)
         setTimeout(() => {

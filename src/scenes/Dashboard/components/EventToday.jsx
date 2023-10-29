@@ -22,6 +22,7 @@ const CountEventsToday = () => {
                 subtitleColor={colors.greenAccent[400]}
                 link = "calendar"
                 icon={<EventIcon sx={{ color: colors.greenAccent[400], fontSize: "30px" }} />}
+                animationTime="300"
             />
         </Box>
     )
