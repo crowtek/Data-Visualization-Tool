@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme,useMediaQuery } from "@mui/material";
 import { tokens } from "../theme";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Link } from 'react-router-dom';
@@ -11,6 +11,8 @@ import PieChart from "./PieChart";
 const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,subtitleColor }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const isScreenSmall = useMediaQuery(theme.breakpoints.down("xl"));
+  const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
 
   const { setPage } = useContext(NavigationContext);
   const setNavigation = () => {
@@ -45,7 +47,7 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
 
         {labels &&
           <Box>
-            <PieChart labels={labels} chartValues={chartValues} animationTime={animationTime}/>
+            <PieChart labels={labels} chartValues={chartValues} animationTime={animationTime} isScreenSmall={isScreenLg}/>
           </Box>
         }
     </Box>
