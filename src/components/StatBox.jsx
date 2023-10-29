@@ -21,7 +21,7 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
 
   return (
     <Box width="100%" p="15px">
-          <Typography variant="h3" fontWeight="bold"  display={"flex"} justifyContent={"space-between"} alignContent={"center"}>
+          <Typography fontSize={isScreenLg ? "18px": "22px"} fontWeight="bold"  display={"flex"} justifyContent={"space-between"} alignContent={"center"}>
             {title}
             {link &&
               <Link to={link} onClick={setNavigation}>
