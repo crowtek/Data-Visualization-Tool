@@ -2,13 +2,11 @@ import { useState } from "react";
 import { Box, IconButton, useTheme } from "@mui/material";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
-import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import SearchIcon from "@mui/icons-material/Search";
 import SettingsModal from "./SettingsModal";
 
 const Topbar = () => {
@@ -19,7 +17,7 @@ const Topbar = () => {
   const handleOpen = () => setShowModal(true);
 
   return (
-    <Box display="flex" justifyContent="flex-end" p={2}>
+    <Box display="flex" justifyContent="flex-end" p={1}>
 
       {/* ICONS */}
       <Box display="flex">

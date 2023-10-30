@@ -16,7 +16,7 @@ const Dashboard = () => {
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
-    <Box m="20px" mt="10px">
+    <Box m="20px">
 
       <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="repeat(6, 1fr)" gap="10px"
         >

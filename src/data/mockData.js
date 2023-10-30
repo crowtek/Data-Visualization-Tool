@@ -612,7 +612,6 @@ export const mockTransactions = [
   },
 ];
 
-
 export const mockEvents = [
   {
     key: "1",
@@ -633,7 +632,6 @@ export const mockEvents = [
     madeBy: "Meik Greenwood"
   },
 ];
-
 
 export const mockIncomingVehicles = [
   {
