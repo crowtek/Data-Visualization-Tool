@@ -4,7 +4,6 @@ import { mockDataVehicles } from "../../data/mockData";
 import Header from "../../components/Header";
 import { randomInt, randomUserName } from '@mui/x-data-grid-generator';
 import VehicleOverviewTable from "./components/Table";
-import Button from '@mui/material/Button';
 
 let idCounter = 100;
 const createRandomRow = () => {
@@ -22,6 +21,7 @@ const createRandomRow = () => {
 
 const Leistand = () => {
   const [rows, setRows] = useState(mockDataVehicles);
+  
   const handleAddRow = () => {
     setRows((prevRows) => [...prevRows, createRandomRow()]);
   };
@@ -29,12 +29,7 @@ const Leistand = () => {
 
   return (
     <Box m="20px">
-      <Box>
-        Leistand
-            <Button size="small" onClick={handleAddRow}>
-              Add a row
-            </Button>
-      </Box>
+      <Header title="Leistand"/>
       <VehicleOverviewTable userData={rows}/>
     </Box>
   );
