@@ -4,7 +4,6 @@ import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { TableStyle as TableStyleImport} from "../../../styles/TableStyle";
 import VehicalModal from "./Modal";
-import VehicleInfo from "../../../components/TableInfo";
 import VehicleStatus from "./VehicleStatus";
 
 
@@ -12,6 +11,7 @@ const VehicleOverviewTable = ({ userData }) => {
     const TableStyle = useMemo(() => {
       return TableStyleImport;
     },[])
+
 
     const columns = useMemo(() => {
       return [
@@ -21,8 +21,8 @@ const VehicleOverviewTable = ({ userData }) => {
         { field: "cargo",headerName: "Ladeeinheit",flex: 0.5,editable: true},
         { field: "relation",headerName: "Relation",flex: 0.5,editable: true},
         { field: "typ",headerName: "Typ",flex: 0.5,editable: true},
-        { field: "land",headerName: "Land",flex: 0.5,renderCell: ({ row }) => row.land.kurz,},
-        { field: "customer",headerName: "Kunde",flex: 0.5,renderCell: ({ row }) => row.customer.name,},
+        { field: "land",headerName: "Land",flex: 0.5,renderCell: ({ row }) => row.land && row.land.kurz,},
+        { field: "customer",headerName: "Kunde",flex: 0.5,renderCell: ({ row }) => row.customer && row.customer.name,},
         { field: "info",headerName: "Info",flex: 1,editable: true},
         { field: "options",headerName: "",renderCell: ({ row }) => <VehicalModal {...row}/>,},
       ];
