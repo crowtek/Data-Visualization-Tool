@@ -17,7 +17,7 @@ const Topbar = () => {
   const handleOpen = () => setShowModal(true);
 
   return (
-    <Box display="flex" justifyContent="flex-end" p={1}>
+    <Box display="flex" justifyContent="flex-end" p={2}>
 
       {/* ICONS */}
       <Box display="flex">

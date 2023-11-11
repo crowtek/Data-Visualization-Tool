@@ -20,7 +20,7 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
       border="2px solid gray"
     >
       
-      <Typography fontSize={screenSize ? "18px": "22px"} fontWeight="bold"  p={2}>
+      <Typography fontSize={screenSize ? "18px": "22px"} fontWeight="bold"  p={"5px 15px"}>
         Neuste aufgenommene Ladeeinheiten
       </Typography>
 
