@@ -31,7 +31,6 @@ body,
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
@@ -60,18 +59,15 @@ body,
   transform: translateY(20px);
   transition: opacity 1s, transform 1s;
 }
-
 .pie-chart-fade-in {
   opacity: 1;
   transform: translateY(0);
 }
-
 .subtitle-animation {
   opacity: 0;
   transform: translateX(20px);
   transition: opacity 1s, transform 1s;
 }
-
 .subtitle-animation-fade-in{
   opacity: 1;
   transform: translateX(0);
