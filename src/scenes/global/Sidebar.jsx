@@ -11,12 +11,13 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import ViewTimelineOutlinedIcon from '@mui/icons-material/ViewTimelineOutlined';
 import PlaylistAddOutlinedIcon from '@mui/icons-material/PlaylistAddOutlined';
 import HistoryIcon from '@mui/icons-material/History';
-import { NavigationContext } from "../../App";
+
+// Check after chaning the to with element was is viewd and change the aktiv element to it that is in the url
 
 const Item = ({ title, to, icon }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const { page,setPage } = useContext(NavigationContext);
+  const [page, setPage] = useState("");
 
   return (
     <MenuItem
@@ -64,61 +65,23 @@ const Sidebar = () => {
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
-            style={{
-              margin: "10px 0 20px 0",
-              color: colors.grey[100],
-            }}
+            style={{ margin: "10px 0 20px 0", color: colors.grey[100],}}
           >
-            {!isCollapsed && (
-              <Box
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center"
-                ml="15px"
-              >
-                <Typography variant="h4" color={colors.grey[100]}>
-                  Meik Grünholz
-                </Typography>
-                <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                  <MenuOutlinedIcon />
-                </IconButton>
-              </Box>
-            )}
+              {!isCollapsed && (
+                <Box display="flex" justifyContent="space-between" alignItems="center"ml="15px">
+                  <Typography variant="h4" color={colors.grey[100]}>Meik Grünholz</Typography>
+                  <IconButton onClick={() => setIsCollapsed(!isCollapsed)}><MenuOutlinedIcon /></IconButton>
+                </Box>
+              )}
           </MenuItem>
 
-
           <Box>
-            <Item
-              title="Dashboard"
-              to="/"
-              icon={<HomeOutlinedIcon />}
-              style={{ fontSize: '20px' }} 
-            />
-            <Item
-              title="Leitstand"
-              to="leitstand"
-              icon={<ViewTimelineOutlinedIcon />}
-            />
-            <Item
-              title="History"
-              to="history"
-              icon={<HistoryIcon />}
-            />
-            <Item
-              title="Zulauf"
-              to="zulauf"
-              icon={<PlaylistAddOutlinedIcon />}
-            />
-            <Item
-              title="Calendar"
-              to="calendar"
-              icon={<CalendarTodayOutlinedIcon />}
-            />
-            <Item
-              title="User List"
-              to="userOverview"
-              icon={<PeopleOutlinedIcon />}
-            />
+            <Item title="Dashboard" to="/" icon={<HomeOutlinedIcon />}/>
+            <Item title="Leitstand" to="leitstand" icon={<ViewTimelineOutlinedIcon />}/>
+            <Item title="History" to="history" icon={<HistoryIcon />} />
+            <Item title="Zulauf" to="zulauf" icon={<PlaylistAddOutlinedIcon />}/>
+            <Item title="Calendar" to="calendar"icon={<CalendarTodayOutlinedIcon />}/>
+            <Item title="User List" to="userOverview"icon={<PeopleOutlinedIcon />}/>
           </Box>
         </Menu>
       </ProSidebar>

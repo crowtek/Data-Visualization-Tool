@@ -1,4 +1,4 @@
-import { useState,useEffect,createContext,useMemo } from "react";
+import { useState,useMemo } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Topbar from "./scenes/global/Topbar";
@@ -14,29 +14,16 @@ import History from "./scenes/History";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 
-export const NavigationContext = createContext();
-
 function App() {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
 
-  // Unnötiger Seiteneffekt. Wrappe das setPage in einen Wrapper, wo du auch den LocalStorage setzt.
-  const lastSelectedPage = localStorage.getItem('lastSelectedPage');
-  const [page, setPage] = useState(useMemo(()=>{return lastSelectedPage ? JSON.parse(lastSelectedPage) : ""},[lastSelectedPage]));
-  
-  useEffect(()=> {
-    localStorage.clear();
-    localStorage.setItem("lastSelectedPage", JSON.stringify(page) )
-  },[page])
-
-
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
-        <NavigationContext.Provider value={{ page, setPage }}>
           <CssBaseline />
           <div className="app">
-            <Sidebar isSidebar={isSidebar} page={page} setPage={setPage}/>
+            <Sidebar isSidebar={isSidebar}/>
             <main className="content">
               <Topbar setIsSidebar={setIsSidebar} />
               <Routes>
@@ -50,7 +37,6 @@ function App() {
               </Routes>
             </main>
           </div>
-        </NavigationContext.Provider>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

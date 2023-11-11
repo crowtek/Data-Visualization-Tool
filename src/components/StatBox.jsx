@@ -3,7 +3,6 @@ import { tokens } from "../theme";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Link } from 'react-router-dom';
 import { useContext,useEffect,useState } from "react";
-import { NavigationContext } from "../App";
 import PieChart from "./PieChart";
 
 
@@ -14,11 +13,6 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
   const isScreenSmall = useMediaQuery(theme.breakpoints.down("xl"));
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
   const [animate, setAnimate] = useState(false);
-
-  const { setPage } = useContext(NavigationContext);
-  const setNavigation = () => {
-    setPage(link);
-  };
 
   useEffect(() => {
       // Trigger the animation after a delay (e.g., 500ms)
@@ -40,7 +34,7 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
           >
             {title}
             {link &&
-              <Link to={link} onClick={setNavigation}>
+              <Link to={link}>
                 <OpenInNewIcon sx={{ fontSize: 30, color: colors.primary[300] }} />
               </Link>
             }
