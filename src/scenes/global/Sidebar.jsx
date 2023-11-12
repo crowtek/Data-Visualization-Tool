@@ -12,6 +12,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import ViewTimelineOutlinedIcon from '@mui/icons-material/ViewTimelineOutlined';
 import PlaylistAddOutlinedIcon from '@mui/icons-material/PlaylistAddOutlined';
 import HistoryIcon from '@mui/icons-material/History';
+import LibraryAddOutlinedIcon from '@mui/icons-material/LibraryAddOutlined';
 
 import { sidebarSx } from "../../styles/SidebarStyle";
 import Item from "./SidebarMenuItem";
@@ -41,6 +42,7 @@ const Sidebar = () => {
             <Item title="History" to="history" icon={<HistoryIcon />} />
             <Item title="Zulauf" to="zulauf" icon={<PlaylistAddOutlinedIcon />}/>
             <Item title="Calendar" to="calendar"icon={<CalendarTodayOutlinedIcon />}/>
+            <Item title="Erfassung" to="erfassung"icon={<LibraryAddOutlinedIcon />}/>
             <Item title="User List" to="userOverview"icon={<PeopleOutlinedIcon />}/>
           </Box>
         </Menu>

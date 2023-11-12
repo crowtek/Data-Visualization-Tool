@@ -10,6 +10,7 @@ import FAQ from "./scenes/Guide";
 import Calendar from "./scenes/Calendar";
 import Zulauf from "./scenes/Zulauf";
 import History from "./scenes/History";
+import Erfassung from "./scenes/Erfassung";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/history" element={<History />}/>
                 <Route path="/zulauf" element={<Zulauf />}/>
+                <Route path="/erfassung" element={<Erfassung />}/>
               </Routes>
             </main>
           </div>
