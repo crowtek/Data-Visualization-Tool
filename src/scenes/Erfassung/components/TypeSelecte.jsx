@@ -1,19 +1,20 @@
 import { Select,MenuItem ,InputLabel,FormControl } from '@mui/material';
 
-const TypeSelect = ({name,handleChange}) => {
+const TypeSelect = ({type,handleChange}) => {
     return(
         <FormControl fullWidth>
-            <InputLabel id="typeSelecteLabel">Age</InputLabel>
+            <InputLabel id="typeSelecteLabel">Type</InputLabel>
             <Select
                 labelId="typeSelecteLabel"
                 id="typeSelecte"
-                value={name}
-                label="Age"
+                defaultValue={"Ladeeinheit Planen"}
+                value={type}
+                label="Type"
                 onChange={handleChange}
             >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+                <MenuItem value={"Neuer Benutzer"}>Neuer Benutzer</MenuItem>
+                <MenuItem value={"Neue Ladeeinheit"}>Neue Ladeeinheit</MenuItem>
+                <MenuItem value={"Ladeeinheit Planen"}>Ladeeinheit Planen</MenuItem>
             </Select>
         </FormControl>
     )

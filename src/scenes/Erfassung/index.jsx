@@ -7,6 +7,7 @@ import EmailInput from "./components/EmailInput";
 
 const Erfassung = () => {
     const [formData, setFormData] = useState({
+        type: "Ladeeinheit Planen",
         username: "",
         email: "",
     })
@@ -27,7 +28,7 @@ const Erfassung = () => {
     return (
         <Box sx={{display:"flex", justifyContent:"center"}}> 
             <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, width:"30vw" }}>
-                <TypeSelect name={formData.username} handleChange={handleChange}/>
+                <TypeSelect name={formData.type} handleChange={handleChange}/>
                 <NameInput name={formData.username} handleChange={handleChange}/>
                 <EmailInput email={formData.email} handleChange={handleChange}/>
 
