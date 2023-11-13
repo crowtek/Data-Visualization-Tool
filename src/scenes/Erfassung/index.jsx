@@ -30,8 +30,18 @@ const Erfassung = () => {
         <Box sx={{display:"flex", justifyContent:"center"}}> 
             <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, width:"30vw" }}>
                 <TypeSelect name={formData.type} handleChange={handleChange}/>
-                <NameInput name={formData.username} handleChange={handleChange}/>
-                <EmailInput email={formData.email} handleChange={handleChange}/>
+                {  
+                    formData.type === "Neuer Benutzer" ? (
+                        <>
+                            <NameInput name={formData.username} handleChange={handleChange}/>
+                            <EmailInput email={formData.email} handleChange={handleChange}/>
+                        </>
+                        ) : formData.type === "Ladeeinheit Planen" ? (
+                            <></>
+                        ) :
+                        (<></>)
+                }
+
                 <SubmitButton />
             </Box>
         </Box>

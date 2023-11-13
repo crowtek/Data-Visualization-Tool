@@ -6,11 +6,12 @@ const TypeSelect = ({type,handleChange}) => {
             <InputLabel id="typeSelecteLabel">Type</InputLabel>
             <Select
                 labelId="typeSelecteLabel"
-                id="typeSelecte"
+                id="type"
                 defaultValue={"Ladeeinheit Planen"}
                 value={type}
-                label="Type"
                 onChange={handleChange}
+                label="type"
+                name="type"
             >
                 <MenuItem value={"Neuer Benutzer"}>Neuer Benutzer</MenuItem>
                 <MenuItem value={"Neue Ladeeinheit"}>Neue Ladeeinheit</MenuItem>
