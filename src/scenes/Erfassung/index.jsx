@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Button, Box } from '@mui/material';
+import { Box } from '@mui/material';
 
 import TypeSelect from "./components/TypeSelecte";
 import NameInput from "./components/NameInput";
 import EmailInput from "./components/EmailInput";
+import SubmitButton from "./components/SumbmitButton";
 
 const Erfassung = () => {
     const [formData, setFormData] = useState({
@@ -31,10 +32,7 @@ const Erfassung = () => {
                 <TypeSelect name={formData.type} handleChange={handleChange}/>
                 <NameInput name={formData.username} handleChange={handleChange}/>
                 <EmailInput email={formData.email} handleChange={handleChange}/>
-
-                <Button type="submit" fullWidth variant="contained"sx={{ mt: 3, mb: 2 }}>
-                    Submit
-                </Button>
+                <SubmitButton />
             </Box>
         </Box>
     )
