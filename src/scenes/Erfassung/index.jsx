@@ -4,6 +4,7 @@ import { Box } from '@mui/material';
 import TypeSelect from "./components/TypeSelecte";
 import NameInput from "./components/NameInput";
 import EmailInput from "./components/EmailInput";
+import PhoneNumberInput from "./components/PhoneNumberInput";
 import SubmitButton from "./components/SumbmitButton";
 
 const Erfassung = () => {
@@ -11,6 +12,7 @@ const Erfassung = () => {
         type: "Ladeeinheit Planen",
         username: "",
         email: "",
+        phoneNumber: "",
     })
 
     function handleChange(event) {
@@ -35,6 +37,7 @@ const Erfassung = () => {
                         <>
                             <NameInput name={formData.username} handleChange={handleChange}/>
                             <EmailInput email={formData.email} handleChange={handleChange}/>
+                            <PhoneNumberInput phoneNumber={formData.phoneNumber} handleChange={handleChange}/>
                         </>
                         ) : formData.type === "Ladeeinheit Planen" ? (
                             <></>
