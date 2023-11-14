@@ -7,6 +7,7 @@ import NewUserForm from "./NewUserForm";
 
 import LadeeinheitInput from "./components/LadeeinheitInput";
 import KennzeichenInput from "./components/KennzeichenInput";
+import StandortInput from "./components/StandortInput";
 
 const Erfassung = () => {
     const [formData, setFormData] = useState({
@@ -48,6 +49,7 @@ const Erfassung = () => {
                     (<>
                         <LadeeinheitInput handleChange={handleChange} ladeeinheit={formData.ladeeinheit} />
                         <KennzeichenInput handleChange={handleChange} kennzeichen={formData.kennzeichen} />
+                        <StandortInput handleChange={handleChange} standort={formData.standort} />
                     </>) :
                     (<></>)
                 }
