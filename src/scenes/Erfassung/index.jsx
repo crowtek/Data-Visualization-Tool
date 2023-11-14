@@ -11,6 +11,7 @@ import StandortInput from "./components/StandortInput";
 import RelationInput from "./components/RelationFilter";
 import TypeSelect from "./components/TypeSelect";
 import CountrySelect from "./components/CountrySelect";
+import CustomerNameInput from "./components/CustomerNameInput";
 
 const Erfassung = () => {
     const [formData, setFormData] = useState({
@@ -56,6 +57,7 @@ const Erfassung = () => {
                         <RelationInput handleChange={handleChange} relation={formData.relation} />
                         <TypeSelect type={formData.type} handleChange={handleChange}/>
                         <CountrySelect land={formData.land} handleChange={handleChange}/>
+                        <CustomerNameInput kunde={formData.kunde} handleChange={handleChange} />
                     </>) :
                     (<></>)
                 }
