@@ -5,12 +5,15 @@ import TypeSelect from "./components/TypeSelecte";
 import SubmitButton from "./components/SumbmitButton";
 import NewUserForm from "./NewUserForm";
 
+import LadeeinheitInput from "./components/LadeeinheitInput";
+
 const Erfassung = () => {
     const [formData, setFormData] = useState({
         type: "Ladeeinheit Planen",
         username: "",
         email: "",
         phoneNumber: "",
+        ladeeinheit: "",
     })
 
     function handleChange(event) {
@@ -33,7 +36,10 @@ const Erfassung = () => {
                 <TypeSelect name={formData.type} handleChange={handleChange}/>
                 {  
                     formData.type === "Neuer Benutzer" ? (<NewUserForm handleChange={handleChange} formData={formData}/>) : 
-                    formData.type === "Ladeeinheit Planen" ? (<></>) :
+                    formData.type === "Ladeeinheit Planen" ? 
+                    (<>
+                        <LadeeinheitInput handleChange={handleChange} ladeeinheit={formData.ladeeinheit} />
+                    </>) :
                     (<></>)
                 }
 
