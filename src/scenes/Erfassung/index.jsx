@@ -2,15 +2,12 @@ import { useState } from "react";
 import { Box } from '@mui/material';
 
 import TypeSelect from "./components/TypeSelecte";
-import NameInput from "./components/NameInput";
-import EmailInput from "./components/EmailInput";
-import PhoneNumberInput from "./components/PhoneNumberInput";
 import SubmitButton from "./components/SumbmitButton";
-import LadeeinheitInput from "./components/LadeeinheitInput";
+import NewUserForm from "./NewUserForm";
 
 const Erfassung = () => {
-    const [formType, setFormType] = useState("Ladeeinheit Planen");
     const [formData, setFormData] = useState({
+        type: "Ladeeinheit Planen",
         username: "",
         email: "",
         phoneNumber: "",
@@ -24,9 +21,6 @@ const Erfassung = () => {
         }));
     }
 
-    function handleFormChange(event){
-        setFormType(event.target.value)
-    }
     
     function handleSubmit(event) {
         event.preventDefault();
@@ -36,18 +30,11 @@ const Erfassung = () => {
     return (
         <Box sx={{display:"flex", justifyContent:"center"}}> 
             <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, width:"30vw" }}>
-                <TypeSelect name={formType} handleChange={handleFormChange}/>
+                <TypeSelect name={formData.type} handleChange={handleChange}/>
                 {  
-                    formType === "Neuer Benutzer" ? (
-                        <>
-                            <NameInput name={formData.username} handleChange={handleChange}/>
-                            <EmailInput email={formData.email} handleChange={handleChange}/>
-                            <PhoneNumberInput phoneNumber={formData.phoneNumber} handleChange={handleChange}/>
-                        </>
-                        ) : formType === "Ladeeinheit Planen" ? (
-                            <></>
-                        ) :
-                        (<></>)
+                    formData.type === "Neuer Benutzer" ? (<NewUserForm handleChange={handleChange} formData={formData}/>) : 
+                    formData.type === "Ladeeinheit Planen" ? (<></>) :
+                    (<></>)
                 }
 
                 <SubmitButton />
