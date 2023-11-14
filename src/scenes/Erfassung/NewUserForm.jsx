@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 import NameInput from "./components/NameInput"
 import EmailInput from "./components/EmailInput";

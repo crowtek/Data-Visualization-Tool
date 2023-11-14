@@ -14,6 +14,13 @@ const Erfassung = () => {
         email: "",
         phoneNumber: "",
         ladeeinheit: "",
+        kennzeichen: "",
+        standort:"",
+        relation:"",
+        typ:"",
+        land:"",
+        kunde:"",
+        info:"",
     })
 
     function handleChange(event) {
