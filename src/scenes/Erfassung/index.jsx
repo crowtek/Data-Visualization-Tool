@@ -10,6 +10,7 @@ import KennzeichenInput from "./components/KennzeichenInput";
 import StandortInput from "./components/StandortInput";
 import RelationInput from "./components/RelationFilter";
 import TypeSelect from "./components/TypeSelect";
+import CountrySelect from "./components/CountrySelect";
 
 const Erfassung = () => {
     const [formData, setFormData] = useState({
@@ -22,7 +23,7 @@ const Erfassung = () => {
         standort:"",
         relation:"",
         type:"Trailer",
-        land:"",
+        land:"Germany",
         kunde:"",
         info:"",
     })
@@ -54,6 +55,7 @@ const Erfassung = () => {
                         <StandortInput handleChange={handleChange} standort={formData.standort} />
                         <RelationInput handleChange={handleChange} relation={formData.relation} />
                         <TypeSelect type={formData.type} handleChange={handleChange}/>
+                        <CountrySelect land={formData.land} handleChange={handleChange}/>
                     </>) :
                     (<></>)
                 }
