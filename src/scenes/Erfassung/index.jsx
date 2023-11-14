@@ -6,6 +6,7 @@ import SubmitButton from "./components/SumbmitButton";
 import NewUserForm from "./NewUserForm";
 
 import LadeeinheitInput from "./components/LadeeinheitInput";
+import KennzeichenInput from "./components/KennzeichenInput";
 
 const Erfassung = () => {
     const [formData, setFormData] = useState({
@@ -46,6 +47,7 @@ const Erfassung = () => {
                     formData.type === "Ladeeinheit Planen" ? 
                     (<>
                         <LadeeinheitInput handleChange={handleChange} ladeeinheit={formData.ladeeinheit} />
+                        <KennzeichenInput handleChange={handleChange} kennzeichen={formData.kennzeichen} />
                     </>) :
                     (<></>)
                 }
