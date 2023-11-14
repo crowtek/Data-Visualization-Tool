@@ -1,17 +1,17 @@
 import { Select,MenuItem ,InputLabel,FormControl } from '@mui/material';
 
-const TypeSelect = ({type,handleChange}) => {
+const FormTypeSelect = ({formType,handleChange}) => {
     return(
         <FormControl fullWidth>
             <InputLabel id="typeSelecteLabel">Type</InputLabel>
             <Select
                 labelId="typeSelecteLabel"
-                id="type"
+                id="formType"
                 defaultValue={"Ladeeinheit Planen"}
-                value={type}
+                value={formType}
                 onChange={handleChange}
-                label="type"
-                name="type"
+                label="formType"
+                name="formType"
             >
                 <MenuItem value={"Neuer Benutzer"}>Neuer Benutzer</MenuItem>
                 <MenuItem value={"Neue Ladeeinheit"}>Neue Ladeeinheit</MenuItem>
@@ -21,4 +21,4 @@ const TypeSelect = ({type,handleChange}) => {
     )
 }
 
-export default TypeSelect;
+export default FormTypeSelect;

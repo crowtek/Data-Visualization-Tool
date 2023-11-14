@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box } from '@mui/material';
 
-import TypeSelect from "./components/TypeSelecte";
+import FormTypeSelect from "./components/FormTypeSelect";
 import SubmitButton from "./components/SumbmitButton";
 import NewUserForm from "./NewUserForm";
 
@@ -9,10 +9,11 @@ import LadeeinheitInput from "./components/LadeeinheitInput";
 import KennzeichenInput from "./components/KennzeichenInput";
 import StandortInput from "./components/StandortInput";
 import RelationInput from "./components/RelationFilter";
+import TypeSelect from "./components/TypeSelect";
 
 const Erfassung = () => {
     const [formData, setFormData] = useState({
-        type: "Ladeeinheit Planen",
+        formType: "Ladeeinheit Planen",
         username: "",
         email: "",
         phoneNumber: "",
@@ -20,7 +21,7 @@ const Erfassung = () => {
         kennzeichen: "",
         standort:"",
         relation:"",
-        typ:"",
+        type:"Trailer",
         land:"",
         kunde:"",
         info:"",
@@ -43,15 +44,16 @@ const Erfassung = () => {
     return (
         <Box sx={{display:"flex", justifyContent:"center"}}> 
             <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, width:"30vw" }}>
-                <TypeSelect name={formData.type} handleChange={handleChange}/>
+                <FormTypeSelect formType={formData.formType} handleChange={handleChange}/>
                 {  
-                    formData.type === "Neuer Benutzer" ? (<NewUserForm handleChange={handleChange} formData={formData}/>) : 
-                    formData.type === "Ladeeinheit Planen" ? 
+                    formData.formType === "Neuer Benutzer" ? (<NewUserForm handleChange={handleChange} formData={formData}/>) : 
+                    formData.formType === "Ladeeinheit Planen" ? 
                     (<>
                         <LadeeinheitInput handleChange={handleChange} ladeeinheit={formData.ladeeinheit} />
                         <KennzeichenInput handleChange={handleChange} kennzeichen={formData.kennzeichen} />
                         <StandortInput handleChange={handleChange} standort={formData.standort} />
                         <RelationInput handleChange={handleChange} relation={formData.relation} />
+                        <TypeSelect type={formData.type} handleChange={handleChange}/>
                     </>) :
                     (<></>)
                 }
