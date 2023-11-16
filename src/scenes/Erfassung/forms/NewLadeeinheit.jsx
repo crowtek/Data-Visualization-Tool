@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 
 import LadeeinheitInput from "../components/LadeeinheitInput";
 import KennzeichenInput from "../components/KennzeichenInput";
@@ -10,16 +11,20 @@ import InfoInput from "../components/InfoInput";
 
 const NewLadeeinheit = ({handleChange,formData}) => {
     return (
-        <>
-            <LadeeinheitInput handleChange={handleChange} ladeeinheit={formData.ladeeinheit} />
-            <KennzeichenInput handleChange={handleChange} kennzeichen={formData.kennzeichen} />
-            <StandortInput handleChange={handleChange} standort={formData.standort} />
-            <RelationInput handleChange={handleChange} relation={formData.relation} />
-            <TypeSelect handleChange={handleChange} type={formData.type} />
-            <CountrySelect handleChange={handleChange} land={formData.land} />
-            <CustomerNameInput handleChange={handleChange} kunde={formData.kunde} />
-            <InfoInput handleChange={handleChange} info={formData.info}  />
-        </>
+        <Box sx={{display:"flex", gap:2}}>
+            <Box>            
+                <LadeeinheitInput handleChange={handleChange} ladeeinheit={formData.ladeeinheit} />
+                <KennzeichenInput handleChange={handleChange} kennzeichen={formData.kennzeichen} />
+                <StandortInput handleChange={handleChange} standort={formData.standort} />
+                <RelationInput handleChange={handleChange} relation={formData.relation} />
+            </Box>
+            <Box>                
+                <TypeSelect handleChange={handleChange} type={formData.type} />
+                <CountrySelect handleChange={handleChange} land={formData.land} />
+                <CustomerNameInput handleChange={handleChange} kunde={formData.kunde} />
+                <InfoInput handleChange={handleChange} info={formData.info}  />
+            </Box>
+        </Box>
     )
 }
 
