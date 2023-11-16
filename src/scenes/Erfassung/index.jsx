@@ -4,15 +4,9 @@ import { Box } from '@mui/material';
 import FormTypeSelect from "./components/FormTypeSelect";
 import SubmitButton from "./components/SumbmitButton";
 import NewUserForm from "./NewUserForm";
+import NewLadeeinheit from "./NewLadeeinheit";
 
-import LadeeinheitInput from "./components/LadeeinheitInput";
-import KennzeichenInput from "./components/KennzeichenInput";
-import StandortInput from "./components/StandortInput";
-import RelationInput from "./components/RelationFilter";
-import TypeSelect from "./components/TypeSelect";
-import CountrySelect from "./components/CountrySelect";
-import CustomerNameInput from "./components/CustomerNameInput";
-import InfoInput from "./components/InfoInput";
+
 
 const Erfassung = () => {
     const [formData, setFormData] = useState({
@@ -50,20 +44,8 @@ const Erfassung = () => {
                 <FormTypeSelect formType={formData.formType} handleChange={handleChange}/>
                 {  
                     formData.formType === "Neuer Benutzer" ? (<NewUserForm handleChange={handleChange} formData={formData}/>) : 
-                    formData.formType === "Ladeeinheit Planen" ? 
-                    (<>
-                        <LadeeinheitInput handleChange={handleChange} ladeeinheit={formData.ladeeinheit} />
-                        <KennzeichenInput handleChange={handleChange} kennzeichen={formData.kennzeichen} />
-                        <StandortInput handleChange={handleChange} standort={formData.standort} />
-                        <RelationInput handleChange={handleChange} relation={formData.relation} />
-                        <TypeSelect handleChange={handleChange} type={formData.type} />
-                        <CountrySelect handleChange={handleChange} land={formData.land} />
-                        <CustomerNameInput handleChange={handleChange} kunde={formData.kunde} />
-                        <InfoInput handleChange={handleChange} info={formData.info}  />
-                    </>) :
-                    (<></>)
+                    formData.formType === "Ladeeinheit Planen" ? (<NewLadeeinheit handleChange={handleChange} formData={formData}/>) : (<></>)
                 }
-
                 <SubmitButton />
             </Box>
         </Box>
