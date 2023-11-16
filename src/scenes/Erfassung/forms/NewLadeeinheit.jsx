@@ -1,12 +1,12 @@
 
-import LadeeinheitInput from "./components/LadeeinheitInput";
-import KennzeichenInput from "./components/KennzeichenInput";
-import StandortInput from "./components/StandortInput";
-import RelationInput from "./components/RelationFilter";
-import TypeSelect from "./components/TypeSelect";
-import CountrySelect from "./components/CountrySelect";
-import CustomerNameInput from "./components/CustomerNameInput";
-import InfoInput from "./components/InfoInput";
+import LadeeinheitInput from "../components/LadeeinheitInput";
+import KennzeichenInput from "../components/KennzeichenInput";
+import StandortInput from "../components/StandortInput";
+import RelationInput from "../components/RelationFilter";
+import TypeSelect from "../components/TypeSelect";
+import CountrySelect from "../components/CountrySelect";
+import CustomerNameInput from "../components/CustomerNameInput";
+import InfoInput from "../components/InfoInput";
 
 const NewLadeeinheit = ({handleChange,formData}) => {
     return (

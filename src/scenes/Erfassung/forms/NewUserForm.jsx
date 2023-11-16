@@ -1,7 +1,7 @@
 
-import NameInput from "./components/NameInput"
-import EmailInput from "./components/EmailInput";
-import PhoneNumberInput from "./components/PhoneNumberInput";
+import NameInput from "../components/NameInput"
+import EmailInput from "../components/EmailInput";
+import PhoneNumberInput from "../components/PhoneNumberInput";
 
 const NewUserForm = ({handleChange,formData}) => {
     return (
