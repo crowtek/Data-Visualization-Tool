@@ -1,4 +1,4 @@
-import { useState,useMemo } from "react";
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Topbar from "./scenes/global/Topbar";
@@ -8,8 +8,6 @@ import UserOverview from "./scenes/User";
 import Leitstand from "./scenes/Leitstand";
 import FAQ from "./scenes/Guide";
 import Calendar from "./scenes/Calendar";
-import Zulauf from "./scenes/Zulauf";
-import History from "./scenes/History";
 import Erfassung from "./scenes/Erfassung";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -33,8 +31,6 @@ function App() {
                 <Route path="/leitstand" element={<Leitstand />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/calendar" element={<Calendar />} />
-                <Route path="/history" element={<History />}/>
-                <Route path="/zulauf" element={<Zulauf />}/>
                 <Route path="/erfassung" element={<Erfassung />}/>
               </Routes>
             </main>
