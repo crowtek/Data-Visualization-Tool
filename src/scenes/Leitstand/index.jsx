@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Box } from "@mui/material";
 import { mockDataVehicles } from "../../data/mockData";
 
-import Leitstand from "./components/Table";
+
 import TableNavigation from "./components/TableNavigation";
+import Leitstand from "./components/Table";
+import HistoryTable from "./components/HistoryTable";
 
 
 const Leistand = () => {
@@ -12,7 +14,13 @@ const Leistand = () => {
   return (
     <Box m="20px">
       <TableNavigation setTable={setTable} table={table}/>
-      <Leitstand userData={mockDataVehicles}/>
+
+      {
+        table === "LEITSTAND" ? (<Leitstand userData={mockDataVehicles}/>) :
+        table === "HISTORY" ? (<HistoryTable userData={mockDataVehicles}/>) : 
+        (<HistoryTable userData={mockDataVehicles}/>)
+        }
+      
     </Box>
   );
 };
