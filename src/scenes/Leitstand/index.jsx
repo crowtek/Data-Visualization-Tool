@@ -1,36 +1,21 @@
 import { useState } from "react";
-import { Box } from "@mui/material";
+import { Box,Button,Typography } from "@mui/material";
 import { mockDataVehicles } from "../../data/mockData";
-import Header from "../../components/Header";
-import { randomInt, randomUserName } from '@mui/x-data-grid-generator';
 import VehicleOverviewTable from "./components/Table";
 
-let idCounter = 100;
-const createRandomRow = () => {
-  idCounter += 1;
-  return { 
-    id: idCounter, 
-    vehicle: randomUserName(), 
-    parkPlace: randomInt(10, 80),
-    cargo: randomUserName(),
-    typ: "Trailer",
-    relation: randomUserName(),
-    info: randomUserName(),
-   };
-};
 
 const Leistand = () => {
-  const [rows, setRows] = useState(mockDataVehicles);
-  
-  const handleAddRow = () => {
-    setRows((prevRows) => [...prevRows, createRandomRow()]);
-  };
-
 
   return (
     <Box m="20px">
-      <Header title="Leistand"/>
-      <VehicleOverviewTable userData={rows}/>
+      <Box sx={{display:"flex", justifyContent:"flex-end", gap:5, marginBlock:2}}>
+        <Box sx={{display:"flex", justifyContent:"space-between", gap:2}}>
+          <Button variant="contained">Leitstand</Button>
+          <Button variant="outlined">History</Button>
+          <Button variant="outlined">Zulauff</Button>
+        </Box>
+      </Box>
+      <VehicleOverviewTable userData={mockDataVehicles}/>
     </Box>
   );
 };
