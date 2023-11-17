@@ -13,7 +13,6 @@ import PlaceOverview from "./components/PlaceOverview";
 
 const Dashboard = () => {
   const theme = useTheme();
-  const isScreenSmall = useMediaQuery(theme.breakpoints.down("xl"));
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (

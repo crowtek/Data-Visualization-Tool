@@ -2,7 +2,7 @@ import { Box, Typography, useTheme,useMediaQuery } from "@mui/material";
 import { tokens } from "../theme";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Link } from 'react-router-dom';
-import { useContext,useEffect,useState } from "react";
+import {useEffect,useState } from "react";
 import PieChart from "./PieChart";
 
 
@@ -10,7 +10,6 @@ import PieChart from "./PieChart";
 const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,subtitleColor }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const isScreenSmall = useMediaQuery(theme.breakpoints.down("xl"));
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
   const [animate, setAnimate] = useState(false);
 

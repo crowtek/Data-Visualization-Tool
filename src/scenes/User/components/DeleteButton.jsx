@@ -32,6 +32,7 @@ const UserTrModal = (props) => {
                 console.error('Network error:', error);
             });
     }, [props.userId]);
+    console.log(open)
 
     return (
         <Button onClick={deleteUser}>

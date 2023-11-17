@@ -12,14 +12,6 @@ const NewUserButton = ({ userData }) => {
     const [showModal, setShowModal] = useState(false);
     const handleOpen = () => setShowModal(true);
 
-    const buttonStlye = {
-        backgroundColor: colors.blueAccent[400],
-        color: colors.primary[100],
-        letterSpacing: 1,
-        height: "50px",
-
-    }
-
     return (
         <>
             <Button variant="outlined" onClick={handleOpen} 

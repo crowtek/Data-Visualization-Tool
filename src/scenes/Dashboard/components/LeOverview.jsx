@@ -1,6 +1,5 @@
 import StatBox from "../../../components/StatBox";
 import { useTheme,Box } from "@mui/material";
-import CarCrashIcon from '@mui/icons-material/CarCrash';
 import { tokens } from "../../../theme";
 
 const CountDamageCar = ({vehicleData}) => {

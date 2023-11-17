@@ -1,5 +1,4 @@
 import StatBox from "../../../components/StatBox";
-import LocalParkingOutlinedIcon from '@mui/icons-material/LocalParkingOutlined';
 import BeenhereOutlinedIcon from '@mui/icons-material/BeenhereOutlined';
 import { useTheme,Box } from "@mui/material";
 import { tokens } from "../../../theme";
