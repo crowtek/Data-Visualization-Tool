@@ -6,6 +6,7 @@ import { mockDataVehicles } from "../../data/mockData";
 import TableNavigation from "./components/TableNavigation";
 import Leitstand from "./components/Table";
 import HistoryTable from "./components/HistoryTable";
+import ZulaufTable from "./components/ZulaufTable";
 
 
 const Leistand = () => {
@@ -18,7 +19,7 @@ const Leistand = () => {
       {
         table === "LEITSTAND" ? (<Leitstand userData={mockDataVehicles}/>) :
         table === "HISTORY" ? (<HistoryTable userData={mockDataVehicles}/>) : 
-        (<HistoryTable userData={mockDataVehicles}/>)
+        (<ZulaufTable userData={mockDataVehicles}/>)
         }
       
     </Box>
