@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Box } from "@mui/material";
 import { mockDataVehicles } from "../../data/mockData";
-import VehicleOverviewTable from "./components/Table";
+
+import Leitstand from "./components/Table";
 import TableNavigation from "./components/TableNavigation";
 
 
@@ -11,7 +12,7 @@ const Leistand = () => {
   return (
     <Box m="20px">
       <TableNavigation setTable={setTable} table={table}/>
-      <VehicleOverviewTable userData={mockDataVehicles}/>
+      <Leitstand userData={mockDataVehicles}/>
     </Box>
   );
 };
