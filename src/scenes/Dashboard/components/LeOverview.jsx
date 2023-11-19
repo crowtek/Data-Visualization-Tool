@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import StatBox from "../../../components/StatBox";
 import { useTheme,Box } from "@mui/material";
 import { tokens } from "../../../theme";
+import { boxStyle } from "../../../styles/DashboardBoxStyle";
 
 const CountDamageCar = ({vehicleData}) => {
     const theme = useTheme();
@@ -17,14 +18,7 @@ const CountDamageCar = ({vehicleData}) => {
 
 
     return (
-        <Box 
-            gridColumn="span 3"
-            gridRow="span 2"   
-            backgroundColor={colors.primary[400]}
-            borderRadius="5px"
-            border="2px solid gray"
-            sx={{display:"flex", alignItems:"center", justifyContent:"center"}}
-        >
+        <Box gridColumn="span 3" gridRow="span 2" sx={boxStyle(colors)}>
             <StatBox
                 title="Ladeeinheiten Übersicht"
                 labels={{first:"Volle LE", second:"Leere LE", third:"Teilbeladen LE"}}
