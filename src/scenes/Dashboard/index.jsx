@@ -1,8 +1,8 @@
 
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-import { mockDataVehicles } from "../../data/mockData";
+import { mockDataVehicles,mockDataVehiclesZulauf } from "../../data/mockData";
 
-import CarTotal from "./components/HofOverview";
+import HofOverview from "./components/HofOverview";
 import CarDamaged from "./components/LeOverview";
 import CarToday from "./components/LeSchaden";
 import EventToday from "./components/EventToday";
@@ -20,7 +20,7 @@ const Dashboard = () => {
 
       <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="repeat(6, 1fr)" gap="10px"
       >
-        <CarTotal vehicleData={mockDataVehicles} />
+        <HofOverview vehicleData={mockDataVehicles} zulaufData={mockDataVehiclesZulauf}/>
         <CarDamaged vehicleData={mockDataVehicles} />
         <CarToday />
         <EventToday />
