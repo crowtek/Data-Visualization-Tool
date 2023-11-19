@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Box } from "@mui/material";
-import { mockDataVehicles } from "../../data/mockData";
+import { mockDataVehicles,mockDataVehiclesZulauf } from "../../data/mockData";
 
 
 import TableNavigation from "./components/TableNavigation";
@@ -19,7 +19,7 @@ const Leistand = () => {
       {
         table === "LEITSTAND" ? (<Leitstand userData={mockDataVehicles} />) :
           table === "HISTORY" ? (<HistoryTable userData={mockDataVehicles} />) :
-            (<ZulaufTable userData={mockDataVehicles} />)
+            (<ZulaufTable userData={mockDataVehiclesZulauf} />)
       }
 
     </Box>
