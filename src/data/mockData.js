@@ -85,7 +85,7 @@ export const mockDataVehicles = [
     incomingTime: "11:00 21.09.2023",
     takeAppointment: "15:00 04.10.2023",
     parkPlace: "003",
-    status: "ready",
+    status: "empty",
     typ: "Trailer",
     info: "",
     land: {
@@ -111,7 +111,7 @@ export const mockDataVehicles = [
     incomingTime: "09:30 21.09.2023",
     takeAppointment: "14:15 05.10.2023",
     parkPlace: "005",
-    status: "in transit",
+    status: "full",
     typ: "Truck",
     info: "Fragile items",
     land: {
@@ -137,7 +137,7 @@ export const mockDataVehicles = [
     incomingTime: "14:45 22.09.2023",
     takeAppointment: "12:30 06.10.2023",
     parkPlace: "008",
-    status: "delayed",
+    status: "teilbeladen",
     typ: "Trailer",
     info: "High-value goods",
     land: {
@@ -163,7 +163,7 @@ export const mockDataVehicles = [
     incomingTime: "10:15 23.09.2023",
     takeAppointment: "16:00 07.10.2023",
     parkPlace: "009",
-    status: "ready",
+    status: "empty",
     typ: "Truck",
     info: "Perishable goods",
     land: {
@@ -189,7 +189,7 @@ export const mockDataVehicles = [
     incomingTime: "12:30 24.09.2023",
     takeAppointment: "11:45 08.10.2023",
     parkPlace: "010",
-    status: "in transit",
+    status: "full",
     typ: "Trailer",
     info: "",
     land: {
@@ -215,7 +215,7 @@ export const mockDataVehicles = [
     incomingTime: "08:45 25.09.2023",
     takeAppointment: "14:30 09.10.2023",
     parkPlace: "011",
-    status: "delayed",
+    status: "teilbeladen",
     typ: "Truck",
     info: "Fragile electronics",
     land: {
@@ -241,7 +241,7 @@ export const mockDataVehicles = [
     incomingTime: "16:00 26.09.2023",
     takeAppointment: "10:15 10.10.2023",
     parkPlace: "012",
-    status: "ready",
+    status: "empty",
     typ: "Trailer",
     info: "Hazardous materials",
     land: {
@@ -267,7 +267,7 @@ export const mockDataVehicles = [
     incomingTime: "10:30 27.09.2023",
     takeAppointment: "12:45 11.10.2023",
     parkPlace: "013",
-    status: "in transit",
+    status: "full",
     typ: "Truck",
     info: "",
     land: {
@@ -293,7 +293,7 @@ export const mockDataVehicles = [
     incomingTime: "13:15 28.09.2023",
     takeAppointment: "09:30 12.10.2023",
     parkPlace: "014",
-    status: "delayed",
+    status: "teilbeladen",
     typ: "Trailer",
     info: "Perishable goods",
     land: {
@@ -319,7 +319,7 @@ export const mockDataVehicles = [
     incomingTime: "15:45 29.09.2023",
     takeAppointment: "13:00 13.10.2023",
     parkPlace: "015",
-    status: "ready",
+    status: "empty",
     typ: "Truck",
     info: "Fragile items",
     land: {
@@ -345,7 +345,7 @@ export const mockDataVehicles = [
     incomingTime: "11:30 30.09.2023",
     takeAppointment: "10:45 14.10.2023",
     parkPlace: "016",
-    status: "in transit",
+    status: "full",
     typ: "Trailer",
     info: "",
     land: {
@@ -371,7 +371,7 @@ export const mockDataVehicles = [
     incomingTime: "12:15 01.10.2023",
     takeAppointment: "11:30 15.10.2023",
     parkPlace: "017",
-    status: "delayed",
+    status: "teilbeladen",
     typ: "Truck",
     info: "High-value goods",
     land: {
@@ -397,7 +397,7 @@ export const mockDataVehicles = [
     incomingTime: "14:45 02.10.2023",
     takeAppointment: "09:15 16.10.2023",
     parkPlace: "018",
-    status: "ready",
+    status: "empty",
     typ: "Trailer",
     info: "Fragile electronics",
     land: {
@@ -423,7 +423,7 @@ export const mockDataVehicles = [
     incomingTime: "10:30 03.10.2023",
     takeAppointment: "10:00 17.10.2023",
     parkPlace: "019",
-    status: "in transit",
+    status: "full",
     typ: "Truck",
     info: "",
     land: {
@@ -449,7 +449,7 @@ export const mockDataVehicles = [
     incomingTime: "09:15 04.10.2023",
     takeAppointment: "12:30 18.10.2023",
     parkPlace: "020",
-    status: "delayed",
+    status: "teilbeladen",
     typ: "Trailer",
     info: "Perishable goods",
     land: {
@@ -464,32 +464,6 @@ export const mockDataVehicles = [
     customer: {
       name: "Smith",
       address: "London Oxford Street 5678"
-    },
-  },
-  {
-    id: 16,
-    vehicle: "ABC 123",
-    vehicleTrailer: "XYZ 456",
-    cargo: "SHP-2023-ABC-888",
-    relation: "Vienna - Prague",
-    incomingTime: "13:45 05.10.2023",
-    takeAppointment: "08:45 19.10.2023",
-    parkPlace: "021",
-    status: "ready",
-    typ: "Truck",
-    info: "",
-    land: {
-      kurz: "CZ",
-      name: "Czech Republic"
-    },
-    driver: {
-      name: "Jan Novak",
-      tel: "0042023456789",
-      firma: "Czech Carriers"
-    },
-    customer: {
-      name: "Svoboda",
-      address: "Prague Wenceslas Square 12345"
     },
   },
 ]
