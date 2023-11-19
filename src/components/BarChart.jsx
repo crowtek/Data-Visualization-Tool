@@ -22,7 +22,7 @@ const BarChart = () => {
     barChartWidth = "700px";
     barChartHeight = "400px";
   }
-  
+
 
   useEffect(() => {
     const ctx = chartRef.current.getContext('2d');
@@ -70,9 +70,9 @@ const BarChart = () => {
 
   return (
     <Box backgroundColor={colors.primary[400]} p={5}>
-      <canvas 
-        ref={chartRef}  
-        width={barChartWidth} 
+      <canvas
+        ref={chartRef}
+        width={barChartWidth}
         height={barChartHeight}
       >
       </canvas>

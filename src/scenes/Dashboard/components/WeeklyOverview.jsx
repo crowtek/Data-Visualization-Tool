@@ -13,25 +13,25 @@ const dataset = [
   {
     london: 60,
     paris: 52,
-    newYork: 48,    
+    newYork: 48,
     month: 'Dienstag',
   },
   {
     london: 47,
     paris: 113,
-    newYork: 150,    
+    newYork: 150,
     month: 'Mittwoch',
   },
   {
     london: 54,
     paris: 56,
-    newYork: 92,    
+    newYork: 92,
     month: 'Donnerstag',
   },
   {
     london: 57,
     paris: 69,
-    newYork: 92,    
+    newYork: 92,
     month: 'Freitag',
   },
   {
@@ -50,7 +50,7 @@ const dataset = [
 const valueFormatter = (value) => `${value}mm`;
 
 
-const SalesQuantity = ({isScreenLg}) => {
+const SalesQuantity = ({ isScreenLg }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -60,8 +60,8 @@ const SalesQuantity = ({isScreenLg}) => {
         label: 'Anzahl der Ladeeinheiten',
       },
     ],
-    width: isScreenLg ? 700:1100,
-    height: isScreenLg ? 400:600,
+    width: isScreenLg ? 800 : 1100,
+    height: isScreenLg ? 330 : 600,
     sx: {
       [`.${axisClasses.left} .${axisClasses.label}`]: {
         transform: 'translate(-20px, 0)',
@@ -71,18 +71,18 @@ const SalesQuantity = ({isScreenLg}) => {
 
   return (
     <Box gridColumn="span 8" gridRow="span 4" backgroundColor={colors.primary[400]}
-    borderRadius="5px" border="2px solid gray">
+      borderRadius="5px" border="2px solid gray">
       <Typography variant="h4" fontWeight="600" sx={{ padding: "20px" }}>
         Wochen Übersicht
       </Typography>
       <Box display={"flex"} justifyContent={"center"}>
-      <BarChart
+        <BarChart
           dataset={dataset}
           xAxis={[{ scaleType: 'band', dataKey: 'month' }]}
           series={[
-            { dataKey: 'london', label: 'Neue Ladeeinheiten', valueFormatter, color:colors.blueAccent[400],borderRadius:"5px" },
-            { dataKey: 'paris', label: 'Rausgefahrende Ladeeinheiten', valueFormatter,color:colors.greenAccent[500]  },
-            { dataKey: 'newYork', label: 'Gäste', valueFormatter,color:colors.redAccent[400]  },
+            { dataKey: 'london', label: 'Neue Ladeeinheiten', valueFormatter, color: colors.blueAccent[400], borderRadius: "5px" },
+            { dataKey: 'paris', label: 'Rausgefahrende Ladeeinheiten', valueFormatter, color: colors.greenAccent[500] },
+            { dataKey: 'newYork', label: 'Gäste', valueFormatter, color: colors.redAccent[400] },
           ]}
           {...chartSetting}
         />
