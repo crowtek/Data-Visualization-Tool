@@ -8,14 +8,12 @@ const CountDamageCar = ({vehicleData}) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode)
 
-
     const filteredVehicles = useMemo(()=> {
         const vehicleEmpty = vehicleData.filter((vehicle => vehicle.status === "empty"));
         const vehicleFull = vehicleData.filter((vehicle => vehicle.status === "full"));
         const vehicleTeilbeladen = vehicleData.filter((vehicle => vehicle.status === "teilbeladen"));
         return {vehicleEmpty,vehicleFull,vehicleTeilbeladen}
     },[vehicleData])
-
 
     return (
         <Box gridColumn="span 3" gridRow="span 2" sx={boxStyle(colors)}>
@@ -29,7 +27,6 @@ const CountDamageCar = ({vehicleData}) => {
                 }}
                 animationTime={400}
             />
-            
         </Box>
     )
 }
