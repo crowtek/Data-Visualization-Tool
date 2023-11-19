@@ -13,15 +13,15 @@ const Leistand = () => {
   const [table, setTable] = useState("LEITSTAND")
 
   return (
-    <Box m="20px">
-      <TableNavigation setTable={setTable} table={table}/>
+    <Box m="20px" mt={"0px"}>
+      <TableNavigation setTable={setTable} table={table} />
 
       {
-        table === "LEITSTAND" ? (<Leitstand userData={mockDataVehicles}/>) :
-        table === "HISTORY" ? (<HistoryTable userData={mockDataVehicles}/>) : 
-        (<ZulaufTable userData={mockDataVehicles}/>)
-        }
-      
+        table === "LEITSTAND" ? (<Leitstand userData={mockDataVehicles} />) :
+          table === "HISTORY" ? (<HistoryTable userData={mockDataVehicles} />) :
+            (<ZulaufTable userData={mockDataVehicles} />)
+      }
+
     </Box>
   );
 };

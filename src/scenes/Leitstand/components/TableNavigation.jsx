@@ -1,39 +1,39 @@
-import { Box,Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
-const TableNavigation = ({table,setTable}) => {
-    
-    const handleTableChange = (event) => {
-        const buttonValue = event.target.innerText;
-        console.log(buttonValue)
-        setTable(buttonValue)
-    }
+const TableNavigation = ({ table, setTable }) => {
 
-    return (
-        <Box sx={{display:"flex", justifyContent:"flex-end", gap:5, marginBlock:2}}>
-        <Box sx={{display:"flex", justifyContent:"space-between", gap:2}}>
-          <Button 
-            variant={table === "LEITSTAND" ? "contained" : "outlined"}
-            onClick={handleTableChange}
-          >
-              Leitstand
-          </Button>
+  const handleTableChange = (event) => {
+    const buttonValue = event.target.innerText;
+    console.log(buttonValue)
+    setTable(buttonValue)
+  }
 
-          <Button
-            variant={table === "HISTORY" ? "contained" : "outlined"}
-            onClick={handleTableChange}
-          >
-            History
-          </Button>
+  return (
+    <Box sx={{ display: "flex", justifyContent: "flex-end", gap: 5, mb: "10px" }}>
+      <Box sx={{ display: "flex", justifyContent: "space-between", gap: 2 }}>
+        <Button
+          variant={table === "LEITSTAND" ? "contained" : "outlined"}
+          onClick={handleTableChange}
+        >
+          Leitstand
+        </Button>
 
-          <Button 
-            variant={table === "ZULAUF" ? "contained" : "outlined"}
-            onClick={handleTableChange}
-          >
-            Zulauf
-          </Button>
-        </Box>
+        <Button
+          variant={table === "HISTORY" ? "contained" : "outlined"}
+          onClick={handleTableChange}
+        >
+          History
+        </Button>
+
+        <Button
+          variant={table === "ZULAUF" ? "contained" : "outlined"}
+          onClick={handleTableChange}
+        >
+          Zulauf
+        </Button>
       </Box>
-    )
+    </Box>
+  )
 }
 
 export default TableNavigation;
