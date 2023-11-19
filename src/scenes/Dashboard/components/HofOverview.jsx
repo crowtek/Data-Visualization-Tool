@@ -2,7 +2,7 @@ import StatBox from "../../../components/StatBox";
 import { useTheme, Box } from "@mui/material";
 import { tokens } from "../../../theme";
 
-const CarCount = ({ vehicleData,zulaufData }) => {
+const CarCount = ({ vehicleData,zulaufData,historyData }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
@@ -22,7 +22,7 @@ const CarCount = ({ vehicleData,zulaufData }) => {
             <StatBox
                 title="Hof Übersicht"
                 labels={{first:"LE auf Hof", second:"LE in Zulauf", third:"Hof verlassen"}}
-                chartValues={{first:vehicleData.length, second:zulaufData.length, third:60}}
+                chartValues={{first:vehicleData.length, second:zulaufData.length, third:historyData.length}}
                 animationTime={200}
             />
         </Box>
