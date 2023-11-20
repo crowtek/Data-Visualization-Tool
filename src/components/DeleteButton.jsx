@@ -2,9 +2,9 @@ import React, { useState, useCallback } from 'react';
 import Button from '@mui/material/Button';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import { useTheme } from '@mui/material/styles';
-import { tokens } from "../../../theme";
+import { tokens } from "../theme";
 
-const UserTrModal = (props) => {
+const DeleteButton = (props) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const [open, setOpen] = useState(false);
@@ -22,7 +22,7 @@ const UserTrModal = (props) => {
         })
             .then(response => {
                 if (response.ok) {
-                    // Request was successful, rerender
+                    // Request was successful, rerender 
                     setOpen(false);
                 } else {
                     console.error('Error deleting user:', response.status, response.statusText);
@@ -41,4 +41,4 @@ const UserTrModal = (props) => {
     );
 }
 
-export default UserTrModal;
+export default DeleteButton;
