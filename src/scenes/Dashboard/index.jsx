@@ -17,10 +17,8 @@ const Dashboard = () => {
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
-    <Box m="20px" mt="0px">
-
-      <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="repeat(6, 1fr)" gap="10px"
-      >
+    <Box paddingX="20px" height={"91vh"}>
+      <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="repeat(6, 1fr)" gap="10px" height={"100%"}>
         <Yard vehicleData={mockDataVehicles} zulaufData={mockDataVehiclesZulauf} historyData={mockDataVehiclesHistory}/>
         <Vehicles vehicleData={mockDataVehicles} />
         <Damages vehicleData={mockDataVehicles}/>
