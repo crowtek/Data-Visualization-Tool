@@ -39,7 +39,7 @@ const Erfassung = () => {
     }
 
     return (
-        <Box sx={{display:"flex", justifyContent:"center"}}> 
+        <Box sx={{display:"flex", justifyContent:"flex-start"}}> 
             <Box component="form" onSubmit={handleSubmit} noValidate p={"20px"} >
                 <FormTypeSelect formType={formData.formType} handleChange={handleChange}/>
                 {  
