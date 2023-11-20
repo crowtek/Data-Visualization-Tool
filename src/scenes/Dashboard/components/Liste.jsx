@@ -17,10 +17,10 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
       <Table>
         <TableHead>
           <TableRow > 
-            <TableCell sx={{fontSize:screenSize ? "16":"20px",fontWeight:"bold"}}>Kennzeichen</TableCell>
-            <TableCell sx={{fontSize:screenSize ? "16":"20px",fontWeight:"bold"}}>{screenSize ? "" : "Eingang"}</TableCell>
-            <TableCell sx={{fontSize:screenSize ? "16":"20px",fontWeight:"bold"}}>Standort</TableCell>
-            <TableCell sx={{fontSize:screenSize ? "16":"20px",fontWeight:"bold"}}>Relation</TableCell>
+            <TableCell sx={{fontSize:screenSize ? "16":"18px",fontWeight:"bold"}}>{screenSize ? "" : "Eingang"}</TableCell>
+            <TableCell sx={{fontSize:screenSize ? "16":"18px",fontWeight:"bold"}}>Kennzeichen</TableCell>
+            <TableCell sx={{fontSize:screenSize ? "16":"18px",fontWeight:"bold"}}>Standort</TableCell>
+            <TableCell sx={{fontSize:screenSize ? "16":"18px",fontWeight:"bold"}}>Relation</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -28,8 +28,10 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
           if(i <= numberOfListElements){
             return(
               <TableRow key={i}>
+                <TableCell sx={{color:colors.blueAccent[300], fontSize:"18px",letterSpacing:"0.7px"}}>
+                  {screenSize ? "" : car.incomingTime}
+                </TableCell>
                 <TableCell >{car.vehicle}</TableCell>
-                <TableCell>{screenSize ? "" : car.incomingTime}</TableCell>
                 <TableCell>{car.parkPlace}</TableCell>
                 <TableCell>{car.relation}</TableCell>
               </TableRow>
