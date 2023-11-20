@@ -40,12 +40,7 @@ const Erfassung = () => {
 
     return (
         <Box sx={{display:"flex", justifyContent:"center"}}> 
-            <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, width:"30vw" }}>
-                { 
-                    formData.formType === "Neuer Benutzer" ? (<Typography variant="h2" mb={4}>Neuen Benutzer Anlegen</Typography>):
-                    (<Typography variant="h2" mb={4}>Neue Ladeeinheit Planen</Typography>)
-                }
-
+            <Box component="form" onSubmit={handleSubmit} noValidate p={"20px"} >
                 <FormTypeSelect formType={formData.formType} handleChange={handleChange}/>
                 {  
                     formData.formType === "Neuer Benutzer" ? (<NewUserForm handleChange={handleChange} formData={formData}/>) : 
