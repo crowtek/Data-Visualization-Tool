@@ -2,14 +2,14 @@
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { mockDataVehicles,mockDataVehiclesZulauf,mockDataVehiclesHistory,mockDataTeam} from "../../data/mockData";
 
-import HofOverview from "./components/HofOverview";
-import LeOverview from "./components/LeOverview";
-import LeSchaden from "./components/Damages";
-import EventToday from "./components/EventToday";
+import Yard from "./components/Yard";
+import Vehicles from "./components/Vehicles";
+import Damages from "./components/Damages";
+import Events from "./components/Events";
 import WeeklyOverview from "./components/WeeklyOverview";
 import List from "./components/Liste";
 import UserOnline from "./components/UserOnline";
-import PlaceOverview from "./components/PlaceOverview";
+import Gates from "./components/Gates";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -20,12 +20,12 @@ const Dashboard = () => {
 
       <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="repeat(6, 1fr)" gap="10px"
       >
-        <HofOverview vehicleData={mockDataVehicles} zulaufData={mockDataVehiclesZulauf} historyData={mockDataVehiclesHistory}/>
-        <LeOverview vehicleData={mockDataVehicles} />
-        <LeSchaden vehicleData={mockDataVehicles}/>
-        <EventToday />
+        <Yard vehicleData={mockDataVehicles} zulaufData={mockDataVehiclesZulauf} historyData={mockDataVehiclesHistory}/>
+        <Vehicles vehicleData={mockDataVehicles} />
+        <Damages vehicleData={mockDataVehicles}/>
+        <Events />
         <UserOnline userData={mockDataTeam}/>
-        <PlaceOverview />
+        <Gates />
         <WeeklyOverview isScreenLg={isScreenLg} />
         <List vehicleData={mockDataVehicles} screenSize={isScreenLg} />
       </Box>
