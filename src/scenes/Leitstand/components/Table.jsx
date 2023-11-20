@@ -7,11 +7,10 @@ import { TableStyle as TableStyleImport } from "../../../styles/TableStyle";
 import DeleteButton from "../../../components/DeleteButton";
 import VehicleStatus from "./VehicleStatus";
 
-const LeitstandTable = ({ userData }) => {
+const LeitstandTable = ({ userData, screenSize }) => {
   const TableStyle = useMemo(() => {
     return TableStyleImport;
   }, [])
-
 
   const columns = useMemo(() => {
     return [
@@ -29,7 +28,7 @@ const LeitstandTable = ({ userData }) => {
   }, [])
 
   return (
-    <Box height="79vh" sx={TableStyle} >
+    <Box height={screenSize ? "70vh":"80vh"} sx={TableStyle} >
       <DataGrid
         rows={userData}
         columns={columns}
