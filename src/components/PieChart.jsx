@@ -36,6 +36,12 @@ const PieChartComponent = ({ labels, chartValues,animationTime,isScreenSmall }) 
                         cy: isScreenSmall ? 55: 80,
                     },
                 ]}
+                slotProps={{
+                    legend: {
+                        itemGap: isScreenSmall ? 10 : 20,
+                        markGap:isScreenSmall ? 5 : 10,
+                    },
+                }}
                 width={isScreenSmall ? 280 : 400}
                 height={isScreenSmall ? 120: 160}
             />
