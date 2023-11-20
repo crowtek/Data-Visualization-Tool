@@ -1,6 +1,6 @@
 
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-import { mockDataVehicles,mockDataVehiclesZulauf,mockDataVehiclesHistory } from "../../data/mockData";
+import { mockDataVehicles,mockDataVehiclesZulauf,mockDataVehiclesHistory,mockDataTeam} from "../../data/mockData";
 
 import HofOverview from "./components/HofOverview";
 import LeOverview from "./components/LeOverview";
@@ -24,7 +24,7 @@ const Dashboard = () => {
         <LeOverview vehicleData={mockDataVehicles} />
         <LeSchaden vehicleData={mockDataVehicles}/>
         <EventToday />
-        <UserOnline />
+        <UserOnline userData={mockDataTeam}/>
         <PlaceOverview />
         <WeeklyOverview isScreenLg={isScreenLg} />
         <List vehicleData={mockDataVehicles} screenSize={isScreenLg} />
