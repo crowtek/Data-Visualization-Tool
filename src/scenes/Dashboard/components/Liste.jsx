@@ -1,5 +1,6 @@
-import { Box, Typography, useTheme,Table ,TableBody,TableCell,TableHead,TableRow} from "@mui/material";
+import { Box, useTheme,Table ,TableBody,TableCell,TableHead,TableRow} from "@mui/material";
 import { tokens } from "../../../theme";
+import { boxStyle } from "../../../styles/DashboardBoxStyle";
 
 const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
   const theme = useTheme();
@@ -12,18 +13,7 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
   });
   
   return (
-    <Box 
-      gridColumn="span 4" 
-      gridRow="span 4" 
-      backgroundColor={colors.primary[400]} 
-      borderRadius="5px"
-      border="2px solid gray"
-    >
-      
-      <Typography fontSize={screenSize ? "18px": "22px"} fontWeight="bold"  p={"5px 15px"}>
-        Neuste aufgenommene Ladeeinheiten
-      </Typography>
-
+    <Box gridColumn="span 4" gridRow="span 4" sx={boxStyle(colors)}>
       <Table>
         <TableHead>
           <TableRow > 

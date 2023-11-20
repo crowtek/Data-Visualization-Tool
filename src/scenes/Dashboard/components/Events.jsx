@@ -5,7 +5,6 @@ import { useTheme,Box } from "@mui/material";
 import { tokens } from "../../../theme";
 import { boxStyle } from "../../../styles/DashboardBoxStyle";
 
-
 const CountEventsToday = ({events}) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);

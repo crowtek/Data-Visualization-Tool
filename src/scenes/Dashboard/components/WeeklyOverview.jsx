@@ -2,6 +2,7 @@ import { Box, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../../theme";
 import { BarChart } from '@mui/x-charts/BarChart';
 import { axisClasses } from '@mui/x-charts';
+import { boxStyle } from "../../../styles/DashboardBoxStyle";
 
 const dataset = [
   {
@@ -70,8 +71,7 @@ const SalesQuantity = ({ isScreenLg }) => {
   };
 
   return (
-    <Box gridColumn="span 8" gridRow="span 4" backgroundColor={colors.primary[400]}
-      borderRadius="5px" border="2px solid gray">
+    <Box gridColumn="span 8" gridRow="span 4" sx={boxStyle(colors)}>
       <Typography variant="h4" fontWeight="600" sx={{ padding: "20px" }}>
         Wochen Übersicht
       </Typography>
