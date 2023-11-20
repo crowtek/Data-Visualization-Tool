@@ -502,7 +502,7 @@ export const mockDataVehiclesZulauf = [
     incomingTime: "11:00 21.09.2023",
     takeAppointment: "15:00 04.10.2023",
     parkPlace: "003",
-    status: "ready",
+    status: "full",
     typ: "Trailer",
     info: "",
     damage: "",
@@ -529,7 +529,7 @@ export const mockDataVehiclesZulauf = [
     incomingTime: "09:30 21.09.2023",
     takeAppointment: "14:15 05.10.2023",
     parkPlace: "005",
-    status: "in transit",
+    status: "full",
     typ: "Truck",
     info: "Fragile items",
     land: {
@@ -555,7 +555,7 @@ export const mockDataVehiclesZulauf = [
     incomingTime: "14:45 22.09.2023",
     takeAppointment: "12:30 06.10.2023",
     parkPlace: "008",
-    status: "delayed",
+    status: "empty",
     typ: "Trailer",
     info: "High-value goods",
     land: {
@@ -581,7 +581,7 @@ export const mockDataVehiclesZulauf = [
     incomingTime: "10:15 23.09.2023",
     takeAppointment: "16:00 07.10.2023",
     parkPlace: "009",
-    status: "ready",
+    status: "teilbeladen",
     typ: "Truck",
     info: "Perishable goods",
     land: {
@@ -607,7 +607,7 @@ export const mockDataVehiclesZulauf = [
     incomingTime: "12:30 24.09.2023",
     takeAppointment: "11:45 08.10.2023",
     parkPlace: "010",
-    status: "in transit",
+    status: "full",
     typ: "Trailer",
     info: "",
     land: {

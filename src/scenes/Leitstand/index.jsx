@@ -3,9 +3,9 @@ import { Box,useMediaQuery,useTheme } from "@mui/material";
 import { mockDataVehicles,mockDataVehiclesZulauf } from "../../data/mockData";
 
 import TableNavigation from "./components/TableNavigation";
-import Leitstand from "./components/Table";
-import HistoryTable from "./components/HistoryTable";
-import ZulaufTable from "./components/ZulaufTable";
+import Leitstand from "./components/Leistand";
+import History from "./components/History";
+import Zulauf from "./components/Zulauf";
 
 const Leistand = () => {
   const [table, setTable] = useState("LEITSTAND");
@@ -17,8 +17,8 @@ const Leistand = () => {
       <TableNavigation setTable={setTable} table={table} screenSize={isScreenLg}/>
       {
         table === "LEITSTAND" ? (<Leitstand userData={mockDataVehicles} />) :
-          table === "HISTORY" ? (<HistoryTable userData={mockDataVehicles} />) :
-            (<ZulaufTable userData={mockDataVehiclesZulauf} />)
+          table === "HISTORY" ? (<History userData={mockDataVehicles} />) :
+            (<Zulauf userData={mockDataVehiclesZulauf} />)
       }
 
     </Box>

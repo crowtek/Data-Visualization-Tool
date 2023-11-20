@@ -1,19 +1,14 @@
-import { Box, useTheme } from "@mui/material";
-import { tokens } from "../../../theme";
-
-import HighlightOffOutlinedIcon from '@mui/icons-material/HighlightOffOutlined';
-import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
-import LoopOutlinedIcon from '@mui/icons-material/LoopOutlined';
+import { Box } from "@mui/material";
+import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
+import CircleIcon from '@mui/icons-material/Circle';
+import DownloadingOutlinedIcon from '@mui/icons-material/DownloadingOutlined';
 
 const VehicleStatus = ({ status }) => {
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
-
     return (
         <Box>
-            {status === "ready" && <CheckCircleOutlineOutlinedIcon sx={{color:colors.greenAccent[600]}}/>}
-            {status === "fail" && <HighlightOffOutlinedIcon sx={{color:colors.redAccent[500]}}/>}
-            {status === "pending" && <LoopOutlinedIcon sx={{color:colors.primary[200]}}/>}
+            {status === "empty" && <CircleOutlinedIcon />}
+            {status === "full" && <CircleIcon/>}
+            {status === "teilbeladen" && <DownloadingOutlinedIcon />}
         </Box>
     )
 }
