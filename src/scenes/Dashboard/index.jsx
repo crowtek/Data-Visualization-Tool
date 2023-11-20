@@ -1,6 +1,7 @@
 
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-import { mockDataVehicles,mockDataVehiclesZulauf,mockDataVehiclesHistory,mockDataTeam} from "../../data/mockData";
+import { mockDataVehicles,mockDataVehiclesZulauf,mockDataVehiclesHistory,mockDataTeam,mockEvents} from "../../data/mockData";
+
 
 import Yard from "./components/Yard";
 import Vehicles from "./components/Vehicles";
@@ -23,7 +24,7 @@ const Dashboard = () => {
         <Yard vehicleData={mockDataVehicles} zulaufData={mockDataVehiclesZulauf} historyData={mockDataVehiclesHistory}/>
         <Vehicles vehicleData={mockDataVehicles} />
         <Damages vehicleData={mockDataVehicles}/>
-        <Events />
+        <Events events={mockEvents}/>
         <UserOnline userData={mockDataTeam}/>
         <Gates />
         <WeeklyOverview isScreenLg={isScreenLg} />

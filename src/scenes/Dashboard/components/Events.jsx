@@ -1,21 +1,22 @@
+import { useMemo } from "react";
 import StatBox from "../../../components/StatBox";
 import EventIcon from '@mui/icons-material/Event';
 import { useTheme,Box } from "@mui/material";
 import { tokens } from "../../../theme";
-import { mockEvents } from "../../../data/mockData"
-import { useMemo } from "react";
+import { boxStyle } from "../../../styles/DashboardBoxStyle";
 
-const CountEventsToday = () => {
+
+const CountEventsToday = ({events}) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
     const currentDate = new Date().toLocaleDateString('en-CA')
     const todayEvents = useMemo(() => {
-        return mockEvents.filter(event => event.date === currentDate)
-    },[currentDate])
+        return events.filter(event => event.date === currentDate)
+    },[currentDate,events])
 
     return (
-        <Box gridColumn="span 3" gridRow="span 1" backgroundColor={colors.primary[400]} borderRadius="5px" border="2px solid gray">
+        <Box gridColumn="span 3" gridRow="span 1" sx={boxStyle(colors)}>
             <StatBox
                 title="Termine Heute"
                 subtitle= {todayEvents.length + " Events"}
