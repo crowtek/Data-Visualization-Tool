@@ -14,8 +14,8 @@ const FormTypeSelect = ({formType,handleChange}) => {
                 name="formType"
             >
                 <MenuItem value={"Neuer Benutzer"}>Neuer Benutzer</MenuItem>
-                <MenuItem value={"Neue Ladeeinheit"}>Neue Ladeeinheit</MenuItem>
-                <MenuItem value={"Ladeeinheit Planen"}>Ladeeinheit Planen</MenuItem>
+                <MenuItem value={"Ladeeinheit Planen"}>Neue Ladeeinheit (Zulauf)</MenuItem>
+                <MenuItem value={"Neue Ladeeinheit"}>Neue Ladeeinheit (Leitstand)</MenuItem>
             </Select>
         </FormControl>
     )

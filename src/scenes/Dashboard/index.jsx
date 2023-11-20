@@ -4,7 +4,7 @@ import { mockDataVehicles,mockDataVehiclesZulauf,mockDataVehiclesHistory } from 
 
 import HofOverview from "./components/HofOverview";
 import LeOverview from "./components/LeOverview";
-import LeSchaden from "./components/LeSchaden";
+import LeSchaden from "./components/Damages";
 import EventToday from "./components/EventToday";
 import WeeklyOverview from "./components/WeeklyOverview";
 import List from "./components/Liste";
@@ -22,7 +22,7 @@ const Dashboard = () => {
       >
         <HofOverview vehicleData={mockDataVehicles} zulaufData={mockDataVehiclesZulauf} historyData={mockDataVehiclesHistory}/>
         <LeOverview vehicleData={mockDataVehicles} />
-        <LeSchaden />
+        <LeSchaden vehicleData={mockDataVehicles}/>
         <EventToday />
         <UserOnline />
         <PlaceOverview />

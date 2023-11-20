@@ -88,6 +88,7 @@ export const mockDataVehicles = [
     status: "empty",
     typ: "Trailer",
     info: "",
+    damage: "rechte seite",
     land: {
       kurz: "DE",
       name: "Deutschland"
@@ -114,6 +115,7 @@ export const mockDataVehicles = [
     status: "full",
     typ: "Truck",
     info: "Fragile items",
+    damage: "",
     land: {
       kurz: "AT",
       name: "Austria"
@@ -140,6 +142,7 @@ export const mockDataVehicles = [
     status: "teilbeladen",
     typ: "Trailer",
     info: "High-value goods",
+    damage: "",
     land: {
       kurz: "DE",
       name: "Deutschland"
@@ -166,6 +169,7 @@ export const mockDataVehicles = [
     status: "empty",
     typ: "Truck",
     info: "Perishable goods",
+    damage: "Boden",
     land: {
       kurz: "FR",
       name: "France"
@@ -192,6 +196,7 @@ export const mockDataVehicles = [
     status: "full",
     typ: "Trailer",
     info: "",
+    damage: "",
     land: {
       kurz: "NL",
       name: "Netherlands"
@@ -218,6 +223,7 @@ export const mockDataVehicles = [
     status: "teilbeladen",
     typ: "Truck",
     info: "Fragile electronics",
+    damage: "",
     land: {
       kurz: "DK",
       name: "Denmark"
@@ -244,6 +250,7 @@ export const mockDataVehicles = [
     status: "empty",
     typ: "Trailer",
     info: "Hazardous materials",
+    damage: "",
     land: {
       kurz: "AT",
       name: "Austria"
@@ -270,6 +277,7 @@ export const mockDataVehicles = [
     status: "full",
     typ: "Truck",
     info: "",
+    damage: "",
     land: {
       kurz: "PL",
       name: "Poland"
@@ -296,6 +304,7 @@ export const mockDataVehicles = [
     status: "teilbeladen",
     typ: "Trailer",
     info: "Perishable goods",
+    damage: "",
     land: {
       kurz: "BE",
       name: "Belgium"
@@ -322,6 +331,7 @@ export const mockDataVehicles = [
     status: "empty",
     typ: "Truck",
     info: "Fragile items",
+    damage: "",
     land: {
       kurz: "NO",
       name: "Norway"
@@ -348,6 +358,7 @@ export const mockDataVehicles = [
     status: "full",
     typ: "Trailer",
     info: "",
+    damage: "",
     land: {
       kurz: "CH",
       name: "Switzerland"
@@ -374,6 +385,7 @@ export const mockDataVehicles = [
     status: "teilbeladen",
     typ: "Truck",
     info: "High-value goods",
+    damage: "",
     land: {
       kurz: "SE",
       name: "Sweden"
@@ -400,6 +412,7 @@ export const mockDataVehicles = [
     status: "empty",
     typ: "Trailer",
     info: "Fragile electronics",
+    damage: "",
     land: {
       kurz: "IT",
       name: "Italy"
@@ -426,6 +439,7 @@ export const mockDataVehicles = [
     status: "full",
     typ: "Truck",
     info: "",
+    damage: "",
     land: {
       kurz: "ES",
       name: "Spain"
@@ -452,6 +466,7 @@ export const mockDataVehicles = [
     status: "teilbeladen",
     typ: "Trailer",
     info: "Perishable goods",
+    damage: "",
     land: {
       kurz: "UK",
       name: "United Kingdom"
@@ -481,6 +496,7 @@ export const mockDataVehiclesZulauf = [
     status: "ready",
     typ: "Trailer",
     info: "",
+    damage: "",
     land: {
       kurz: "DE",
       name: "Deutschland"
