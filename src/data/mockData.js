@@ -1020,23 +1020,26 @@ export const mockDataVehiclesHistory = [
   },
 ]
 
+
+const today = new Date();
+const formattedDate = today.toISOString().split('T')[0];
 export const mockEvents = [
   {
     key: "1",
     name: "Car XYZ incoming",
-    date: "2023-09-23",
+    date: formattedDate,
     madeBy: "John Doa"
   },
   {
     key: "2",
     name: "Car ABC appointment",
-    date: "2023-09-22",
+    date: formattedDate,
     madeBy: "Selena Picker"
   },
   {
     key: "3",
     name: "New Coworker",
-    date: "2023-09-22",
+    date: formattedDate,
     madeBy: "Meik Greenwood"
   },
 ];
