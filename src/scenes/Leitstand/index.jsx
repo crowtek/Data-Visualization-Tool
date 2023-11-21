@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Box,useMediaQuery,useTheme } from "@mui/material";
-import { mockDataVehicles,mockDataVehiclesZulauf } from "../../data/mockData";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { mockDataVehicles, mockDataVehiclesZulauf } from "../../data/mockData";
 
 import TableNavigation from "./components/TableNavigation";
 import Leitstand from "./components/Leistand";
@@ -13,8 +13,8 @@ const Leistand = () => {
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
-    <Box p="20px" height={"90vh"} >
-      <TableNavigation setTable={setTable} table={table} screenSize={isScreenLg}/>
+    <Box paddingX="20px" height={"88vh"} >
+      <TableNavigation setTable={setTable} table={table} screenSize={isScreenLg} />
       {
         table === "LEITSTAND" ? (<Leitstand userData={mockDataVehicles} />) :
           table === "HISTORY" ? (<History userData={mockDataVehicles} />) :

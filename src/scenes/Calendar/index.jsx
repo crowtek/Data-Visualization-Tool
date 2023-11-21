@@ -1,5 +1,5 @@
 
-import { Box} from "@mui/material";
+import { Box } from "@mui/material";
 import Header from "../../components/Header";
 import { mockEvents } from "../../data/mockData"
 
@@ -9,11 +9,10 @@ import CalendarComponent from "./components/CalendarComponent";
 const Calendar = () => {
   return (
     <Box m="20px">
-      <Header title="Calendar"/>
 
       <Box display="flex" justifyContent="space-between" mt={"10px"}>
         <EventList />
-        <CalendarComponent eventData={mockEvents}/>
+        <CalendarComponent eventData={mockEvents} />
       </Box>
     </Box>
   );
