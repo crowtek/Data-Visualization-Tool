@@ -24,31 +24,12 @@ cd projectname
 npm install
 
 
-### 2. **Step-by-Step Instructions:**
-
-Break down the installation process into steps. Numbered lists can be very effective for this. For example:
-
-```markdown
-## Installation
-
 Follow these steps to set up the project:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/projectname.git
-
-
+git clone https://github.com/yourusername/projectname.git
 cd projectname
 npm install
 
-### 3. **Include Prerequisites:**
-
-If there are any prerequisites like having Node.js installed, mention them at the beginning of the installation section. For example:
-
-```markdown
-## Installation
-
-### Prerequisites
 
 - Ensure you have Node.js installed on your system.
 ```bash
