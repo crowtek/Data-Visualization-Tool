@@ -12,7 +12,14 @@ Real-time data updates
 Customizable color schemes and layouts
 Responsive design for various devices
 
-Installation
+## React
+
+I optimize the performance of my components by preventing them from re-rendering unless specific data changes.
+![Alt text](image.png)
+
+## Project Architecture
+
+![Alt text](image-1.png)
 
 ## Installation
 
