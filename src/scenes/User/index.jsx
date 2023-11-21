@@ -1,8 +1,5 @@
 import { Box } from "@mui/material";
 import { mockDataTeam } from "../../data/mockData";
-import Header from "../../components/Header";
-
-import NewUserButton from "./components/NewUserButton";
 import UserOverviewTable from "./components/Table";
 
 const Team = () => {
