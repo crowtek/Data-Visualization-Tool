@@ -7,12 +7,7 @@ import UserOverviewTable from "./components/Table";
 
 const Team = () => {
   return (
-    <Box m={"20px"}>
-      <Box sx={{ display: "flex", justifyContent: "space-between",marginBottom:"15px" }}>
-        <Header title="User List" />
-        <NewUserButton userData={mockDataTeam} />
-      </Box>
-
+    <Box paddingX={"20px"}>
       <UserOverviewTable userData={mockDataTeam} />
     </Box>
   );
