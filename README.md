@@ -36,6 +36,3 @@ npm install
 
 
 `````
-
-License
-State the license under which your project is made available.
