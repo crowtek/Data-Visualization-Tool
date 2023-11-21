@@ -72,9 +72,6 @@ const SalesQuantity = ({ isScreenLg }) => {
 
   return (
     <Box gridColumn="span 8" gridRow="span 4" sx={boxStyle(colors)}>
-      <Typography variant="h4" fontWeight="600" sx={{ padding: "20px" }}>
-        Wochen Übersicht
-      </Typography>
       <Box display={"flex"} justifyContent={"center"}>
         <BarChart
           dataset={dataset}

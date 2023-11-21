@@ -1,6 +1,6 @@
 
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-import { mockDataVehicles,mockDataVehiclesZulauf,mockDataVehiclesHistory,mockDataTeam,mockEvents} from "../../data/mockData";
+import { mockDataVehicles, mockDataVehiclesZulauf, mockDataVehiclesHistory, mockDataTeam, mockEvents } from "../../data/mockData";
 
 
 import Yard from "./components/Yard";
@@ -17,13 +17,13 @@ const Dashboard = () => {
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
-    <Box paddingX="20px" height={"91vh"}>
+    <Box paddingX="20px" height={"88vh"}>
       <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="repeat(6, 1fr)" gap="10px" height={"100%"}>
-        <Yard vehicleData={mockDataVehicles} zulaufData={mockDataVehiclesZulauf} historyData={mockDataVehiclesHistory}/>
+        <Yard vehicleData={mockDataVehicles} zulaufData={mockDataVehiclesZulauf} historyData={mockDataVehiclesHistory} />
         <Vehicles vehicleData={mockDataVehicles} />
-        <Damages vehicleData={mockDataVehicles}/>
-        <Events events={mockEvents}/>
-        <UserOnline userData={mockDataTeam}/>
+        <Damages vehicleData={mockDataVehicles} />
+        <Events events={mockEvents} />
+        <UserOnline userData={mockDataTeam} />
         <Gates />
         <WeeklyOverview isScreenLg={isScreenLg} />
         <List vehicleData={mockDataVehicles} screenSize={isScreenLg} />
