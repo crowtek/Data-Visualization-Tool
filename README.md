@@ -5,7 +5,7 @@ Tech: React, Material UI, Data Grid, Light & Dark Mode
 Description
 Provide a brief description of your data visualization tool, highlighting its purpose, core features, and any unique aspects that set it apart from other tools.
 
-Example:
+![Alt text](<Screenshot (237).png>)
 
 This Project is a dynamic data visualization tool built with React. Designed for interactive and intuitive exploration of complex datasets, it offers a range of customizable charts and graphs to bring data to life.
 
