@@ -18,21 +18,16 @@ Installation
 
 To install this project, run the following commands:
 
-`````bash
-git clone https://github.com/yourusername/projectname.git
-cd projectname
-npm install
-
+```bash
 
 Follow these steps to set up the project:
 
-git clone https://github.com/yourusername/projectname.git
+git clone https://github.com/crowtek/Data-Visualization-Tool.git
 cd projectname
 npm install
 
 
 - Ensure you have Node.js installed on your system.
-````bash
 
 
-`````
+```
