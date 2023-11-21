@@ -3,32 +3,17 @@
 Tech: React, Material UI, Data Grid, Light & Dark Mode
 
 Description
-Provide a brief description of your data visualization tool, highlighting its purpose, core features, and any unique aspects that set it apart from other tools.
+A Tool for Overviewing all the incoming data in a logistics Company built with React.
+Designed for interactive and intuitive exploration of complex datasets, it offers a range of customizable charts and graphs to bring data to life.
 
 ![Alt text](<Screenshot (237).png>)
-
-This Project is a dynamic data visualization tool built with React. Designed for interactive and intuitive exploration of complex datasets, it offers a range of customizable charts and graphs to bring data to life.
-
-Features
-List the main features of your tool. This could include types of visualizations, data manipulation capabilities, interactivity features, etc.
-
-Example:
 
 Interactive charts and graphs
 Real-time data updates
 Customizable color schemes and layouts
 Responsive design for various devices
-Demo
-If you have a live version, provide a link. If not, consider adding screenshots or a video demonstration.
 
-Example:
-
-Check out the live demo here. Below are some screenshots showcasing the tool's capabilities:
-
-[Screenshot 1 Description]
-[Screenshot 2 Description]
 Installation
-Provide step-by-step instructions on how to install your project.
 
 bash
 Copy code
