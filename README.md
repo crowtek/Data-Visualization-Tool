@@ -23,7 +23,7 @@ To install this project, run the following commands:
 Follow these steps to set up the project:
 
 git clone https://github.com/crowtek/Data-Visualization-Tool.git
-cd projectname
+cd Data-Visualization-Tool
 npm install
 
 
