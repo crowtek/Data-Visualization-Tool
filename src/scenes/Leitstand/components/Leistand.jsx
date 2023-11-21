@@ -33,9 +33,7 @@ const LeitstandTable = ({ userData, screenSize }) => {
         rows={userData}
         columns={columns}
         autoPageSize
-        slots={{
-          toolbar: GridToolbar,
-        }}
+        slots={{toolbar: GridToolbar,}}
       />
     </Box>
   )
