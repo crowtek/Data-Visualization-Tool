@@ -18,7 +18,7 @@ Installation
 
 To install this project, run the following commands:
 
-````bash
+`````bash
 git clone https://github.com/yourusername/projectname.git
 cd projectname
 npm install
@@ -32,24 +32,10 @@ npm install
 
 
 - Ensure you have Node.js installed on your system.
-```bash
+````bash
 
 
-
-Contributing
-Outline how others can contribute to your project. Mention any coding standards or contribution guidelines they should follow.
-
-Example:
-
-Contributions are welcome! Please read our Contributing Guide for details on our code of conduct, and the process for submitting pull requests.
+`````
 
 License
 State the license under which your project is made available.
-
-Example:
-
-This project is licensed under the MIT License - see the LICENSE.md file for details.
-
-Acknowledgments
-Mention any individuals, organizations, or resources that were instrumental in your development process.
-````
