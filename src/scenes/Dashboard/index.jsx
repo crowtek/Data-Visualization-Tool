@@ -16,9 +16,26 @@ const Dashboard = () => {
   const theme = useTheme();
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
 
+  const gridStyle = () => ({
+    display:"grid", 
+    gridTemplateColumns:"repeat(12, 1fr)",
+    gridAutoRows:"repeat(6, 1fr)",
+    gap:"10px",
+    height:"100%"
+  }); 
+  const mobileGridStyle = () => ({
+    display:"grid", 
+    gridTemplateColumns:"1fr",
+    gridAutoRows:"repeat(12, 1fr)",
+    gap:"10px",
+    height:"100%"
+  }); 
+  
+
+
   return (
     <Box paddingX="20px" height={"88vh"}>
-      <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="repeat(6, 1fr)" gap="10px" height={"100%"}>
+      <Box sx={isScreenLg ? mobileGridStyle: gridStyle}>
         <Yard vehicleData={mockDataVehicles} zulaufData={mockDataVehiclesZulauf} historyData={mockDataVehiclesHistory} />
         <Vehicles vehicleData={mockDataVehicles} />
         <Damages vehicleData={mockDataVehicles} />

@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import { tokens } from "../../../theme";
 import { BarChart } from '@mui/x-charts/BarChart';
 import { axisClasses } from '@mui/x-charts';
@@ -71,7 +71,7 @@ const SalesQuantity = ({ isScreenLg }) => {
   };
 
   return (
-    <Box gridColumn="span 8" gridRow="span 4" sx={boxStyle(colors)}>
+    <Box gridColumn="span 8" gridRow="span 4" sx={isScreenLg ? {display:"none"} : boxStyle(colors)} >
       <Box display={"flex"} justifyContent={"center"}>
         <BarChart
           dataset={dataset}
