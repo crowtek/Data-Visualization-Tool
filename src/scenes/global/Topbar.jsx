@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, IconButton, useTheme,Typography } from "@mui/material";
+import { Box, IconButton, useTheme } from "@mui/material";
 import { useContext } from "react";
 import { ColorModeContext } from "../../theme";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
@@ -8,7 +8,6 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SettingsModal from "./SettingsModal";
-import PageTitle from "./PageTitle";
 
 const Topbar = () => {
   const theme = useTheme();
@@ -17,8 +16,7 @@ const Topbar = () => {
   const handleOpen = () => setShowModal(true);
 
   return (
-    <Box display="flex" justifyContent="space-between" p={2}>
-      <PageTitle />
+    <Box display="flex" justifyContent="flex-end" p={2}>
       {/* ICONS */}
       <Box display="flex">
         <IconButton onClick={colorMode.toggleColorMode}>
