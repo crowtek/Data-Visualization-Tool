@@ -1,6 +1,5 @@
 // sidebarStyles.js
 export const sidebarSx = (colors) => ({
-    borderRadius: "5px",
     borderRight: "2px solid gray",
     fontSize: 16,
     "& .pro-sidebar-inner": {
