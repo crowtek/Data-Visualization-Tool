@@ -18,7 +18,9 @@ export const headerStyle = () => ({
 
 export const containerStyle = () => ({
     height:"92vh",
+    maxWidth:"96vw",
     padding:"20px",
+    overflow:"hidden"
 })
 
 export const dashboardGrid = () => ({
