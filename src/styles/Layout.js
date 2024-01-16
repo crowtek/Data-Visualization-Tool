@@ -16,8 +16,19 @@ export const headerStyle = () => ({
     }
 });
 
-
 export const containerStyle = () => ({
     height:"92vh",
     padding:"20px",
 })
+
+export const dashboardGrid = () => ({
+    display:"grid", 
+    gridTemplateColumns:"repeat(12, 1fr)",
+    gridAutoRows:"repeat(6, 1fr)",
+    gap:"10px",
+    height:"100%",
+    [mediaQueries.medium]: {
+        gridTemplateColumns:"1fr",
+        gridAutoRows:"repeat(12, 1fr)",
+    }
+}); 
