@@ -45,7 +45,6 @@ const Dashboard = () => {
         <WeeklyOverview isScreenLg={isScreenLg} />
         <List vehicleData={mockDataVehicles} screenSize={isScreenLg} />
       </Box>
-
     </Box>
   );
 };

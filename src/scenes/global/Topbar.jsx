@@ -8,6 +8,7 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SettingsModal from "./SettingsModal";
+import { headerStyle } from "../../styles/Layout";
 
 const Topbar = () => {
   const theme = useTheme();
@@ -16,7 +17,7 @@ const Topbar = () => {
   const handleOpen = () => setShowModal(true);
 
   return (
-    <Box display="flex" justifyContent="flex-end" p={2}>
+    <Box sx={headerStyle}>
       {/* ICONS */}
       <Box display="flex">
         <IconButton onClick={colorMode.toggleColorMode}>
