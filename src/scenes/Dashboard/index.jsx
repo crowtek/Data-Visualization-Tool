@@ -34,7 +34,7 @@ const Dashboard = () => {
 
 
   return (
-    <Box paddingX="20px" height={"88vh"}>
+    <Box paddingX="20px" height={"90vh"}>
       <Box sx={isScreenLg ? mobileGridStyle: gridStyle}>
         <Yard vehicleData={mockDataVehicles} zulaufData={mockDataVehiclesZulauf} historyData={mockDataVehiclesHistory} />
         <Vehicles vehicleData={mockDataVehicles} />
