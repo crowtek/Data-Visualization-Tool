@@ -20,7 +20,12 @@ export const containerStyle = () => ({
     height:"92vh",
     maxWidth:"96vw",
     padding:"20px",
-    overflow:"hidden"
+    overflow:"hidden",
+    [mediaQueries.medium]: {
+        height:"100%",
+        maxWidth:"100vw",
+        overflow:"unset"
+    }
 })
 
 export const dashboardGrid = () => ({
