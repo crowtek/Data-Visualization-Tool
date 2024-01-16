@@ -12,6 +12,8 @@ import List from "./components/Liste";
 import UserOnline from "./components/UserOnline";
 import Gates from "./components/Gates";
 
+import { containerStyle } from "../../styles/Layout";
+
 const Dashboard = () => {
   const theme = useTheme();
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
@@ -34,7 +36,7 @@ const Dashboard = () => {
 
 
   return (
-    <Box paddingX="20px" height={"90vh"}>
+    <Box sx={containerStyle}>
       <Box sx={isScreenLg ? mobileGridStyle: gridStyle}>
         <Yard vehicleData={mockDataVehicles} zulaufData={mockDataVehiclesZulauf} historyData={mockDataVehiclesHistory} />
         <Vehicles vehicleData={mockDataVehicles} />
