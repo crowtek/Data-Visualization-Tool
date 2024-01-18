@@ -19,11 +19,11 @@ import Item from "./SidebarMenuItem";
 const Sidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
+  const mobileScreen = useMediaQuery(theme.breakpoints.down("md"));
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
-    <Box sx={isScreenLg ? {display:"none"} : sidebarSx(colors)} >
+    <Box sx={mobileScreen ? {display:"none"} : sidebarSx(colors)} >
       <ProSidebar collapsed={isCollapsed} >
         <Menu >
           <MenuItem onClick={() => setIsCollapsed(!isCollapsed)} icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}>

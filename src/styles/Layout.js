@@ -1,7 +1,7 @@
 export const mediaQueries = {
     small: "@media (max-width: 600px)",
-    medium: "@media (max-width: 868px)",
-    large: "@media (max-width: 1124px)",
+    medium: "@media (max-width: 900px)",
+    large: "@media (max-width: 1400px)",
 };
 
   
