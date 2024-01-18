@@ -15,6 +15,9 @@ export const List = (colors) => ({
         fontSize: 16,
         fontWeight: "bold",
         whiteSpace: "nowrap",
+        "@media (max-width: 1650px)" : {
+            fontSize: 14
+        }
     },
     "& .incomingTimeCell": {
         color:`${colors.blueAccent[300]}`,

@@ -55,14 +55,11 @@ const SalesQuantity = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const tabletSize = useMediaQuery(theme.breakpoints.down("lg"));
+  const mobileSize = useMediaQuery(theme.breakpoints.down("md"));
 
   const chartSetting = {
-    yAxis: [
-      {
-        label: 'Anzahl der Ladeeinheiten',
-      },
-    ],
-    width: tabletSize ? 600 : 1000,
+    yAxis: [{label: 'Anzahl der Ladeeinheiten',},],
+    width: tabletSize ? 600 : 900,
     height: tabletSize ? 330 : 500,
     sx: {
       [`.${axisClasses.left} .${axisClasses.label}`]: {
@@ -72,7 +69,7 @@ const SalesQuantity = () => {
   };
 
   return (
-    <Box gridColumn="span 8" gridRow="span 4" sx={tabletSize ? {display:"none"} : boxStyle(colors)} >
+    <Box gridColumn={tabletSize ? "span 6" : "span 7"} gridRow="span 4" sx={mobileSize ? {display:"none"} : boxStyle(colors)} >
       <Box display={"flex"} justifyContent={"center"}>
         <BarChart
           dataset={dataset}

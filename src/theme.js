@@ -194,8 +194,8 @@ export const themeSettings = (mode) => {
     breakpoints: {
       values: {
         xs: 0, // Extra small screens (phones)
-        sm: 600, // Small screens (tablets)
-        md: 960, // Medium screens (small laptops)
+        sm: 900, // Small screens (tablets)
+        md: 1400, // Medium screens (small laptops)
         lg: 1680, // Large screens (desktops)
         xl: 1920, // Extra large screens (large desktops)
       },
