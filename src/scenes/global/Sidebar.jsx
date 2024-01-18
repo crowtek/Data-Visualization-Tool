@@ -19,7 +19,7 @@ import Item from "./SidebarMenuItem";
 const Sidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const mobileScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const mobileScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
