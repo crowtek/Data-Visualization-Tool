@@ -1,4 +1,4 @@
-import { Box, useTheme } from "@mui/material";
+import { Box, useTheme,useMediaQuery } from "@mui/material";
 import { tokens } from "../../../theme";
 import { BarChart } from '@mui/x-charts/BarChart';
 import { axisClasses } from '@mui/x-charts';
@@ -51,9 +51,10 @@ const dataset = [
 const valueFormatter = (value) => `${value}mm`;
 
 
-const SalesQuantity = ({ isScreenLg }) => {
+const SalesQuantity = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const tabletSize = useMediaQuery(theme.breakpoints.down("lg"));
 
   const chartSetting = {
     yAxis: [
@@ -61,8 +62,8 @@ const SalesQuantity = ({ isScreenLg }) => {
         label: 'Anzahl der Ladeeinheiten',
       },
     ],
-    width: isScreenLg ? 600 : 1000,
-    height: isScreenLg ? 330 : 500,
+    width: tabletSize ? 600 : 1000,
+    height: tabletSize ? 330 : 500,
     sx: {
       [`.${axisClasses.left} .${axisClasses.label}`]: {
         transform: 'translate(-20px, 0)',
@@ -71,7 +72,7 @@ const SalesQuantity = ({ isScreenLg }) => {
   };
 
   return (
-    <Box gridColumn="span 8" gridRow="span 4" sx={isScreenLg ? {display:"none"} : boxStyle(colors)} >
+    <Box gridColumn="span 8" gridRow="span 4" sx={tabletSize ? {display:"none"} : boxStyle(colors)} >
       <Box display={"flex"} justifyContent={"center"}>
         <BarChart
           dataset={dataset}
