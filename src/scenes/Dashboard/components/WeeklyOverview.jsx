@@ -2,7 +2,7 @@ import { Box, useTheme } from "@mui/material";
 import { tokens } from "../../../theme";
 import { BarChart } from '@mui/x-charts/BarChart';
 import { axisClasses } from '@mui/x-charts';
-import { boxStyle } from "../../../styles/DashboardBoxStyle";
+import { boxStyle } from "../../../styles/Dashboard";
 
 const dataset = [
   {
@@ -61,8 +61,8 @@ const SalesQuantity = ({ isScreenLg }) => {
         label: 'Anzahl der Ladeeinheiten',
       },
     ],
-    width: isScreenLg ? 800 : 1100,
-    height: isScreenLg ? 330 : 600,
+    width: isScreenLg ? 600 : 1000,
+    height: isScreenLg ? 330 : 500,
     sx: {
       [`.${axisClasses.left} .${axisClasses.label}`]: {
         transform: 'translate(-20px, 0)',

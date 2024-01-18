@@ -2,7 +2,7 @@ import StatBox from "../../../components/StatBox";
 import DepartureBoardIcon from '@mui/icons-material/DepartureBoard';
 import { useTheme,Box } from "@mui/material";
 import { tokens } from "../../../theme";
-import { boxStyle } from "../../../styles/DashboardBoxStyle";
+import { boxStyle } from "../../../styles/Dashboard";
 
 const IncomingCarsCount = ({vehicleData}) => {
     const theme = useTheme();

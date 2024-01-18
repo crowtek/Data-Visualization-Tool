@@ -2,7 +2,7 @@ import StatBox from "../../../components/StatBox";
 import BeenhereOutlinedIcon from '@mui/icons-material/BeenhereOutlined';
 import { useTheme,Box } from "@mui/material";
 import { tokens } from "../../../theme";
-import { boxStyle } from "../../../styles/DashboardBoxStyle";
+import { boxStyle } from "../../../styles/Dashboard";
 
 const PlaceOverview = () => {
     const theme = useTheme();

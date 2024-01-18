@@ -3,7 +3,7 @@ import StatBox from "../../../components/StatBox";
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import { useTheme,Box } from "@mui/material";
 import { tokens } from "../../../theme";
-import { boxStyle } from "../../../styles/DashboardBoxStyle";
+import { boxStyle } from "../../../styles/Dashboard";
 
 const UserOnline = ({userData}) => {
     const theme = useTheme();
