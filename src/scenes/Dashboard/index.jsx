@@ -1,5 +1,5 @@
 
-import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { Box } from "@mui/material";
 import { mockDataVehicles, mockDataVehiclesZulauf, mockDataVehiclesHistory, mockDataTeam, mockEvents } from "../../data/mockData";
 
 import Yard from "./components/Yard";
@@ -14,9 +14,6 @@ import Gates from "./components/Gates";
 import { containerStyle, dashboardGrid } from "../../styles/Layout";
 
 const Dashboard = () => {
-  const theme = useTheme();
-  const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
-
   return (
     <Box sx={containerStyle}>
       <Box sx={dashboardGrid}>
@@ -26,8 +23,8 @@ const Dashboard = () => {
         <Events events={mockEvents} />
         <UserOnline userData={mockDataTeam} />
         <Gates />
-        <WeeklyOverview isScreenLg={isScreenLg} />
-        <List vehicleData={mockDataVehicles} screenSize={isScreenLg} />
+        <WeeklyOverview />
+        <List vehicleData={mockDataVehicles}/>
       </Box>
     </Box>
   );

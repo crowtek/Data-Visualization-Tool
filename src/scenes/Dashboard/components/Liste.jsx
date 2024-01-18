@@ -1,12 +1,13 @@
-import { Box, useTheme,Table ,TableBody,TableCell,TableHead,TableRow} from "@mui/material";
+import { Box, useTheme,Table ,TableBody,TableCell,TableHead,TableRow,useMediaQuery} from "@mui/material";
 import { tokens } from "../../../theme";
 import { boxStyle, List } from "../../../styles/Dashboard";
 
-const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
+const LatestIncomingCarsList = ({ vehicleData }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const tabletSize = useMediaQuery(theme.breakpoints.down("lg"));
 
-  let numberOfListElements = screenSize ? 3 : 8;
+  let numberOfListElements = tabletSize ? 3 : 8;
 
   const sortedData = vehicleData.slice().sort((a, b) => {
     return new Date(b.incomingTime) - new Date(a.incomingTime);
@@ -17,7 +18,7 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
       <Table sx={List(colors)}>
         <TableHead>
           <TableRow > 
-            <TableCell>{screenSize ? "" : "Eingang"}</TableCell>
+            <TableCell>{tabletSize ? "" : "Eingang"}</TableCell>
             <TableCell>Kennzeichen</TableCell>
             <TableCell>Standort</TableCell>
             <TableCell>Relation</TableCell>
@@ -28,7 +29,7 @@ const LatestIncomingCarsList = ({ vehicleData,screenSize }) => {
           if(i <= numberOfListElements){
             return(
               <TableRow key={i}>
-                <TableCell className="incomingTimeCell">{screenSize ? "" : car.incomingTime}</TableCell>
+                <TableCell className="incomingTimeCell">{tabletSize ? "" : car.incomingTime}</TableCell>
                 <TableCell >{car.vehicle}</TableCell>
                 <TableCell>{car.parkPlace}</TableCell>
                 <TableCell>{car.relation}</TableCell>
