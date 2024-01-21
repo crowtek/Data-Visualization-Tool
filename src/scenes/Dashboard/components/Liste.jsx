@@ -8,7 +8,7 @@ const LatestIncomingCarsList = ({ vehicleData }) => {
   const tabletSize = useMediaQuery(theme.breakpoints.down("lg"));
   const smallTabletSize = useMediaQuery(theme.breakpoints.down("md"));
   const mobileSize = useMediaQuery(theme.breakpoints.down("sm"));
-  const gridColumnValue = mobileSize ? "span 1" : smallTabletSize ? "span 12" : tabletSize ? "span 6" : "span 5";
+  const gridColumnValue = mobileSize ? "span 3" : smallTabletSize ? "span 12" : tabletSize ? "span 6" : "span 5";
 
   let numberOfListElements = tabletSize ? 8 : 8;
 
@@ -21,10 +21,10 @@ const LatestIncomingCarsList = ({ vehicleData }) => {
       <Table sx={List(colors)}>
         <TableHead>
           <TableRow > 
-            <TableCell>Eingang</TableCell>
+            <TableCell className="hiddeOnMobile">Eingang</TableCell>
             <TableCell>Kennzeichen</TableCell>
             <TableCell>Standort</TableCell>
-            <TableCell>Relation</TableCell>
+            <TableCell className="hiddeOnMobile">Relation</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -35,7 +35,7 @@ const LatestIncomingCarsList = ({ vehicleData }) => {
                 <TableCell className="incomingTimeCell">{car.incomingTime}</TableCell>
                 <TableCell >{car.vehicle}</TableCell>
                 <TableCell>{car.parkPlace}</TableCell>
-                <TableCell>{car.relation}</TableCell>
+                <TableCell className="hiddeOnMobile">{car.relation}</TableCell>
               </TableRow>
             )
           }else{

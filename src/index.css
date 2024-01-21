@@ -72,3 +72,11 @@ body,
   opacity: 1;
   transform: translateX(0);
 }
+
+
+/* Extra classes */
+@media (max-width: 900px) {
+  .hiddeOnMobile {
+    display: none;
+  }
+}
