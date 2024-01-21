@@ -10,8 +10,6 @@ const LatestIncomingCarsList = ({ vehicleData }) => {
   const mobileSize = useMediaQuery(theme.breakpoints.down("sm"));
   const gridColumnValue = mobileSize ? "span 3" : smallTabletSize ? "span 12" : tabletSize ? "span 6" : "span 5";
 
-  let numberOfListElements = tabletSize ? 8 : 8;
-
   const sortedData = vehicleData.slice().sort((a, b) => {
     return new Date(b.incomingTime) - new Date(a.incomingTime);
   });
@@ -29,7 +27,7 @@ const LatestIncomingCarsList = ({ vehicleData }) => {
         </TableHead>
         <TableBody>
         {sortedData.map((car, i) => {
-          if(i <= numberOfListElements){
+          if(i <= 8){
             return(
               <TableRow key={i}>
                 <TableCell className="incomingTimeCell">{car.incomingTime}</TableCell>
