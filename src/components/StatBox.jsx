@@ -11,6 +11,7 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
+  const mobileScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -22,12 +23,12 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
 
 
   return (
-    <Box width="100%" p="15px" overflow={"hidden"}>
+    <Box width="100%" p={mobileScreen ? "5px": "15px"} overflow={"hidden"}>
           {/* Box Header */}
           <Typography 
             fontSize={isScreenLg ? "18px": "22px"} 
             fontWeight="bold"  
-            display={"flex"} 
+            display={mobileScreen? "none":"flex"} 
             justifyContent={"space-between"} 
             alignContent={"center"}
           >
@@ -43,13 +44,14 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
           {subtitle &&
             <Typography
               className={`subtitle-animation${animate ? ' subtitle-animation-fade-in' : ''}`}
-              fontSize={isScreenLg ? "18px": "22px"} 
+              fontSize={mobileScreen ? "15px" :isScreenLg ? "18px": "22px"} 
               fontWeight="bold" 
               color={subtitleColor}
               display={"flex"} 
-              justifyContent={"flex-start"} 
+              justifyContent={mobileScreen ? "center" :"flex-start"} 
               alignItems={"center"} 
-              gap={2}
+              gap={mobileScreen ? 1 : 2}
+              margin={mobileScreen ? "6px" :0}
             >
               {icon}
               {subtitle}
@@ -63,7 +65,7 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
                 labels={labels} 
                 chartValues={chartValues} 
                 animationTime={animationTime} 
-                isScreenSmall={isScreenLg}
+                isScreenSmall={mobileScreen}
               />
             </Box>
           }

@@ -1,6 +1,6 @@
 import { Box, useTheme,Table ,TableBody,TableCell,TableHead,TableRow,useMediaQuery} from "@mui/material";
 import { tokens } from "../../../theme";
-import { boxStyle, List } from "../../../styles/Dashboard";
+import { boxStyle, List,ListGrid } from "../../../styles/Dashboard";
 
 const LatestIncomingCarsList = ({ vehicleData }) => {
   const theme = useTheme();
@@ -15,7 +15,7 @@ const LatestIncomingCarsList = ({ vehicleData }) => {
   });
   
   return (
-    <Box gridColumn={gridColumnValue} gridRow="span 4" sx={boxStyle(colors)}>
+    <Box sx={{ ...boxStyle(colors), ...ListGrid() }}>
       <Table sx={List(colors)}>
         <TableHead>
           <TableRow > 

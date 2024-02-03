@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { PieChart } from '@mui/x-charts/PieChart';
-import { useTheme } from "@mui/material";
+import { useTheme,useMediaQuery } from "@mui/material";
 import { tokens } from "../theme";
 
 const PieChartComponent = ({ labels, chartValues,animationTime,isScreenSmall }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    const tabletScreen = useMediaQuery(theme.breakpoints.down("lg"));
     const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
@@ -42,7 +43,7 @@ const PieChartComponent = ({ labels, chartValues,animationTime,isScreenSmall }) 
                         markGap:isScreenSmall ? 5 : 10,
                     },
                 }}
-                width={isScreenSmall ? 280 : 400}
+                width={isScreenSmall ? 340 :tabletScreen ? 280: 400}
                 height={isScreenSmall ? 120: 160}
             />
         </div>

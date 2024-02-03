@@ -31,11 +31,20 @@ export const containerStyle = () => ({
 export const dashboardGrid = () => ({
     display:"grid", 
     gridTemplateColumns:"repeat(12, 1fr)",
-    gridAutoRows:"repeat(6, 1fr)",
+    gridTemplateRows:"repeat(6, 1fr)",
     gap:"10px",
     height:"100%",
     [mediaQueries.medium]: {
-        gridTemplateColumns:"1fr",
-        gridAutoRows:"repeat(12, 1fr)",
-    }
+        gridTemplateColumns:"repeat(4, 1fr)",
+        gridTemplateRows:"repeat(12, 1fr)",
+        "& > div": {
+            gridColumn: "span 4",
+            gridRow:"span 2",
+        },
+        "& > div.smallGrid": {
+            gridColumn: "span 1",
+            gridRow:"span 1",
+        }
+    },
+
 }); 

@@ -37,3 +37,19 @@ export const List = (colors) => ({
         }
     }
 });
+
+export const ListGrid = () => ({
+    gridColumn: "span 5",
+    gridRow:"span 4",
+    "@media (max-width: 1580px)" : {
+        gridColumn: "span 6",
+    },
+    "@media (max-width: 1400px)" : {
+        gridColumn: "span 12",
+    },
+    "@media (max-width: 920px)" : {
+        gridColumn: "span 3",
+        gridRow:"span 6",
+        display:"none"
+    },
+});
