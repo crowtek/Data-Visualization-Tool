@@ -2,7 +2,7 @@ import { Box, useTheme,useMediaQuery } from "@mui/material";
 import { tokens } from "../../../theme";
 import { BarChart } from '@mui/x-charts/BarChart';
 import { axisClasses } from '@mui/x-charts';
-import { boxStyle } from "../../../styles/Dashboard";
+import { boxStyle, WeeklyOverviewGrid } from "../../../styles/Dashboard";
 
 const dataset = [
   {
@@ -55,29 +55,37 @@ const SalesQuantity = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const tabletSize = useMediaQuery(theme.breakpoints.down("lg"));
-  const mobileSize = useMediaQuery(theme.breakpoints.down("md"));
 
   const chartSetting = {
-    yAxis: [{label: 'Anzahl der Ladeeinheiten',},],
-    width: tabletSize ? 600 : 900,
-    height: tabletSize ? 330 : 500,
-    sx: {
-      [`.${axisClasses.left} .${axisClasses.label}`]: {
-        transform: 'translate(-20px, 0)',
-      },
-    },
+    width: tabletSize ? 800 : 900,
+    height: tabletSize ? 500 : 500,
   };
 
   return (
-    <Box gridColumn={tabletSize ? "span 6" : "span 7"} gridRow="span 4" sx={mobileSize ? {display:"none"} : boxStyle(colors)} >
-      <Box display={"flex"} justifyContent={"center"}>
+    <Box sx={{ ...boxStyle(colors), ...WeeklyOverviewGrid()}} >
+      <Box>
         <BarChart
           dataset={dataset}
           xAxis={[{ scaleType: 'band', dataKey: 'month' }]}
           series={[
-            { dataKey: 'london', label: 'Neue Ladeeinheiten', valueFormatter, color: colors.blueAccent[400], borderRadius: "5px" },
-            { dataKey: 'paris', label: 'Rausgefahrende Ladeeinheiten', valueFormatter, color: colors.greenAccent[500] },
-            { dataKey: 'newYork', label: 'Gäste', valueFormatter, color: colors.redAccent[400] },
+            { 
+              dataKey: 'london', 
+              label: 'Neue Ladeeinheiten', 
+              valueFormatter, 
+              color: colors.blueAccent[400] 
+            },
+            { 
+              dataKey: 'paris', 
+              label: 'Rausgefahrende Ladeeinheiten', 
+              valueFormatter, 
+              color: colors.greenAccent[500] 
+            },
+            { 
+              dataKey: 'newYork', 
+              label: 'Gäste', 
+              valueFormatter, 
+              color: colors.redAccent[400] 
+            },
           ]}
           {...chartSetting}
         />
