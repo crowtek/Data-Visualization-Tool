@@ -9,7 +9,7 @@ export const boxStyle = (colors) => ({
     borderRadius:"5px",
     background:`${colors.primary[400]}`,
     overflow:"auto",
-    [mediaQueries.medium] : {
+    [mediaQueries.laptop] : {
         overflow:"unset"
     }
 });
@@ -20,7 +20,7 @@ export const List = (colors) => ({
         fontSize: 16,
         fontWeight: "bold",
         whiteSpace: "nowrap",
-        [mediaQueries.medium] : {
+        [mediaQueries.laptop] : {
             fontSize: 14
         }
     },
@@ -31,7 +31,7 @@ export const List = (colors) => ({
             display: "none",
         }
     },
-    [mediaQueries.medium] : {
+    [mediaQueries.laptop] : {
         gridColumn: "span 4",
         gridRow: "span 1",
         ".hiddeOnMobile": {

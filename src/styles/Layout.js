@@ -1,6 +1,7 @@
 export const mediaQueries = {
     small: "@media (max-width: 600px)",
     medium: "@media (max-width: 900px)",
+    laptop: "@media (max-width: 1400px)",
     large: "@media (max-width: 1540px)",
 };
 
@@ -21,7 +22,7 @@ export const containerStyle = () => ({
     maxWidth:"96vw",
     padding:"20px",
     overflow:"hidden",
-    [mediaQueries.medium]: {
+    [mediaQueries.laptop]: {
         height:"100%",
         maxWidth:"100vw",
         overflow:"unset"
@@ -34,7 +35,7 @@ export const dashboardGrid = () => ({
     gridTemplateRows:"repeat(6, 1fr)",
     gap:"10px",
     height:"100%",
-    [mediaQueries.medium]: {
+    [mediaQueries.laptop]: {
         gridTemplateColumns:"repeat(4, 1fr)",
         gridTemplateRows:"repeat(12, 1fr)",
         "& > div": {

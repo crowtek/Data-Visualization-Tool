@@ -11,7 +11,7 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
-  const mobileScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const mobileScreen = useMediaQuery(theme.breakpoints.down("md"));
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {

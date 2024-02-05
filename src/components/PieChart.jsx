@@ -6,7 +6,8 @@ import { tokens } from "../theme";
 const PieChartComponent = ({ labels, chartValues,animationTime,isScreenSmall }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    const tabletScreen = useMediaQuery(theme.breakpoints.down("lg"));
+    const laptopScreen = useMediaQuery(theme.breakpoints.down("lg"));
+    const tabletScreen = useMediaQuery(theme.breakpoints.down("sm"));
     const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
@@ -27,24 +28,24 @@ const PieChartComponent = ({ labels, chartValues,animationTime,isScreenSmall }) 
                             { id: 1, color: colors.greenAccent[500], value: chartValues.second || "", label: labels.second || "" },
                             { id: 2, color: colors.redAccent[400], value: chartValues.third || "", label: labels.third || "" },
                         ],
-                        innerRadius: isScreenSmall ? 25: 30,
-                        outerRadius: isScreenSmall ? 45: 65,
+                        innerRadius: laptopScreen ? 25: 30,
+                        outerRadius: laptopScreen ? 45: 65,
                         paddingAngle: 5,
                         cornerRadius: 5,
                         startAngle: -90,
                         endAngle: 220,
-                        cx: isScreenSmall ? 50: 100,
-                        cy: isScreenSmall ? 55: 80,
+                        cx: laptopScreen ? 50: 100,
+                        cy: laptopScreen ? 55: 80,
                     },
                 ]}
                 slotProps={{
                     legend: {
-                        itemGap: isScreenSmall ? 10 : 20,
-                        markGap:isScreenSmall ? 5 : 10,
+                        itemGap: laptopScreen ? 10 : 20,
+                        markGap:laptopScreen ? 5 : 10,
                     },
                 }}
-                width={isScreenSmall ? 340 :tabletScreen ? 280: 400}
-                height={isScreenSmall ? 120: 160}
+                width={laptopScreen ? 320 : 400}
+                height={laptopScreen ? 120: 160}
             />
         </div>
     );
