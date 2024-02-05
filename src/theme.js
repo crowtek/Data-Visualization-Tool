@@ -60,6 +60,17 @@ export const tokens = (mode) => ({
         800: "#2a2d64",
         900: "#151632",
       },
+      yellowAccent: {
+        100: "#fff9c4", 
+        200: "#fff59d", 
+        300: "#fff176", 
+        400: "#ffee58", 
+        500: "#ffeb3b", 
+        600: "#fdd835", 
+        700: "#fbc02d", 
+        800: "#f9a825",
+        900: "#f57f17",
+      },
     }
     : {
       grey: {
@@ -116,6 +127,17 @@ export const tokens = (mode) => ({
         700: "#a4a9fc",
         800: "#c3c6fd",
         900: "#e1e2fe",
+      },
+      yellowAccent: {
+        100: "#f57f17", // Mustard yellow
+        200: "#f9a825", // Deep yellow
+        300: "#fbc02d", // Darker yellow
+        400: "#fdd835", // Dark yellow
+        500: "#ffeb3b", // Bright yellow
+        600: "#ffee58", // Medium-dark yellow
+        700: "#fff176", // Medium yellow
+        800: "#fff59d", // Light-medium yellow
+        900: "#fff9c4", // Light yellow
       },
     }),
 });
