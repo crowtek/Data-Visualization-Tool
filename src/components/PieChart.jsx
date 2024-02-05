@@ -7,15 +7,13 @@ const PieChartComponent = ({ labels, chartValues,animationTime,isScreenSmall }) 
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const laptopScreen = useMediaQuery(theme.breakpoints.down("lg"));
-    const tabletScreen = useMediaQuery(theme.breakpoints.down("sm"));
     const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
-        // Trigger the animation after a delay (e.g., 500ms)
         setTimeout(() => {
             setAnimate(true);
         }, animationTime ? animationTime : 500);
-    }, []);
+    }, [animationTime]);
 
 
     return (

@@ -19,7 +19,7 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
       setTimeout(() => {
           setAnimate(true);
       }, animationTime ? animationTime : 500);
-  }, []);
+  }, [animationTime]);
 
 
   return (

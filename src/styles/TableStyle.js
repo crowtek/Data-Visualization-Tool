@@ -7,6 +7,7 @@ export const TableStyle = () => {
   const colors = tokens(theme.palette.mode);
 
   return {
+    height:"80vh",
     "& .MuiDataGrid-root": {
       letterSpacing: 0.7,
       borderRadius:"5px",
