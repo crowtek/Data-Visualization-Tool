@@ -46,11 +46,6 @@ export const ListGrid = () => ({
     [mediaQueries.large] : {
         gridColumn: "span 12",
     },
-    [mediaQueries.medium] : {
-        gridColumn: "span 3",
-        gridRow:"span 6",
-        display:"none"
-    },
 });
 
 export const WeeklyOverviewGrid = () => ({

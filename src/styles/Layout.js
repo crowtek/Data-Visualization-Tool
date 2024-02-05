@@ -44,6 +44,10 @@ export const dashboardGrid = () => ({
         "& > div.smallGrid": {
             gridColumn: "span 1",
             gridRow:"span 1",
+        },
+        "& > div.bigGrid": {
+            gridColumn: "span 4",
+            gridRow:"span 8",
         }
     },
 
