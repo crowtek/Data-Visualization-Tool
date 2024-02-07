@@ -1,7 +1,7 @@
 
 import { Select, MenuItem, InputLabel, FormControl } from '@mui/material';
 
-const CountrySelect = ({ country, handleChange }) => {
+const CountrySelect = ({ country, onChange }) => {
   const countries = [
     'Germany',
     'United States',
@@ -27,7 +27,7 @@ const CountrySelect = ({ country, handleChange }) => {
         defaultValue={"Germany"}
         id="country"
         value={country}
-        onChange={handleChange}
+        onChange={onChange}
         label="Country"
         name="country"
       >
