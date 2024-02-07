@@ -1,9 +1,9 @@
 import { Box, Typography, useTheme,useMediaQuery } from "@mui/material";
-import { tokens } from "../theme";
+import { tokens } from "../../../theme";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Link } from 'react-router-dom';
 import {useEffect,useState } from "react";
-import PieChart from "./PieChart";
+import PieChart from "../../../components/PieChart";
 
 
 

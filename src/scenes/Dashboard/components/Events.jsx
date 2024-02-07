@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import StatBox from "../../../components/StatBox";
+import StatBox from './StatBox';
 import EventIcon from '@mui/icons-material/Event';
 import { useTheme,Box,useMediaQuery } from "@mui/material";
 import { tokens } from "../../../theme";

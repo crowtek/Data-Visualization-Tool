@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import StatBox from "../../../components/StatBox";
+import StatBox from './StatBox';
 import { useTheme,Box } from "@mui/material";
 import { tokens } from "../../../theme";
 import { boxStyle } from "../../../styles/Page/Dashboard";

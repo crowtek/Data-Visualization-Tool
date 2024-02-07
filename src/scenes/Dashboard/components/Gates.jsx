@@ -1,4 +1,4 @@
-import StatBox from "../../../components/StatBox";
+import StatBox from './StatBox';
 import BeenhereOutlinedIcon from '@mui/icons-material/BeenhereOutlined';
 import { useTheme,Box,useMediaQuery } from "@mui/material";
 import { tokens } from "../../../theme";
