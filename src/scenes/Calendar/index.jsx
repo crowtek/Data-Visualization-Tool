@@ -1,6 +1,5 @@
 
 import { Box } from "@mui/material";
-import Header from "../../components/Header";
 import { mockEvents } from "../../data/mockData"
 
 import EventList from "./components/EventList";

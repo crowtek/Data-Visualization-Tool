@@ -2,7 +2,7 @@
 import { useMemo,useEffect,useState } from "react";
 import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
-import { TableStyle as TableStyleImport } from "../../../styles/TableStyle";
+import { TableStyle as TableStyleImport } from "../../../styles/components/TableStyle";
 
 import DeleteButton from "../../../components/DeleteButton";
 import VehicleStatus from "./VehicleStatus";

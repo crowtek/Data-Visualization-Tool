@@ -4,7 +4,7 @@ import { Box,List,ListItem,ListItemText,Typography,useTheme,ListItemButton,Modal
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import { tokens } from "../../../theme";
 import { mockEvents } from "../../../data/mockData"
-import { ModalStyle as ModalStyleImport } from "../../../styles/ModalStyle";
+import { ModalStyle as ModalStyleImport } from "../../../styles/components/ModalStyle";
 
 const EventList = () => {
     const theme = useTheme();

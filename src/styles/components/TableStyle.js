@@ -1,6 +1,6 @@
 
 import { useTheme } from "@mui/material";
-import { tokens } from "../theme";
+import { tokens } from "../../theme";
 
 export const TableStyle = () => {
   const theme = useTheme();

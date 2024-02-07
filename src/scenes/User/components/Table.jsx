@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { useMemo } from "react";
-import { TableStyle as TableStyleImport } from "../../../styles/TableStyle";
+import { TableStyle as TableStyleImport } from "../../../styles/components/TableStyle";
 import DeleteButton from "../../../components/DeleteButton";
 import AccessLevelButton from './AccessLevelButton';
 
