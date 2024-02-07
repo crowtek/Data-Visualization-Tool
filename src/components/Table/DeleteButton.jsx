@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import Button from '@mui/material/Button';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import { useTheme } from '@mui/material/styles';
-import { tokens } from "../theme";
+import { tokens } from "../../theme";
 
 const DeleteButton = (props) => {
     const theme = useTheme();
