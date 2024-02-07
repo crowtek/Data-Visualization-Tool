@@ -1,13 +1,8 @@
 
-import { useMemo,useEffect,useState } from "react";
-import { Box } from "@mui/material";
-import { DataGrid, GridToolbar } from "@mui/x-data-grid";
-import { TableStyle as TableStyleImport} from "../../../styles/components/TableStyle";
-
+import { useMemo} from "react";
+import Table from "../../../components/Table/Table";
 
 const HistoryTable = ({ userData }) => {
-  const [loading, setLoading] = useState(true);
-  const [rows, setRows] = useState([]);
   const columns = useMemo(() => {
     return [
       { field: "vehicle", headerName: "Kennzeichen",flex: 0.5 , id: "id"},
@@ -21,32 +16,9 @@ const HistoryTable = ({ userData }) => {
     ];
   },[])
 
-  const TableStyle = useMemo(() => {
-    return TableStyleImport;
-  },[])
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setRows(userData);
-      setLoading(false);
-    }, 800);
-
-    return () => clearTimeout(timer);
-  }, [userData]);
-  
-
   return (
-      <Box sx={TableStyle} >
-          <DataGrid
-              rows={rows}
-              columns={columns}
-              autoPageSize
-              loading={loading}
-              slots={{
-                toolbar: GridToolbar,
-              }}
-          />
-      </Box>
+    <Table tableData={userData} tableColumns={columns}/>
   )
 }
+
 export default HistoryTable;
