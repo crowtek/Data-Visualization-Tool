@@ -3,7 +3,7 @@ import { tokens } from "../../../theme";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Link } from 'react-router-dom';
 import {useEffect,useState } from "react";
-import PieChart from "../../../components/PieChart";
+import PieChart from "./PieChart";
 
 
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { PieChart } from '@mui/x-charts/PieChart';
 import { useTheme,useMediaQuery } from "@mui/material";
-import { tokens } from "../theme";
+import { tokens } from "../../../theme";
 
 const PieChartComponent = ({ labels, chartValues,animationTime,isScreenSmall }) => {
     const theme = useTheme();
