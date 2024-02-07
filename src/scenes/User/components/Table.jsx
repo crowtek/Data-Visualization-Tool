@@ -1,15 +1,11 @@
-import { Box } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+
 import { useMemo } from "react";
-import { TableStyle as TableStyleImport } from "../../../styles/components/TableStyle";
+
+import Table from "../../../components/Table/Table";
 import DeleteButton from "../../../components/Table/DeleteButton";
-import AccessLevelButton from './AccessLevelButton';
+import AccessLevelButton from '../../../components/Table/AccessLevelButton';
 
 const UserOverviewTable = ({ userData }) => {
-    const TableStyle = useMemo(() => {
-        return TableStyleImport;
-    }, [])
-
     const columns = useMemo(() => {
         return [
             { field: "name", id: "id", headerName: "Name", flex: 1.5, editable: true },
@@ -25,9 +21,7 @@ const UserOverviewTable = ({ userData }) => {
     }, [userData]);
 
     return (
-        <Box height="84vh" sx={TableStyle}>
-            <DataGrid disableRowSelectionOnClick rows={userData} columns={columns} />
-        </Box>
+        <Table tableData={userData} tableColumns={columns}/>
     )
 }
 export default UserOverviewTable;

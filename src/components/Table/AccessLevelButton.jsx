@@ -2,9 +2,9 @@ import { Box, Typography, useTheme } from "@mui/material";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
-import { tokens } from "../../../theme";
+import { tokens } from "../../theme";
 import { useState, useCallback } from "react";
-import HandleAccessChange from "../utils/HandleAccessChange";
+import HandleAccessChange from "../../scenes/User/utils/HandleAccessChange";
 
 const buttonStyle = {
   width: "100%",
