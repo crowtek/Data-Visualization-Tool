@@ -1,23 +1,10 @@
 
 import { Box, Typography, Modal } from "@mui/material";
 import SettingEntry from './SettingEntry';
+import {ModalStyle} from "../../../styles/components/ModalStyle";
 
 const SettingsModal = ({ showModal, setShowModal }) => {
     const handleClose = () => setShowModal(false);
-
-    const ModalStyle = {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        bgcolor: 'background.paper',
-        border: '2px solid #000',
-        boxShadow: 24,
-        p: 4,
-        display:"flex",
-        flexDirection:"column",
-        gap: 2
-    };
 
     return (
         <>
