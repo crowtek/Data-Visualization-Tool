@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
 import { ModalStyle } from '../../styles/components/ModalStyle';
-import NewLadeeinheit from '../forms/NewLadeeinheit';
+import NewLadeeinheit from '../Forms/NewLadeeinheit';
 
 const NewLeModal = ({ open, onClose }) => {
     return (
