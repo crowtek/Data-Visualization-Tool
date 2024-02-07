@@ -1,7 +1,7 @@
 import { TextField } from '@mui/material';
 
  
- const EmailInput = ({onChange }) => {
+ const EmailInput = ({email, onChange}) => {
     return (
         <TextField
         variant="outlined"
@@ -13,6 +13,7 @@ import { TextField } from '@mui/material';
         type="email"
         id="email"
         autoComplete="email"
+        value={email}
         onChange={onChange}
     />
     )
