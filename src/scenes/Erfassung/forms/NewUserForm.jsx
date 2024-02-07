@@ -1,8 +1,8 @@
 import { Box,Avatar  } from '@mui/material';
 
-import NameInput from "../components/NameInput"
-import EmailInput from "../components/EmailInput";
-import PhoneNumberInput from "../components/PhoneNumberInput";
+import NameInput from "../../../components/InputField/UserName"
+import EmailInput from "../../../components/InputField/Email";
+import PhoneNumberInput from "../../../components/InputField/PhoneNumber";
 
 const NewUserForm = () => {
     return (
