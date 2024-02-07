@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { mockDataTeam } from "../../data/mockData";
-import UserOverviewTable from "./components/Table";
+import UserOverviewTable from "./components/UserTable";
 
 const Team = () => {
   return (
