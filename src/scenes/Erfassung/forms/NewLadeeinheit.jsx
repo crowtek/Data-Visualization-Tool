@@ -6,8 +6,8 @@ import LadeeinheitInput from "../../../components/InputField/Ladeeinheit";
 import KennzeichenInput from "../../../components/InputField/Kennzeichen";
 import StandortInput from "../../../components/InputField/Standort";
 import RelationInput from "../../../components/InputField/Relation";
-import TypeSelect from "../components/TypeSelect";
-import CountrySelect from "../components/CountrySelect";
+import TypeSelect from "../../../components/Selects/Type";
+import CountrySelect from "../../../components/Selects/Countries";
 import CustomerNameInput from "../../../components/InputField/CustomerName";
 import InfoInput from "../../../components/InputField/Info";
 
