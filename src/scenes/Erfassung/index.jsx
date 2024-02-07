@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 import { ErfassungLayout } from "../../styles/Erfassung";
 import OverviewBox from "./components/OverviewBox";
 
-import NewLadeeinheit from './modal/NewLeModal';
+import NewLadeeinheit from '../../components/modal/NewLeModal';
 
 
 

@@ -4,8 +4,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
-import { ModalStyle } from '../../../styles/ModalStyle';
-import NewLadeeinheit from '../../../components/forms/NewLadeeinheit';
+import { ModalStyle } from '../../styles/ModalStyle';
+import NewLadeeinheit from '../forms/NewLadeeinheit';
 
 const NewLeModal = ({ open, onClose }) => {
     return (
