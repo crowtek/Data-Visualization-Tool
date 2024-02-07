@@ -1,15 +1,11 @@
 
-import { useMemo,useEffect,useState } from "react";
-import { Box } from "@mui/material";
-import { DataGrid, GridToolbar } from "@mui/x-data-grid";
-import { TableStyle as TableStyleImport } from "../../../styles/components/TableStyle";
+import { useMemo } from "react";
 
+import Table from "../../../components/Table/Table";
 import DeleteButton from "../../../components/Table/DeleteButton";
 import VehicleStatus from "./VehicleStatus";
 
 const LeitstandTable = ({ userData }) => {
-  const [loading, setLoading] = useState(true);
-  const [rows, setRows] = useState([]);
   const columns = useMemo(() => [
     { field: "status", headerName: "Status", flex: 0.2, renderCell: ({ row: { status } }) => <VehicleStatus status={status} />, },
     { field: "vehicle", headerName: "Kennzeichen", flex: 0.5, id: "id" },
@@ -23,32 +19,8 @@ const LeitstandTable = ({ userData }) => {
     { field: "options",headerName: "", renderCell: ({ row }) => <DeleteButton {...row} />,},
   ],[]);
 
-
-  const TableStyle = useMemo(() => {
-    return TableStyleImport;
-  }, [])
-
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setRows(userData);
-      setLoading(false);
-    }, 800);
-
-    return () => clearTimeout(timer);
-  }, [userData]);
-
-
   return (
-    <Box sx={TableStyle} >
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        autoPageSize
-        slots={{toolbar: GridToolbar,}}
-        loading={loading}
-      />
-    </Box>
+    <Table tableData={userData} tableColumns={columns}/>
   )
 }
 
