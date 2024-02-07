@@ -1,6 +1,6 @@
 import { TextField } from '@mui/material';
 
-const LadeeinheitInput = ({ladeeinheit,handleChange}) => {
+const LadeeinheitInput = ({ladeeinheit,onChange}) => {
     return (
         <TextField
             variant="outlined"
@@ -13,7 +13,7 @@ const LadeeinheitInput = ({ladeeinheit,handleChange}) => {
             autoComplete="ladeeinheit"
             autoFocus
             value={ladeeinheit}
-            onChange={handleChange}
+            onChange={onChange}
         />
     )
 }

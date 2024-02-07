@@ -4,13 +4,13 @@ import NameInput from "../components/NameInput"
 import EmailInput from "../components/EmailInput";
 import PhoneNumberInput from "../components/PhoneNumberInput";
 
-const NewUserForm = ({handleChange,formData}) => {
+const NewUserForm = () => {
     return (
         <Box sx={{display:"flex"}}>
             <Box>
-                <NameInput name={formData.username} handleChange={handleChange}/>
-                <EmailInput email={formData.email} handleChange={handleChange}/>
-                <PhoneNumberInput phoneNumber={formData.phoneNumber} handleChange={handleChange}/>
+                <NameInput />
+                <EmailInput />
+                <PhoneNumberInput/>
             </Box>
             <Box>
                 <Avatar

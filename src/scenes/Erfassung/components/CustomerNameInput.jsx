@@ -1,7 +1,7 @@
 import { TextField } from '@mui/material';
 
  
- const CustomerNameInput = ({kunde, handleChange}) => {
+ const CustomerNameInput = ({onChange}) => {
     return (
         <TextField
             variant="outlined"
@@ -12,8 +12,7 @@ import { TextField } from '@mui/material';
             type="kunde"
             id="kunde"
             autoComplete="kunde"
-            value={kunde}
-            onChange={handleChange}
+            onChange={onChange}
         />
     )
  }

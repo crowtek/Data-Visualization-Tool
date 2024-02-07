@@ -1,4 +1,6 @@
-import { Box } from '@mui/material';
+import { useState } from 'react';
+
+import { Box, Button } from '@mui/material';
 
 import LadeeinheitInput from "../components/LadeeinheitInput";
 import KennzeichenInput from "../components/KennzeichenInput";
@@ -9,23 +11,44 @@ import CountrySelect from "../components/CountrySelect";
 import CustomerNameInput from "../components/CustomerNameInput";
 import InfoInput from "../components/InfoInput";
 
-const NewLadeeinheit = ({handleChange,formData}) => {
+const NewLadeeinheit = () => {
+    const [formData, setFormData] = useState({});
+
+    const handleSubmit = (event) => {
+        event.preventDefault(); 
+        // Process form data here or send it to a server
+        console.log(formData.ladeeinheit); // For example, log formData to the console
+    };
+
+    const handleChange = (name) => (event) => {
+        console.log(name);
+        setFormData({
+            ...formData,
+            [name]: event.target.value,
+        });
+
+    };
+
     return (
-        <Box sx={{display:"flex", gap:2}}>
-            <Box>            
-                <LadeeinheitInput handleChange={handleChange} ladeeinheit={formData.ladeeinheit} />
-                <KennzeichenInput handleChange={handleChange} kennzeichen={formData.kennzeichen} />
-                <StandortInput handleChange={handleChange} standort={formData.standort} />
-                <RelationInput handleChange={handleChange} relation={formData.relation} />
+        <Box component="form" onSubmit={handleSubmit} sx={{display: "flex", gap: 2, flexDirection:"column"}}>
+            <Box sx={{display: "flex", gap: 2}}>
+                <Box>            
+                    <LadeeinheitInput onChange={handleChange('ladeeinheit')} />
+                    <KennzeichenInput onChange={handleChange('kennzeichen')} />
+                    <StandortInput onChange={handleChange('standort')} />
+                    <RelationInput onChange={handleChange('relation')} />
+                </Box>
+                <Box>                
+                    <TypeSelect onChange={handleChange('type')} />
+                    <CountrySelect onChange={handleChange('country')} />
+                    <CustomerNameInput onChange={handleChange('customerName')} />
+                    <InfoInput onChange={handleChange('info')} />
+                </Box>
             </Box>
-            <Box>                
-                <TypeSelect handleChange={handleChange} type={formData.type} />
-                <CountrySelect handleChange={handleChange} land={formData.land} />
-                <CustomerNameInput handleChange={handleChange} kunde={formData.kunde} />
-                <InfoInput handleChange={handleChange} info={formData.info}  />
-            </Box>
+
+            <Button type="submit" variant="contained">Submit</Button>
         </Box>
-    )
-}
+    );
+};
 
 export default NewLadeeinheit;

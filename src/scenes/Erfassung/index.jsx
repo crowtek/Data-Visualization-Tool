@@ -1,16 +1,31 @@
 
+import { useState } from 'react';
 import { Box } from '@mui/material';
 import { ErfassungLayout } from "../../styles/Erfassung";
 import OverviewBox from "./components/OverviewBox";
 
+import NewLadeeinheit from './modal/NewLeModal';
+
+
 
 const Erfassung = () => {
+    const [newLeModal, showNewLeModal] = useState(false);
+
+    const openModal = (name) => {
+        console.log(name)
+        if(name === "newLe" ){
+            showNewLeModal(true)
+        }
+    }
+
     return (
-        <Box sx={ErfassungLayout}> 
-            <OverviewBox name={"Neue Ladeeinheit"} linkName={"/newLe"}/>
-            <OverviewBox name={"Neuer Benutzer"} linkName={"/newUser"}/>
-            <OverviewBox name={"Neue Relation"} linkName={"/newRelation"}/>
-            <OverviewBox name={"Ladeeinheit Planen"} linkName={"/"}/>
+        <Box sx={ErfassungLayout} > 
+            <OverviewBox name={"Neue Ladeeinheit"} linkName={"/newLe"}  onClick={() => openModal("newLe")}/>
+            <OverviewBox name={"Neuer Benutzer"} linkName={"/newUser"} onClick={() => openModal("newUser")}/>
+            <OverviewBox name={"Neue Relation"} linkName={"/newRelation"} onClick={() => openModal("newRelation")}/>
+            <OverviewBox name={"Ladeeinheit Planen"} linkName={"/"} onClick={() => openModal("")}/>
+
+            <NewLadeeinheit open={newLeModal} onClose={() => showNewLeModal(false)} />
         </Box>
     )
 }
