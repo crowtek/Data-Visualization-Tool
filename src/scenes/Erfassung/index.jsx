@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Box } from '@mui/material';
 import { ErfassungLayout } from "../../styles/Erfassung";
-import OverviewBox from "./components/OverviewBox";
+import OverviewBox from "./components/OptionBox";
 
 import NewLadeeinheit from '../../components/modal/NewLeModal';
 
@@ -12,7 +12,6 @@ const Erfassung = () => {
     const [newLeModal, showNewLeModal] = useState(false);
 
     const openModal = (name) => {
-        console.log(name)
         if(name === "newLe" ){
             showNewLeModal(true)
         }
