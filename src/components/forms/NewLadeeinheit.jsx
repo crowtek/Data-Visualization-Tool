@@ -2,14 +2,14 @@ import { useState } from 'react';
 
 import { Box, Button } from '@mui/material';
 
-import LadeeinheitInput from "../../../components/InputField/Ladeeinheit";
-import KennzeichenInput from "../../../components/InputField/Kennzeichen";
-import StandortInput from "../../../components/InputField/Standort";
-import RelationInput from "../../../components/InputField/Relation";
-import TypeSelect from "../../../components/Selects/Type";
-import CountrySelect from "../../../components/Selects/Countries";
-import CustomerNameInput from "../../../components/InputField/CustomerName";
-import InfoInput from "../../../components/InputField/Info";
+import LadeeinheitInput from "../InputField/Ladeeinheit";
+import KennzeichenInput from "../InputField/Kennzeichen";
+import StandortInput from "../InputField/Standort";
+import RelationInput from "../InputField/Relation";
+import TypeSelect from "../Selects/Type";
+import CountrySelect from "../Selects/Countries";
+import CustomerNameInput from "../InputField/CustomerName";
+import InfoInput from "../InputField/Info";
 
 const NewLadeeinheit = () => {
     const [formData, setFormData] = useState({});
