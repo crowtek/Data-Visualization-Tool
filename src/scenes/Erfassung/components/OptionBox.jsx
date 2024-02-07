@@ -1,7 +1,7 @@
 
 import { Box,Typography,useTheme } from '@mui/material';
 import { tokens } from "../../../theme";
-import { OverviewBoxStyle } from '../../../styles/Erfassung';
+import { OverviewBoxStyle } from '../../../styles/Page/Erfassung';
 
 import LePlanung from '@mui/icons-material/DepartureBoardOutlined';
 import NewUser from '@mui/icons-material/PersonAddAltOutlined';

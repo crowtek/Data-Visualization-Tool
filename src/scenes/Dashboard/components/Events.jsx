@@ -3,7 +3,7 @@ import StatBox from "../../../components/StatBox";
 import EventIcon from '@mui/icons-material/Event';
 import { useTheme,Box,useMediaQuery } from "@mui/material";
 import { tokens } from "../../../theme";
-import { boxStyle } from "../../../styles/Dashboard";
+import { boxStyle } from "../../../styles/Page/Dashboard";
 
 const CountEventsToday = ({events}) => {
     const theme = useTheme();

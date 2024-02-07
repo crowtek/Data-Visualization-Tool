@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Box } from '@mui/material';
-import { ErfassungLayout } from "../../styles/Erfassung";
+import { ErfassungLayout } from "../../styles/Page/Erfassung";
 import OverviewBox from "./components/OptionBox";
 
 import NewLadeeinheit from '../../components/modal/NewLeModal';

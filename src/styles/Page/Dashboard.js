@@ -1,5 +1,5 @@
 
-import { mediaQueries } from "./Layout";
+import { mediaQueries } from "../Layout";
 
 export const boxStyle = (colors) => ({
     display:"flex", 

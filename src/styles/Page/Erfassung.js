@@ -1,4 +1,4 @@
-import { mediaQueries } from "./Layout"
+import { mediaQueries } from "../Layout"
 
 export const ErfassungLayout = () => ({
     display:"flex",

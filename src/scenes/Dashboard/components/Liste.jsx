@@ -1,6 +1,6 @@
 import { Box, useTheme,Table ,TableBody,TableCell,TableHead,TableRow} from "@mui/material";
 import { tokens } from "../../../theme";
-import { boxStyle, List,ListGrid } from "../../../styles/Dashboard";
+import { boxStyle, List,ListGrid } from "../../../styles/Page/Dashboard";
 
 const LatestIncomingCarsList = ({ vehicleData }) => {
   const theme = useTheme();

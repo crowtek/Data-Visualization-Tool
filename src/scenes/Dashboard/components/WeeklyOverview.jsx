@@ -1,7 +1,7 @@
 import { Box, useTheme,useMediaQuery } from "@mui/material";
 import { tokens } from "../../../theme";
 import { BarChart } from '@mui/x-charts/BarChart';
-import { boxStyle, WeeklyOverviewGrid } from "../../../styles/Dashboard";
+import { boxStyle, WeeklyOverviewGrid } from "../../../styles/Page/Dashboard";
 
 const dataset = [
   {

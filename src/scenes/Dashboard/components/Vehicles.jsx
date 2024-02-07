@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import StatBox from "../../../components/StatBox";
 import { useTheme,Box } from "@mui/material";
 import { tokens } from "../../../theme";
-import { boxStyle } from "../../../styles/Dashboard";
+import { boxStyle } from "../../../styles/Page/Dashboard";
 
 const CountDamageCar = ({vehicleData}) => {
     const theme = useTheme();
