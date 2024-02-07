@@ -5,26 +5,37 @@ import { ErfassungLayout } from "../../styles/Page/Erfassung";
 import OverviewBox from "./components/OptionBox";
 
 import NewLadeeinheit from '../../components/Modal/NewLadeeinheit';
-
-
+import NewUser from '../../components/Modal/NewUser';
 
 const Erfassung = () => {
-    const [newLeModal, showNewLeModal] = useState(false);
+    const [modals, setModals] = useState({
+        newLeModal: false,
+        newUserModal: false,
+    });
 
-    const openModal = (name) => {
-        if(name === "newLe" ){
-            showNewLeModal(true)
-        }
+    const openModal = (modalKey) => {
+        setModals((prevModals) => ({
+            ...prevModals,
+            [modalKey]: true,
+        })); 
     }
 
-    return (
-        <Box sx={ErfassungLayout} > 
-            <OverviewBox name={"Neue Ladeeinheit"} linkName={"/newLe"}  onClick={() => openModal("newLe")}/>
-            <OverviewBox name={"Neuer Benutzer"} linkName={"/newUser"} onClick={() => openModal("newUser")}/>
-            <OverviewBox name={"Neue Relation"} linkName={"/newRelation"} onClick={() => openModal("newRelation")}/>
-            <OverviewBox name={"Ladeeinheit Planen"} linkName={"/"} onClick={() => openModal("")}/>
+    const closeModal = (modalKey) => {
+        setModals((prevModals) => ({
+            ...prevModals,
+            [modalKey]: false,
+        }));
+    };
 
-            <NewLadeeinheit open={newLeModal} onClose={() => showNewLeModal(false)} />
+    return (
+        <Box sx={ErfassungLayout}>
+            <OverviewBox name="Neue Ladeeinheit" linkName="/newLe" onClick={() => openModal('newLeModal')} />
+            <OverviewBox name="Neuer Benutzer" linkName="/newUser" onClick={() => openModal('newUserModal')} />
+            <OverviewBox name="Neue Relation" linkName="/newRelation" onClick={() => {/* Handle new relation modal */}} />
+            <OverviewBox name="Ladeeinheit Planen" linkName="/" onClick={() => {/* Handle planning modal */}} />
+
+            <NewLadeeinheit open={modals.newLeModal} onClose={() => closeModal('newLeModal')} />
+            <NewUser open={modals.newUserModal} onClose={() => closeModal('newUserModal')} />
         </Box>
     )
 }
