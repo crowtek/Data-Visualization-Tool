@@ -14,7 +14,7 @@ const OverviewBox = ({name, linkName, onClick}) => {
     const colors = tokens(theme.palette.mode);
 
     return (
-        <Box sx={OverviewBoxStyle} name={linkName} onClick={onClick}>
+        <Box sx={OverviewBoxStyle(colors)} name={linkName} onClick={onClick}>
             <Typography>{name}</Typography>
             {linkName === "/newLe" ? <NewLe sx={{color:colors.blueAccent[400]}} /> :
              linkName === "/newUser" ? <NewUser sx={{color:colors.greenAccent[400]}}/> :

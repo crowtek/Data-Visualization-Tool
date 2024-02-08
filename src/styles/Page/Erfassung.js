@@ -12,7 +12,7 @@ export const ErfassungLayout = () => ({
     }
 })
 
-export const OverviewBoxStyle = () => ({
+export const OverviewBoxStyle = (colors) => ({
     height:"25vh",
     width:"25vh",
 
@@ -24,13 +24,13 @@ export const OverviewBoxStyle = () => ({
 
     border: "2px solid gray",
     borderRadius: "5px",
-    background: "#1F2A40",
+    background: colors.primary[400],
     overflow:"auto",
     cursor:"pointer",
     transition:"all 0,4s ease-in-out",
 
     "&:hover": {
-        background:"#33466b"
+        background:colors.blueAccent[700]
     },
     "& > svg":{
         height: "80px",
