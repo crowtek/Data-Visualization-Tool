@@ -18,7 +18,7 @@ const UserOverviewTable = ({ userData }) => {
             },
             { field: "options", headerName: "", renderCell: ({ row }) => <DeleteButton {...row} />, },
         ];
-    }, [userData]);
+    }, []);
 
     return (
         <Table tableData={userData} tableColumns={columns}/>
