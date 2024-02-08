@@ -1,6 +1,6 @@
 import { TextField } from '@mui/material';
 
-const StandortInput = ({standort,handleChange}) => {
+const StandortInput = ({standort,onChange}) => {
     return (
         <TextField
             variant="outlined"
@@ -13,7 +13,7 @@ const StandortInput = ({standort,handleChange}) => {
             autoComplete="standort"
             autoFocus
             value={standort}
-            onChange={handleChange}
+            onChange={onChange}
         />
     )
 }

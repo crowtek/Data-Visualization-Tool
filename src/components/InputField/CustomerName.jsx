@@ -1,7 +1,6 @@
 import { TextField } from '@mui/material';
 
- 
- const CustomerNameInput = ({kunde, onChange}) => {
+const CustomerNameInput = ({kunde, onChange}) => {
     return (
         <TextField
             variant="outlined"
@@ -16,6 +15,6 @@ import { TextField } from '@mui/material';
             onChange={onChange}
         />
     )
- }
+}
 
  export default CustomerNameInput;
