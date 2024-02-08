@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Box,Avatar,Button  } from '@mui/material';
+import { Box,Button,Stack  } from '@mui/material';
 
 import NameInput from "../InputField/UserName"
 import EmailInput from "../InputField/Email";
 import PhoneNumberInput from "../InputField/PhoneNumber";
+import CustomerNameInput from '../InputField/CustomerName';
 
 const NewUserForm = () => {
     const [formData, setFormData] = useState({});
@@ -21,23 +22,14 @@ const NewUserForm = () => {
     }
 
     return (
-        <Box component="form" onSubmit={handleSubmit} sx={{display: "flex", gap: 2, flexDirection:"column"}}>
-            <Box maxWidth="lg" sx={{display:"flex"}}>
-                <Box>
-                    <NameInput onChange={handleChange('name')}/>
-                    <EmailInput onChange={handleChange('email')}/>
-                    <PhoneNumberInput onChange={handleChange('phone')}/>
-                </Box>
-                <Box>
-                    <Avatar
-                        alt="Image"
-                        src="/static/images/avatar/1.jpg"
-                        sx={{ width: 124, height: 124, margin:"70px"}}
-                    />
-                </Box>
-            </Box>
-            
-            <Button type="submit" variant="contained">Submit</Button>
+        <Box component="form" onSubmit={handleSubmit}>
+            <Stack spacing={3}>
+                <NameInput onChange={handleChange('name')}/>
+                <EmailInput onChange={handleChange('email')}/>
+                <PhoneNumberInput onChange={handleChange('phone')}/>
+                <CustomerNameInput onChange={handleChange('customer')}/>
+                <Button type="submit" variant="contained">Submit</Button>
+            </Stack>
         </Box>
     )
 }
