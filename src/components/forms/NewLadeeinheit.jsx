@@ -16,8 +16,7 @@ const NewLadeeinheit = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault(); 
-        // Process form data here or send it to a server
-        console.log(formData.ladeeinheit); // For example, log formData to the console
+        console.log(formData.ladeeinheit);
     };
 
     const handleChange = (name) => (event) => {
