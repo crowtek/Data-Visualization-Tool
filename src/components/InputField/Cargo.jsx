@@ -7,10 +7,10 @@ const CargoInput = ({value,onChange}) => {
             margin="normal"
             required
             fullWidth
-            id="ladeeinheit"
-            label="Ladeeinheit"
-            name="ladeeinheit"
-            autoComplete="ladeeinheit"
+            id="cargo"
+            label="Cargo"
+            name="Cargo"
+            autoComplete="cargo"
             autoFocus
             value={value}
             onChange={onChange}

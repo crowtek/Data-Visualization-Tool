@@ -36,16 +36,16 @@ const NewLadeeinheit = ({data}) => {
             { !isCheckIconVisible ? 
             (
                <Box component="form" onSubmit={handleSubmit} sx={{display: "flex", gap: 2, flexDirection:"column"}} >
-                    <Typography variant="h2" component="h2">Neue Ladeeinheit erstellen</Typography>
+                    <Typography variant="h2" component="h2">{data ? "Edit Cargo": "Add new Cargo"}</Typography>
                     <Box className="modalContainer" sx={{display: "flex", gap: 2}}>
                         <Box>            
-                            <CargoInput onChange={handleChange('cargo')} value={data.cargo}/>
-                            <KennzeichenInput onChange={handleChange('kennzeichen')} value={data.vehicle}/>
-                            <ParkPlaceInput onChange={handleChange('parkPlace')} value={data.parkPlace}/>
-                            <RelationInput onChange={handleChange('relation')} value={data.relation}/>
+                            <CargoInput onChange={handleChange('cargo')} value={data?.cargo}/>
+                            <KennzeichenInput onChange={handleChange('kennzeichen')} value={data?.vehicle}/>
+                            <ParkPlaceInput onChange={handleChange('parkPlace')} value={data?.parkPlace}/>
+                            <RelationInput onChange={handleChange('relation')} value={data?.relation}/>
                         </Box>
                         <Box>                
-                            <TypeSelect onChange={handleChange('type')} />
+                            <TypeSelect onChange={handleChange('type')} value={data?.typ}/>
                             <CountrySelect onChange={handleChange('country')} />
                             <CustomerNameInput onChange={handleChange('customerName')} />
                             <InfoInput onChange={handleChange('info')} />
