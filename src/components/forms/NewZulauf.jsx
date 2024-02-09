@@ -1,11 +1,12 @@
 import { useState } from 'react';
 
-import { Box, Button } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import dayjs from 'dayjs';
 
+import AnimatedCheckIcon from '../animations/CheckIcon';
 import LadeeinheitInput from "../InputField/Ladeeinheit";
 import KennzeichenInput from "../InputField/Kennzeichen";
 import StandortInput from "../InputField/Standort";
@@ -16,11 +17,14 @@ import CustomerNameInput from "../InputField/CustomerName";
 import InfoInput from "../InputField/Info";
 
 const NewZulauf = () => {
-    const [formData, setFormData] = useState({date:dayjs(),});
+    const [formData, setFormData] = useState({date:dayjs()});
+    const [isCheckIconVisible, setIsCheckIconVisible] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault(); 
         console.log(formData);
+
+        setIsCheckIconVisible((isCheckIconVisible) => !isCheckIconVisible);
     };
 
     const handleDateChange = (newValue) => {
@@ -39,28 +43,43 @@ const NewZulauf = () => {
     };
 
     return (
-        <Box component="form" onSubmit={handleSubmit} sx={{display: "flex", gap: 2, flexDirection:"column"}}>
-            <Box className="modalContainer">
-                <Box>            
-                    <LadeeinheitInput onChange={handleChange('ladeeinheit')} />
-                    <KennzeichenInput onChange={handleChange('kennzeichen')} />
-                    <StandortInput onChange={handleChange('standort')} />
-                    <RelationInput onChange={handleChange('relation')} />
-                    <CustomerNameInput onChange={handleChange('customerName')} />
-                    <InfoInput onChange={handleChange('info')} />
-                </Box>
-                <Box>
-                    <LocalizationProvider dateAdapter={AdapterDayjs} >
-                        <DateCalendar value={formData.date} onChange={handleDateChange}/> 
-                    </LocalizationProvider>                
-                    <TypeSelect onChange={handleChange('type')} />
-                    <CountrySelect onChange={handleChange('country')} />
+        <Box>
+            { !isCheckIconVisible ? 
+            (
+                <Box component="form" onSubmit={handleSubmit} sx={{display: "flex", gap: 2, flexDirection:"column"}}>
+                    <Typography variant="h2" component="h2">Ladeeinheit Planen</Typography>
+                    <Box className="modalContainer">
+                        <Box>            
+                            <LadeeinheitInput onChange={handleChange('ladeeinheit')} />
+                            <KennzeichenInput onChange={handleChange('kennzeichen')} />
+                            <StandortInput onChange={handleChange('standort')} />
+                            <RelationInput onChange={handleChange('relation')} />
+                            <CustomerNameInput onChange={handleChange('customerName')} />
+                            <InfoInput onChange={handleChange('info')} />
+                        </Box>
+                        <Box>
+                            <LocalizationProvider dateAdapter={AdapterDayjs} >
+                                <DateCalendar value={formData.date} onChange={handleDateChange}/> 
+                            </LocalizationProvider>                
+                            <TypeSelect onChange={handleChange('type')} />
+                            <CountrySelect onChange={handleChange('country')} />
 
-                </Box>
-            </Box>
+                        </Box>
+                    </Box>
 
-            <Button type="submit" variant="contained">Submit</Button>
+                    <Button type="submit" variant="contained">Submit</Button>
+                </Box>
+            
+            ) :
+            (            
+                <div className="CheckIconContainer">
+                    <AnimatedCheckIcon isVisible={isCheckIconVisible} />
+                    <Typography variant="h2" component="h2">Gespeichert</Typography>
+                </div>
+            )
+            }   
         </Box>
+
     );
 };
 

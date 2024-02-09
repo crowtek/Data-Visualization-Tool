@@ -1,9 +1,5 @@
 
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-
+import { Box, Modal  } from '@mui/material';
 import { ModalStyle } from '../../styles/components/ModalStyle';
 import NewLadeeinheit from '../Forms/NewLadeeinheit';
 

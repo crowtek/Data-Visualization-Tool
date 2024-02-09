@@ -1,7 +1,5 @@
 
-import * as React from 'react';
 import { Box, Modal  } from '@mui/material';
-
 import { ModalStyle } from '../../styles/components/ModalStyle';
 import NewRelation from '../Forms/NewRelation';
 
