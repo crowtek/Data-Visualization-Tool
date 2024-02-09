@@ -39,16 +39,16 @@ const NewLadeeinheit = ({data}) => {
                     <Typography variant="h2" component="h2">{data ? "Edit Cargo": "Add new Cargo"}</Typography>
                     <Box className="modalContainer" sx={{display: "flex", gap: 2}}>
                         <Box>            
-                            <CargoInput onChange={handleChange('cargo')} value={data?.cargo}/>
-                            <KennzeichenInput onChange={handleChange('kennzeichen')} value={data?.vehicle}/>
-                            <ParkPlaceInput onChange={handleChange('parkPlace')} value={data?.parkPlace}/>
-                            <RelationInput onChange={handleChange('relation')} value={data?.relation}/>
+                            <CargoInput onChange={handleChange('cargo')} value={formData.cargo? formData.cargo : data?.cargo}/>
+                            <KennzeichenInput onChange={handleChange('vehicle')} value={formData.vehicle? formData.vehicle : data?.vehicle}/>
+                            <ParkPlaceInput onChange={handleChange('parkPlace')} value={formData.parkPlace? formData.parkPlace : data?.parkPlace}/>
+                            <RelationInput onChange={handleChange('relation')} value={formData.relation? formData.relation : data?.relation}/>
                         </Box>
                         <Box>                
-                            <TypeSelect onChange={handleChange('type')} value={data?.typ}/>
-                            <CountrySelect onChange={handleChange('country')} value={data?.land.name}/>
-                            <CustomerNameInput onChange={handleChange('customerName')} value={data?.customer.name}/>
-                            <InfoInput onChange={handleChange('info')} value={data?.info}/>
+                            <TypeSelect onChange={handleChange('type')} value={formData.type? formData.type:data?.land.typ}/>
+                            <CountrySelect onChange={handleChange('country')} value={formData.country? formData.country:data?.land.name}/>
+                            <CustomerNameInput onChange={handleChange('customerName')} value={formData.customerName? formData.customerName : data?.customer.name}/>
+                            <InfoInput onChange={handleChange('info')} value={formData.info? formData.info : data?.info}/>
                         </Box>
                     </Box>
 
