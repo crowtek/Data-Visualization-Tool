@@ -1,6 +1,6 @@
 import { TextField } from '@mui/material';
 
-const RelationInput = ({relation,onChange}) => {
+const RelationInput = ({value,onChange}) => {
     return (
         <TextField
             variant="outlined"
@@ -11,7 +11,7 @@ const RelationInput = ({relation,onChange}) => {
             name="relation"
             autoComplete="relation"
             autoFocus
-            value={relation}
+            value={value}
             onChange={onChange}
         />
     )

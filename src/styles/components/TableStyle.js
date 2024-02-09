@@ -18,7 +18,7 @@ export const TableStyle = () => {
     },
     "& .MuiDataGrid-columnHeaders": {
       backgroundColor: colors.primary[400],
-      fontSize: 16,
+      fontSize: 17,
     },
     "& .MuiDataGrid-toolbarContainer ":{
       backgroundColor: colors.primary[400],
