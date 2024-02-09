@@ -1,9 +1,6 @@
 import { useState } from 'react';
 
-import { motion } from "framer-motion";
 import AnimatedCheckIcon from '../animations/CheckIcon';
-import "../animations/animation.css";
-
 import { Box, Button,Typography } from '@mui/material';
 
 import LadeeinheitInput from "../InputField/Ladeeinheit";

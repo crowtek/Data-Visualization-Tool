@@ -8,6 +8,7 @@ import NewLadeeinheit from '../../components/Modal/Ladeeinheit';
 import NewUser from '../../components/Modal/NewUser';
 import RelationModal from '../../components/Modal/Relation';
 import ZulaufModal from '../../components/Modal/Zulauf';
+import "../../components/animations/animation.css";
 
 const Erfassung = () => {
     const [modals, setModals] = useState({
