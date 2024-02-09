@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import Button from '@mui/material/Button';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import { useTheme } from '@mui/material/styles';
@@ -32,7 +32,6 @@ const DeleteButton = (props) => {
                 console.error('Network error:', error);
             });
     }, [props.userId]);
-    console.log(open)
 
     return (
         <Button onClick={deleteUser}>

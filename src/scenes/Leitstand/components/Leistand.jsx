@@ -3,6 +3,7 @@ import { useMemo } from "react";
 
 import Table from "../../../components/Table/Table";
 import DeleteButton from "../../../components/Table/DeleteButton";
+import ModalButton from "../../../components/Table/ModalButton";
 import VehicleStatus from "./VehicleStatus";
 
 const LeitstandTable = ({ userData }) => {
@@ -16,7 +17,8 @@ const LeitstandTable = ({ userData }) => {
     { field: "land", headerName: "Land", flex: 0.5, renderCell: ({ row }) => row.land && row.land.kurz, },
     { field: "customer", headerName: "Kunde", flex: 0.5, renderCell: ({ row }) => row.customer && row.customer.name, },
     { field: "info", headerName: "Info", flex: 1, editable: true },
-    { field: "options",headerName: "", renderCell: ({ row }) => <DeleteButton {...row} />,},
+    { field: "modal",headerName: "",flex: 0.2, renderCell: ({ row }) => <ModalButton {...row} />,},
+    { field: "options",headerName: "", flex: 0.2,renderCell: ({ row }) => <DeleteButton {...row} />,},
   ],[]);
 
   return (
