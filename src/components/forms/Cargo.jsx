@@ -1,13 +1,9 @@
 import { useState } from 'react';
 
-import { Box, Button, Typography } from '@mui/material';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
-import dayjs from 'dayjs';
-
 import AnimatedCheckIcon from '../animations/CheckIcon';
-import LadeeinheitInput from "../InputField/Ladeeinheit";
+import { Box, Button,Typography } from '@mui/material';
+
+import CargoInput from "../InputField/Cargo";
 import KennzeichenInput from "../InputField/Kennzeichen";
 import StandortInput from "../InputField/Standort";
 import RelationInput from "../InputField/Relation";
@@ -16,22 +12,15 @@ import CountrySelect from "../Selects/Countries";
 import CustomerNameInput from "../InputField/CustomerName";
 import InfoInput from "../InputField/Info";
 
-const NewZulauf = () => {
-    const [formData, setFormData] = useState({date:dayjs()});
+const NewLadeeinheit = ({data}) => {
+    const [formData, setFormData] = useState({});
     const [isCheckIconVisible, setIsCheckIconVisible] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault(); 
-        console.log(formData);
+        console.log(formData.ladeeinheit);
 
         setIsCheckIconVisible((isCheckIconVisible) => !isCheckIconVisible);
-    };
-
-    const handleDateChange = (newValue) => {
-        setFormData({
-            ...formData,
-            date: newValue,
-        });
     };
 
     const handleChange = (name) => (event) => {
@@ -46,30 +35,25 @@ const NewZulauf = () => {
         <Box>
             { !isCheckIconVisible ? 
             (
-                <Box component="form" onSubmit={handleSubmit} sx={{display: "flex", gap: 2, flexDirection:"column"}}>
-                    <Typography variant="h2" component="h2">Ladeeinheit Planen</Typography>
-                    <Box className="modalContainer">
+               <Box component="form" onSubmit={handleSubmit} sx={{display: "flex", gap: 2, flexDirection:"column"}} >
+                    <Typography variant="h2" component="h2">Neue Ladeeinheit erstellen</Typography>
+                    <Box className="modalContainer" sx={{display: "flex", gap: 2}}>
                         <Box>            
-                            <LadeeinheitInput onChange={handleChange('ladeeinheit')} />
+                            <CargoInput onChange={handleChange('cargo')} value={data.cargo}/>
                             <KennzeichenInput onChange={handleChange('kennzeichen')} />
                             <StandortInput onChange={handleChange('standort')} />
                             <RelationInput onChange={handleChange('relation')} />
-                            <CustomerNameInput onChange={handleChange('customerName')} />
-                            <InfoInput onChange={handleChange('info')} />
                         </Box>
-                        <Box>
-                            <LocalizationProvider dateAdapter={AdapterDayjs} >
-                                <DateCalendar value={formData.date} onChange={handleDateChange}/> 
-                            </LocalizationProvider>                
+                        <Box>                
                             <TypeSelect onChange={handleChange('type')} />
                             <CountrySelect onChange={handleChange('country')} />
-
+                            <CustomerNameInput onChange={handleChange('customerName')} />
+                            <InfoInput onChange={handleChange('info')} />
                         </Box>
                     </Box>
 
                     <Button type="submit" variant="contained">Submit</Button>
                 </Box>
-            
             ) :
             (            
                 <div className="CheckIconContainer">
@@ -77,10 +61,12 @@ const NewZulauf = () => {
                     <Typography variant="h2" component="h2">Gespeichert</Typography>
                 </div>
             )
-            }   
+            }       
+
+
         </Box>
 
     );
 };
 
-export default NewZulauf;
+export default NewLadeeinheit;

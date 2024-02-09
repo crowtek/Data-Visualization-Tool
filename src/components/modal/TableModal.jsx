@@ -1,13 +1,13 @@
 
 import { Box, Modal  } from '@mui/material';
 import { ModalStyle } from '../../styles/components/ModalStyle';
-import NewLadeeinheit from '../Forms/NewLadeeinheit';
+import CargoModal from '../Forms/Cargo';
 
 const TableModal = ({ open, onClose, data }) => {
     return (
         <Modal open={open} onClose={onClose} onClick={(e) => e.stopPropagation()}>
             <Box sx={ModalStyle}>
-                <NewLadeeinheit />
+                <CargoModal data={data} />
             </Box>
         </Modal>
     )
