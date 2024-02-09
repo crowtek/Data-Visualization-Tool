@@ -1,17 +1,17 @@
 import { TextField } from '@mui/material';
 
-const CustomerNameInput = ({kunde, onChange}) => {
+const CustomerNameInput = ({value, onChange}) => {
     return (
         <TextField
             variant="outlined"
             margin="normal"
             fullWidth
-            name="kunde"
-            label="Costumer"
-            type="kunde"
-            id="kunde"
-            autoComplete="kunde"
-            value={kunde}
+            name="Customer"
+            label="Customer"
+            type="Customer"
+            id="Customer"
+            autoComplete="Customer"
+            value={value}
             onChange={onChange}
         />
     )
