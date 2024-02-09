@@ -11,7 +11,6 @@ const NewLeModal = ({ open, onClose }) => {
     return (
         <Modal open={open} onClose={onClose}>
             <Box sx={ModalStyle}>
-                <Typography variant="h2" component="h2">Neue Ladeeinheit erstellen</Typography>
                 <NewLadeeinheit />
             </Box>
         </Modal>

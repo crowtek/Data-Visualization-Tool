@@ -1,0 +1,15 @@
+
+.CheckIconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4vh;
+    padding: 20px;
+}
+  
+  .CheckIcon {
+    width: 100px;
+    height: 100px;
+  }
+  
