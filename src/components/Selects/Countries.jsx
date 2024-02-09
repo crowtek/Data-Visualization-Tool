@@ -1,7 +1,7 @@
 
 import { Select, MenuItem, InputLabel, FormControl } from '@mui/material';
 
-const CountrySelect = ({ country, onChange }) => {
+const CountrySelect = ({ value, onChange }) => {
   const countries = [
     'Germany',
     'United States',
@@ -17,7 +17,16 @@ const CountrySelect = ({ country, onChange }) => {
     'Mexico',
     'Spain',
     'Italy',
+    'Austria',
+    'Netherlands',
+    'Denmark',
+    'Norway',
+    'Switzerland',
+    'Sweden',
+    'Belgium',
+    'Poland',
   ];
+  
 
   return (
     <FormControl fullWidth margin="normal">
@@ -26,7 +35,7 @@ const CountrySelect = ({ country, onChange }) => {
         labelId="countryLabel"
         defaultValue={"Germany"}
         id="country"
-        value={country}
+        value={value}
         onChange={onChange}
         label="Country"
         name="country"

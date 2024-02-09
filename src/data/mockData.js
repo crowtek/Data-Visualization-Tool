@@ -100,7 +100,7 @@ export const mockDataVehicles = [
     damage: "rechte seite",
     land: {
       kurz: "DE",
-      name: "Deutschland"
+      name: "Germany"
     },
     driver: {
       name: "Anna Haus",
@@ -154,7 +154,7 @@ export const mockDataVehicles = [
     damage: "",
     land: {
       kurz: "DE",
-      name: "Deutschland"
+      name: "Germany"
     },
     driver: {
       name: "Eva Johnson",
@@ -491,6 +491,7 @@ export const mockDataVehicles = [
     },
   },
 ]
+
 
 export const mockDataVehiclesZulauf = [
   {

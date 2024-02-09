@@ -46,7 +46,7 @@ const NewLadeeinheit = ({data}) => {
                         </Box>
                         <Box>                
                             <TypeSelect onChange={handleChange('type')} value={data?.typ}/>
-                            <CountrySelect onChange={handleChange('country')} />
+                            <CountrySelect onChange={handleChange('country')} value={data?.land.name}/>
                             <CustomerNameInput onChange={handleChange('customerName')} />
                             <InfoInput onChange={handleChange('info')} />
                         </Box>
