@@ -1,6 +1,6 @@
 import { TextField } from '@mui/material';
 
-const KennzeichenInput = ({kennzeichen,onChange}) => {
+const KennzeichenInput = ({value,onChange}) => {
     return (
         <TextField
             variant="outlined"
@@ -12,7 +12,7 @@ const KennzeichenInput = ({kennzeichen,onChange}) => {
             name="kennzeichen"
             autoComplete="kennzeichen"
             autoFocus
-            value={kennzeichen}
+            value={value}
             onChange={onChange}
         />
     )

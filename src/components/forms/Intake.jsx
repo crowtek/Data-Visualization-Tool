@@ -9,7 +9,7 @@ import dayjs from 'dayjs';
 import AnimatedCheckIcon from '../animations/CheckIcon';
 import CargoInput from "../InputField/Cargo";
 import KennzeichenInput from "../InputField/Kennzeichen";
-import StandortInput from "../InputField/Standort";
+import ParkPlace from "../InputField/ParkPlace";
 import RelationInput from "../InputField/Relation";
 import TypeSelect from "../Selects/Type";
 import CountrySelect from "../Selects/Countries";
@@ -52,7 +52,7 @@ const NewZulauf = () => {
                         <Box>            
                             <CargoInput onChange={handleChange('ladeeinheit')} />
                             <KennzeichenInput onChange={handleChange('kennzeichen')} />
-                            <StandortInput onChange={handleChange('standort')} />
+                            <ParkPlace onChange={handleChange('parkPlace')} />
                             <RelationInput onChange={handleChange('relation')} />
                             <CustomerNameInput onChange={handleChange('customerName')} />
                             <InfoInput onChange={handleChange('info')} />

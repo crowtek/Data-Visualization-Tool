@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Box,Button, Stack, Typography  } from '@mui/material';
 
 import AnimatedCheckIcon from '../animations/CheckIcon';
-import StandortInput from '../InputField/Standort';
+import ParkPlaceInput from '../InputField/ParkPlace';
 import CountrySelect from '../Selects/Countries';
 import CustomerNameInput from '../InputField/CustomerName';
 
@@ -33,11 +33,11 @@ const NewRelation = () => {
                         <Typography variant="h2" component="h2">Neue Relation erstellen</Typography>
                         <CustomerNameInput onChange={handleChange('costumerName')}/>
                         <Typography variant="h4">Relation Start</Typography>
-                        <StandortInput onChange={handleChange('standortStart')}/>
+                        <ParkPlaceInput onChange={handleChange('parkPlaceStart')}/>
                         <CountrySelect onChange={handleChange('countryStart')}/>
 
                         <Typography variant="h4">Relation Ende</Typography>
-                        <StandortInput onChange={handleChange('standortEnd')}/>
+                        <ParkPlaceInput onChange={handleChange('parkPlaceEnd')}/>
                         <CountrySelect onChange={handleChange('countryEnd')}/>
 
                         <Button type="submit" variant="contained">Submit</Button>

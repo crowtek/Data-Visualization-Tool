@@ -1,20 +1,20 @@
 import { TextField } from '@mui/material';
 
-const StandortInput = ({standort,onChange}) => {
+const ParkPlaceInput = ({value,onChange}) => {
     return (
         <TextField
             variant="outlined"
             margin="normal"
             required
             fullWidth
-            id="standort"
-            label="Standort"
-            name="standort"
-            autoComplete="standort"
+            id="parkPlace"
+            label="Park Place"
+            name="Park Place"
+            autoComplete="Park Place"
             autoFocus
-            value={standort}
+            value={value}
             onChange={onChange}
         />
     )
 }
-export default StandortInput;
+export default ParkPlaceInput;

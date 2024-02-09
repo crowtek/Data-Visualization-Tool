@@ -5,7 +5,7 @@ import { Box, Button,Typography } from '@mui/material';
 
 import CargoInput from "../InputField/Cargo";
 import KennzeichenInput from "../InputField/Kennzeichen";
-import StandortInput from "../InputField/Standort";
+import ParkPlaceInput from "../InputField/ParkPlace";
 import RelationInput from "../InputField/Relation";
 import TypeSelect from "../Selects/Type";
 import CountrySelect from "../Selects/Countries";
@@ -40,9 +40,9 @@ const NewLadeeinheit = ({data}) => {
                     <Box className="modalContainer" sx={{display: "flex", gap: 2}}>
                         <Box>            
                             <CargoInput onChange={handleChange('cargo')} value={data.cargo}/>
-                            <KennzeichenInput onChange={handleChange('kennzeichen')} />
-                            <StandortInput onChange={handleChange('standort')} />
-                            <RelationInput onChange={handleChange('relation')} />
+                            <KennzeichenInput onChange={handleChange('kennzeichen')} value={data.vehicle}/>
+                            <ParkPlaceInput onChange={handleChange('parkPlace')} value={data.parkPlace}/>
+                            <RelationInput onChange={handleChange('relation')} value={data.relation}/>
                         </Box>
                         <Box>                
                             <TypeSelect onChange={handleChange('type')} />
