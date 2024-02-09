@@ -30,7 +30,7 @@ const NewLadeeinheit = () => {
 
     return (
         <Box component="form" onSubmit={handleSubmit} sx={{display: "flex", gap: 2, flexDirection:"column"}}>
-            <Box sx={{display: "flex", gap: 2}}>
+            <Box className="modalContainer" sx={{display: "flex", gap: 2}}>
                 <Box>            
                     <LadeeinheitInput onChange={handleChange('ladeeinheit')} />
                     <KennzeichenInput onChange={handleChange('kennzeichen')} />

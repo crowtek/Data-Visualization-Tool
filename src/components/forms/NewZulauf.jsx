@@ -40,7 +40,7 @@ const NewZulauf = () => {
 
     return (
         <Box component="form" onSubmit={handleSubmit} sx={{display: "flex", gap: 2, flexDirection:"column"}}>
-            <Box sx={{display: "flex", gap: 2}}>
+            <Box className="modalContainer">
                 <Box>            
                     <LadeeinheitInput onChange={handleChange('ladeeinheit')} />
                     <KennzeichenInput onChange={handleChange('kennzeichen')} />
