@@ -1054,18 +1054,21 @@ export const mockEvents = [
     key: "1",
     name: "Car XYZ incoming",
     date: formattedDate,
-    madeBy: "John Doa"
+    madeBy: "John Doa",
+    importance:"Normal",
   },
   {
     key: "2",
     name: "Car ABC appointment",
     date: formattedDate,
-    madeBy: "Selena Picker"
+    madeBy: "Selena Picker",
+    importance:"Prio",
   },
   {
     key: "3",
     name: "New Coworker",
     date: formattedDate,
-    madeBy: "Meik Greenwood"
+    madeBy: "Meik Greenwood",
+    importance:"Minor",
   },
 ];

@@ -1,17 +1,23 @@
+import { useCallback, useState } from "react";
+
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
 import { Box} from "@mui/material";
-import { useCallback } from "react";
 
-import { HandleNewEvent } from "../utils/HandleNewEvent";
-import { HandleDeleteEvent } from "../utils/HandleDeleteEvent";
+import EventModal from "../../../components/Modal/Event"
 
 const CalendarComponent = ({eventData}) => {
-    const handleNewEvent = useCallback(HandleNewEvent, [])
-    const handleDeleteEvent = useCallback(HandleDeleteEvent, []);
+    const [showModal, setShowModal] = useState(false);
+    const [clickedEventData, setClickedEventData] = useState(false);
+
+    const handleModal = (selected) =>{
+      setClickedEventData(selected?.event?._def.extendedProps);
+      setShowModal((showModal) => !showModal);
+    }
+
     return (
         <Box flexGrow={2} ml="15px">
           <FullCalendar
@@ -32,11 +38,12 @@ const CalendarComponent = ({eventData}) => {
             selectable={true}
             selectMirror={true}
             dayMaxEvents={true}
-            select={handleNewEvent}
-            eventClick={handleDeleteEvent}
+            select={handleModal}
+            eventClick={handleModal}
             // eventsSet={(events) => setCurrentEvents(events)}
             initialEvents={eventData}
           />
+          <EventModal eventData={clickedEventData} open={showModal} onClose={() => handleModal()} />
         </Box>
     )
 }

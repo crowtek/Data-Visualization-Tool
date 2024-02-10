@@ -10,7 +10,7 @@ import AnimatedCheckIcon from '../animations/CheckIcon';
 import EventInput from "../InputField/Event";
 import ImportanceSelect from '../Selects/Importance';
 
-const EventForm = () => {
+const EventForm = ({eventData}) => {
     const [formData, setFormData] = useState({date:dayjs()});
     const [isCheckIconVisible, setIsCheckIconVisible] = useState(false);
 
@@ -46,8 +46,9 @@ const EventForm = () => {
                         <LocalizationProvider dateAdapter={AdapterDayjs} >
                             <DateCalendar value={formData.date} onChange={handleDateChange}/> 
                         </LocalizationProvider>                
-                        <ImportanceSelect onChange={handleChange('importance')}/>
-                        <EventInput onChange={handleChange('event')} />
+                        <ImportanceSelect onChange={handleChange('importance')} value={formData.importance ? formData.importance : eventData?.importance}/>
+                        <EventInput onChange={handleChange('event')} value={formData.event ? formData.event : eventData?.name}/>
+
                         <Button type="submit" variant="contained">Submit</Button>
                     </Stack>
                 </Box>
