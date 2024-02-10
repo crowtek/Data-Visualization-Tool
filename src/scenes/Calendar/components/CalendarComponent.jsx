@@ -14,6 +14,7 @@ const CalendarComponent = ({eventData}) => {
     const [clickedEventData, setClickedEventData] = useState(false);
 
     const handleModal = (selected) =>{
+      console.log(selected?.event?._def.extendedProps);
       setClickedEventData(selected?.event?._def.extendedProps);
       setShowModal((showModal) => !showModal);
     }

@@ -1056,6 +1056,7 @@ export const mockEvents = [
     date: formattedDate,
     madeBy: "John Doa",
     importance:"Normal",
+    day:"11.02.2024"
   },
   {
     key: "2",
@@ -1063,6 +1064,7 @@ export const mockEvents = [
     date: formattedDate,
     madeBy: "Selena Picker",
     importance:"Prio",
+    day:"12.02.2024"
   },
   {
     key: "3",
@@ -1070,5 +1072,6 @@ export const mockEvents = [
     date: formattedDate,
     madeBy: "Meik Greenwood",
     importance:"Minor",
+    day:"14.02.2024"
   },
 ];

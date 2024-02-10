@@ -5,19 +5,21 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
 
 import AnimatedCheckIcon from '../animations/CheckIcon';
 import EventInput from "../InputField/Event";
 import ImportanceSelect from '../Selects/Importance';
 
 const EventForm = ({eventData}) => {
-    const [formData, setFormData] = useState({date:dayjs()});
+    dayjs.extend(customParseFormat);
+    const parsedDate = dayjs(eventData.day, "DD.MM.YYYY");
+    const [formData, setFormData] = useState({date:parsedDate? parsedDate :dayjs()});
     const [isCheckIconVisible, setIsCheckIconVisible] = useState(false);
+    
 
     const handleSubmit = (event) => {
         event.preventDefault(); 
-        console.log(formData);
-
         setIsCheckIconVisible((isCheckIconVisible) => !isCheckIconVisible);
     };
 
@@ -35,6 +37,7 @@ const EventForm = ({eventData}) => {
         });
 
     };
+
 
     return (
         <Box>
