@@ -1,29 +1,27 @@
 
 import { useState, useCallback, useMemo } from "react";
-import { Box,List,ListItem,ListItemText,Typography,useTheme,ListItemButton,Modal,TextField,Button} from "@mui/material";
+import { Box,List,ListItem,ListItemText,Typography,useTheme,ListItemButton} from "@mui/material";
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import { tokens } from "../../../theme";
 import { mockEvents } from "../../../data/mockData"
-import { ModalStyle as ModalStyleImport } from "../../../styles/components/ModalStyle";
+
+import EventModal from "../../../components/Modal/Event";
+import { EventListStyle } from "../../../styles/Page/Calendar";
 
 const EventList = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    const [showModal, setShowModal] = useState(false); // State to control Modal visibility
+    const [selectedEvent, setSelectedEvent] = useState(null); // State to store the selected event data
 
-    const ModalStyle = useMemo(() => {
-        return {...ModalStyleImport}
-    },[])
-
+    // Filter Events
     const currentDate = new Date().toLocaleDateString('en-CA')
     const todayEvents = useMemo(() => {
         return mockEvents.filter(event => event.date === currentDate)
     },[currentDate])
-
     const [events, setEvents] = useState(todayEvents);
     
-    const [isOpenModal, setIsOpenModal] = useState(false); // State to control Modal visibility
-    const [selectedEvent, setSelectedEvent] = useState(null); // State to store the selected event data
-
+    // Delete Events
     const handleEventDelete = useCallback((event) => {
         event.stopPropagation();
         const clickedEventId = event.currentTarget.parentNode.id;
@@ -35,52 +33,40 @@ const EventList = () => {
         const clickedEventData = events.find(event => event.key === clickedEventId)
  
         setSelectedEvent(clickedEventData);
-        setIsOpenModal(true);
+        setShowModal((showModal) => !showModal);
     },[events])
 
 
     const handleCloseModal = useCallback(() => {
         setSelectedEvent(null);
-        setIsOpenModal(false);
+        setShowModal((showModal) => !showModal);
     },[]);
 
 
     return (
-        <Box display="flex" justifyContent="space-between" flexGrow={0.8}>
-            <Box flexGrow={1} backgroundColor={colors.primary[400]} p="15px" borderRadius="4px">
-                <Typography variant="h4">Events</Typography>
-                
-                <List>
-                    {events.map((element) => (
-                        <ListItem 
-                        key={element.key} 
-                        id={element.key} 
-                        sx={{ backgroundColor: colors.blueAccent[600], margin: "10px 0", borderRadius: "2px",}}
-                        onClick={handleEventEdit}
-                        >
-                            <ListItemText primary={element.name} secondary={element.date} sx={{width:"80%"}}/>
+        <Box sx={EventListStyle(colors)} >
+            <Typography variant="h3">Events Today {currentDate}</Typography>
+            
+            <List className="eventList">
+                {events.map((element) => (
+                    <ListItem className="eventList-item" key={element.key} id={element.key} onClick={handleEventEdit}
+                    sx={{
+                        backgroundColor:
+                          element.importance === "Prio" ? colors.redAccent[600] :
+                          element.importance === "Minor" ? colors.grey[600] : 
+                          colors.blueAccent[600] 
+                      }}
+                    >
+                        <ListItemText primary={element.name} secondary={"Made by: " + element.madeBy} sx={{width:"80%"}}/>
 
-                            <ListItemButton onClick={handleEventDelete} sx={{borderRadius:2,width:"30px"}}>
-                                <DeleteOutlineIcon />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
-                </List>
-            </Box>
+                        <ListItemButton onClick={handleEventDelete}>
+                            <DeleteOutlineIcon />
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
 
-            <Modal open={isOpenModal} onClose={handleCloseModal}>
-                <Box sx={ModalStyle}>
-                    {selectedEvent && (
-                        <Box sx={{display:"flex",flexDirection:"column",gap:3}}>
-                            <Typography id={selectedEvent.key} variant="h4">Event</Typography>
-                            <TextField id="event-name" label="Name" defaultValue={selectedEvent.name}/>
-                            <TextField id="event-date" label="Date" defaultValue={selectedEvent.date}/>
-                            <TextField disabled id="event-madeBy" label="Event made by" defaultValue={selectedEvent.madeBy}/>
-                            <Button variant="contained" sx={{letterSpacing:1}}>Save Changes</Button>
-                        </Box>
-                    )}
-                </Box>
-            </Modal>
+            <EventModal eventData={selectedEvent} open={showModal} onClose={() => handleCloseModal()} />
         </Box>
     );
 };
