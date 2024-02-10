@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useState } from "react";
 
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -7,14 +7,14 @@ import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
 import { Box} from "@mui/material";
 
-import EventModal from "../../../components/Modal/Event"
+import EventModal from "../../../components/Modal/Event";
+import "../../../styles/components/Calendar.css";
 
 const CalendarComponent = ({eventData}) => {
     const [showModal, setShowModal] = useState(false);
     const [clickedEventData, setClickedEventData] = useState(false);
 
     const handleModal = (selected) =>{
-      console.log(selected?.event?._def.extendedProps);
       setClickedEventData(selected?.event?._def.extendedProps);
       setShowModal((showModal) => !showModal);
     }
@@ -41,8 +41,7 @@ const CalendarComponent = ({eventData}) => {
             dayMaxEvents={true}
             select={handleModal}
             eventClick={handleModal}
-            // eventsSet={(events) => setCurrentEvents(events)}
-            initialEvents={eventData}
+            events={eventData}
           />
           <EventModal eventData={clickedEventData} open={showModal} onClose={() => handleModal()} />
         </Box>

@@ -1052,26 +1052,33 @@ const formattedDate = today.toISOString().split('T')[0];
 export const mockEvents = [
   {
     key: "1",
+    title: "Car XYZ incoming",
     name: "Car XYZ incoming",
     date: formattedDate,
     madeBy: "John Doa",
     importance:"Normal",
-    day:"11.02.2024"
+    day:"11.02.2024",
+    eventClassNames:['Normal']
   },
   {
     key: "2",
+    title: "Car ABC appointment",
+    eventClassNames:['custom-class'], 
     name: "Car ABC appointment",
     date: formattedDate,
     madeBy: "Selena Picker",
     importance:"Prio",
-    day:"12.02.2024"
+    day:"12.02.2024",
+
   },
   {
     key: "3",
+    title: "New Coworker",
     name: "New Coworker",
     date: formattedDate,
     madeBy: "Meik Greenwood",
     importance:"Minor",
-    day:"14.02.2024"
+    day:"14.02.2024",
+    eventClassNames:['Minor']
   },
 ];

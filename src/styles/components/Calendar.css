@@ -1,0 +1,21 @@
+
+.fc-popover-title{
+    color: gray;
+}
+.fc-event{
+    padding: 5px;
+}
+.fc-daygrid-day-bottom{
+    padding: 5px;
+}
+.fc-daygrid-more-link {
+    font-size: 18px;
+    margin: 5px;
+}
+.fc .fc-daygrid-day.fc-day-today{
+    background-color: transparent;
+}
+
+.custom-class{
+    background-color: red;
+}

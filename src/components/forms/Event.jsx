@@ -13,11 +13,11 @@ import ImportanceSelect from '../Selects/Importance';
 
 const EventForm = ({eventData}) => {
     dayjs.extend(customParseFormat);
-    const parsedDate = dayjs(eventData.day, "DD.MM.YYYY");
+    const parsedDate = dayjs(eventData?.day, "DD.MM.YYYY");
     const [formData, setFormData] = useState({date:parsedDate? parsedDate :dayjs()});
     const [isCheckIconVisible, setIsCheckIconVisible] = useState(false);
     
-
+    console.log(eventData)
     const handleSubmit = (event) => {
         event.preventDefault(); 
         setIsCheckIconVisible((isCheckIconVisible) => !isCheckIconVisible);
