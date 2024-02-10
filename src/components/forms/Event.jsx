@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Typography, Stack } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
@@ -40,14 +40,16 @@ const EventForm = () => {
         <Box>
             { !isCheckIconVisible ? 
             (
-                <Box component="form" onSubmit={handleSubmit} sx={{display: "flex", gap: 2, flexDirection:"column"}}>
-                    <Typography variant="h2" component="h2">Add Event</Typography>
-                    <LocalizationProvider dateAdapter={AdapterDayjs} >
-                        <DateCalendar value={formData.date} onChange={handleDateChange}/> 
-                    </LocalizationProvider>                
-                    <ImportanceSelect onChange={handleChange('importance')}/>
-                    <EventInput onChange={handleChange('event')} />
-                    <Button type="submit" variant="contained">Submit</Button>
+                <Box component="form" onSubmit={handleSubmit}>
+                    <Stack spacing={3}>
+                        <Typography variant="h2" component="h2">Add Event</Typography>
+                        <LocalizationProvider dateAdapter={AdapterDayjs} >
+                            <DateCalendar value={formData.date} onChange={handleDateChange}/> 
+                        </LocalizationProvider>                
+                        <ImportanceSelect onChange={handleChange('importance')}/>
+                        <EventInput onChange={handleChange('event')} />
+                        <Button type="submit" variant="contained">Submit</Button>
+                    </Stack>
                 </Box>
             
             ) :
