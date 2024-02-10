@@ -17,7 +17,7 @@ const LeitstandTable = ({ userData }) => {
     { field: "land", headerName: "Land", flex: 0.5, renderCell: ({ row }) => row.land && row.land.kurz, },
     { field: "customer", headerName: "Kunde", flex: 0.5, renderCell: ({ row }) => row.customer && row.customer.name, },
     { field: "info", headerName: "Info", flex: 1, editable: true },
-    { field: "modal",headerName: "",flex: 0.2, renderCell: ({ row }) => <ModalButton {...row} />,},
+    { field: "modal",headerName: "",flex: 0.2, renderCell: ({ row }) => <ModalButton {...row} table={"Leitstand"}/>,},
     { field: "options",headerName: "", flex: 0.2,renderCell: ({ row }) => <DeleteButton {...row} />,},
   ],[]);
 

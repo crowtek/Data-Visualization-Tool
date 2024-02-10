@@ -11,7 +11,6 @@ const ModalButton = (props) => {
 
     const openModal = () => {
         setShowModal((showModal) => !showModal)
-        console.log(props)
     }
 
     return(
