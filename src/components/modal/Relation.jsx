@@ -1,7 +1,7 @@
 
 import { Box, Modal  } from '@mui/material';
 import { ModalStyle } from '../../styles/components/ModalStyle';
-import NewRelation from '../Forms/NewRelation';
+import NewRelation from '../Forms/Relation';
 
 const RelationModal = ({ open, onClose }) => {
     return (

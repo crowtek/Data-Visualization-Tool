@@ -4,18 +4,18 @@ import { Box } from '@mui/material';
 import { ErfassungLayout } from "../../styles/Page/Erfassung";
 import OverviewBox from "./components/OptionBox";
 
-import NewLadeeinheit from '../../components/Modal/Ladeeinheit';
-import NewUser from '../../components/Modal/NewUser';
+import CargoModal from '../../components/Modal/Cargo';
+import UserModal from '../../components/Modal/User';
 import RelationModal from '../../components/Modal/Relation';
-import ZulaufModal from '../../components/Modal/Zulauf';
+import IntakeModal from '../../components/Modal/Intake';
 import "../../components/animations/animation.css";
 
 const Erfassung = () => {
     const [modals, setModals] = useState({
-        newLeModal: false,
-        newUserModal: false,
-        newRelationModal: false,
-        newZulaufModal: false,
+        showCargoModal: false,
+        showUserModal: false,
+        showRelationModal: false,
+        showIntakeModal: false,
         
     });
 
@@ -35,15 +35,15 @@ const Erfassung = () => {
 
     return (
         <Box sx={ErfassungLayout}>
-            <OverviewBox name="Neue Ladeeinheit" linkName="/newLe" onClick={() => openModal('newLeModal')} />
-            <OverviewBox name="Neuer Benutzer" linkName="/newUser" onClick={() => openModal('newUserModal')} />
-            <OverviewBox name="Neue Relation" linkName="/newRelation" onClick={() => openModal('newRelationModal')} />
-            <OverviewBox name="Ladeeinheit Planen" linkName="/" onClick={() => openModal('newZulaufModal')} />
+            <OverviewBox name="Neue Ladeeinheit" linkName="/newLe" onClick={() => openModal('showCargoModal')} />
+            <OverviewBox name="Neuer Benutzer" linkName="/newUser" onClick={() => openModal('showUserModal')} />
+            <OverviewBox name="Neue Relation" linkName="/newRelation" onClick={() => openModal('showRelationModal')} />
+            <OverviewBox name="Ladeeinheit Planen" linkName="/" onClick={() => openModal('showIntakeModal')} />
 
-            <NewLadeeinheit open={modals.newLeModal} onClose={() => closeModal('newLeModal')} />
-            <NewUser open={modals.newUserModal} onClose={() => closeModal('newUserModal')} />
-            <RelationModal open={modals.newRelationModal} onClose={() => closeModal('newRelationModal')} />
-            <ZulaufModal open={modals.newZulaufModal} onClose={() => closeModal('newZulaufModal')} />
+            <CargoModal open={modals.showCargoModal} onClose={() => closeModal('showCargoModal')} />
+            <UserModal open={modals.showUserModal} onClose={() => closeModal('showUserModal')} />
+            <RelationModal open={modals.showRelationModal} onClose={() => closeModal('showRelationModal')} />
+            <IntakeModal open={modals.showIntakeModal} onClose={() => closeModal('showIntakeModal')} />
         </Box>
     )
 }

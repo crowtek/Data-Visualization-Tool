@@ -1,16 +1,16 @@
 
-import { Box, Modal  } from '@mui/material';
+import {Box, Modal} from '@mui/material';
 import { ModalStyle } from '../../styles/components/ModalStyle';
-import Cargo from '../Forms/Cargo';
+import NewUserForm from '../Forms/User';
 
-const NewLeModal = ({ open, onClose }) => {
+const UserModal = ({ open, onClose }) => {
     return (
         <Modal open={open} onClose={onClose}>
             <Box sx={ModalStyle}>
-                <Cargo />
+                <NewUserForm />
             </Box>
         </Modal>
     )
 }
 
-export default NewLeModal;
+export default UserModal;

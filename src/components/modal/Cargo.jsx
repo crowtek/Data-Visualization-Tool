@@ -1,16 +1,16 @@
 
 import { Box, Modal  } from '@mui/material';
 import { ModalStyle } from '../../styles/components/ModalStyle';
-import NewZulauf from '../Forms/Intake';
+import Cargo from '../Forms/Cargo';
 
-const ZulaufModal = ({ open, onClose }) => {
+const CargoModal = ({ open, onClose }) => {
     return (
         <Modal open={open} onClose={onClose}>
             <Box sx={ModalStyle}>
-                <NewZulauf />
+                <Cargo />
             </Box>
         </Modal>
     )
 }
 
-export default ZulaufModal;
+export default CargoModal;
