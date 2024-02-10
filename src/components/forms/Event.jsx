@@ -8,6 +8,7 @@ import dayjs from 'dayjs';
 
 import AnimatedCheckIcon from '../animations/CheckIcon';
 import EventInput from "../InputField/Event";
+import ImportanceSelect from '../Selects/Importance';
 
 const EventForm = () => {
     const [formData, setFormData] = useState({date:dayjs()});
@@ -44,8 +45,8 @@ const EventForm = () => {
                     <LocalizationProvider dateAdapter={AdapterDayjs} >
                         <DateCalendar value={formData.date} onChange={handleDateChange}/> 
                     </LocalizationProvider>                
+                    <ImportanceSelect onChange={handleChange('importance')}/>
                     <EventInput onChange={handleChange('event')} />
-
                     <Button type="submit" variant="contained">Submit</Button>
                 </Box>
             
