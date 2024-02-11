@@ -50,32 +50,42 @@ export const dashboardGrid = (colors) => ({
             overflow:"unset"
         }
     },
+    ".WeeklyOverview":{
+        gridColumn: "span 7",
+        gridRow:"span 4",
+        "& > div":{
+            display:"flex",
+            justifyContent:"center"
+        },
+        [mediaQueries.large] : {
+            display:"none"
+        },
+    },
     ".smallGrid":{
         gridColumn: "span 3",
         gridRow:"span 1",
         "svg":{
             fontSize: "30px"
         },
+    },
+    ".red":{
+        color: colors.redAccent[400],
+        "svg":{
+            color:colors.redAccent[400]
+        }
+    },
 
-        ".red":{
-            color: colors.redAccent[400],
-            "svg":{
-                color:colors.redAccent[400]
-            }
-        },
+    ".green":{
+        color: colors.greenAccent[400],
+        "svg":{
+            color:colors.greenAccent[400]
+        }
+    },
 
-        ".green":{
-            color: colors.greenAccent[400],
-            "svg":{
-                color:colors.greenAccent[400]
-            }
-        },
-
-        ".blue":{
-            color: colors.blueAccent[400],
-            "svg":{
-                color:colors.blueAccent[400]
-            }
+    ".blue":{
+        color: colors.blueAccent[400],
+        "svg":{
+            color:colors.blueAccent[400]
         }
     },
     [mediaQueries.laptop]: {

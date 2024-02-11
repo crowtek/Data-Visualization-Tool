@@ -1082,3 +1082,48 @@ export const mockEvents = [
     eventClassNames:['Minor']
   },
 ];
+
+export const WeeklyOverviewData = [
+  {
+    intake: 20,
+    left: 47,
+    onSite: 76,
+    day: 'Montag',
+  },
+  {
+    intake: 60,
+    left: 52,
+    onSite: 48,
+    day: 'Dienstag',
+  },
+  {
+    intake: 47,
+    left: 113,
+    onSite: 150,
+    day: 'Mittwoch',
+  },
+  {
+    intake: 54,
+    left: 56,
+    onSite: 92,
+    day: 'Donnerstag',
+  },
+  {
+    intake: 57,
+    left: 69,
+    onSite: 92,
+    day: 'Freitag',
+  },
+  {
+    intake: 60,
+    left: 123,
+    onSite: 63,
+    day: 'Samstag',
+  },
+  {
+    intake: 129,
+    left: 60,
+    onSite: 25,
+    day: 'Sonntag',
+  },
+];

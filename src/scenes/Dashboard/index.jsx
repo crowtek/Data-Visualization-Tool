@@ -1,7 +1,7 @@
 
 import { Box,useTheme } from "@mui/material";
 import { tokens } from "../../theme";
-import { mockDataVehicles, mockDataVehiclesZulauf, mockDataVehiclesHistory, mockDataTeam, mockEvents } from "../../data/mockData";
+import { mockDataVehicles, mockDataVehiclesZulauf, mockDataVehiclesHistory, mockDataTeam, mockEvents,WeeklyOverviewData } from "../../data/mockData";
 
 import Yard from "./components/Yard";
 import Vehicles from "./components/Vehicles";
@@ -27,7 +27,7 @@ const Dashboard = () => {
         <Events events={mockEvents} />
         <UserOnline userData={mockDataTeam} />
         <Gates />
-        <WeeklyOverview />
+        <WeeklyOverview weekysData={WeeklyOverviewData}/>
         <List vehicleData={mockDataVehicles}/>
       </Box>
     </Box>

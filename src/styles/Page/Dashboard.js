@@ -33,15 +33,3 @@ export const ListGrid = () => ({
         gridColumn: "span 12",
     },
 });
-
-export const WeeklyOverviewGrid = () => ({
-    gridColumn: "span 7",
-    gridRow:"span 4",
-    "& > div":{
-        display:"flex",
-        justifyContent:"center"
-    },
-    [mediaQueries.large] : {
-        display:"none"
-    },
-});
