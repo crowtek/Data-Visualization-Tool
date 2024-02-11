@@ -12,7 +12,8 @@ import List from "./components/Liste";
 import UserOnline from "./components/UserOnline";
 import Gates from "./components/Gates";
 
-import { containerStyle, dashboardGrid } from "../../styles/Layout";
+import { containerStyle } from "../../styles/Layout";
+import { dashboardGrid } from "../../styles/Page/Dashboard";
 
 const Dashboard = () => {
   const theme = useTheme();
