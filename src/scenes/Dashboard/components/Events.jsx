@@ -1,15 +1,8 @@
 import { useMemo } from "react";
 import StatBox from './StatBox';
 import EventIcon from '@mui/icons-material/Event';
-import { useTheme,Box,useMediaQuery } from "@mui/material";
-import { tokens } from "../../../theme";
-import { boxStyle } from "../../../styles/Page/Dashboard";
 
 const CountEventsToday = ({events}) => {
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
-    const mobileScreen = useMediaQuery(theme.breakpoints.down("sm"));
-    const elementType = mobileScreen ? "" : "Events";
 
     const currentDate = new Date().toLocaleDateString('en-CA')
     const todayEvents = useMemo(() => {
@@ -17,16 +10,19 @@ const CountEventsToday = ({events}) => {
     },[currentDate,events])
 
     return (
-        <Box className="smallGrid" gridColumn="span 3" gridRow="span 1" sx={boxStyle(colors)}>
+        <div className="smallGrid">
             <StatBox
-                title="Termine Heute"
-                subtitle= {todayEvents.length +" "+ elementType}
-                subtitleColor={colors.greenAccent[400]}
+                title="Events Today"
+                subtitle={{
+                    name:"Events",
+                    count:todayEvents.length,
+                }}
                 link = "calendar"
-                icon={<EventIcon sx={{ color: colors.greenAccent[400], fontSize: "30px" }} />}
+                icon={<EventIcon/>}
                 animationTime="300"
+                boxClass="green"
             />
-        </Box>
+        </div>
     )
 }
 

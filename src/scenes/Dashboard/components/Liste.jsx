@@ -11,7 +11,7 @@ const LatestIncomingCarsList = ({ vehicleData }) => {
   });
   
   return (
-    <Box className="bigGrid" sx={{ ...boxStyle(colors), ...ListGrid() }}>
+    <Box className="bigGrid" sx={{ ...ListGrid() }}>
       <Table sx={List(colors)}>
         <TableHead>
           <TableRow > 

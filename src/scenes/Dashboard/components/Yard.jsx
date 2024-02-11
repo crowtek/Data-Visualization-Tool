@@ -1,14 +1,10 @@
 import StatBox from './StatBox';
-import { useTheme, Box } from "@mui/material";
-import { tokens } from "../../../theme";
-import { boxStyle } from "../../../styles/Page/Dashboard";
+import { Box } from "@mui/material";
 
 const CarCount = ({ vehicleData,zulaufData,historyData }) => {
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
 
     return (
-        <Box gridColumn="span 3" gridRow="span 2" sx={boxStyle(colors)} >
+        <Box gridColumn="span 3" gridRow="span 2" >
             <StatBox
                 title="Hof Übersicht"
                 labels={{first:"LE auf Hof", second:"LE in Zulauf", third:"Hof verlassen"}}

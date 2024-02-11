@@ -1,27 +1,23 @@
 import StatBox from './StatBox';
 import DepartureBoardIcon from '@mui/icons-material/DepartureBoard';
-import { useTheme,Box,useMediaQuery } from "@mui/material";
-import { tokens } from "../../../theme";
-import { boxStyle } from "../../../styles/Page/Dashboard";
 
 const IncomingCarsCount = ({vehicleData}) => {
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
-    const mobileScreen = useMediaQuery(theme.breakpoints.down("sm"));
     const damagedVehicles = vehicleData.filter((vehicle) => vehicle.damage)
-    const elementType = mobileScreen ? "" : "Ladeeinheiten";
 
     return (
-        <Box className="smallGrid" gridColumn="span 3" gridRow="span 1" sx={boxStyle(colors)}>
+        <div className="smallGrid">
             <StatBox
-                title="Ladeeinheiten mit Schaden"
-                subtitle= {damagedVehicles.length +" "+ elementType}
-                subtitleColor={colors.redAccent[400]}
+                title="Cargo with Damage"
+                subtitle={{
+                    name:"Cargos",
+                    count:damagedVehicles.length,
+                }}
                 link="vehicleOverview"
-                icon={<DepartureBoardIcon sx={{ color: colors.redAccent[300], fontSize: "30px" }} />}
+                icon={<DepartureBoardIcon />}
                 animationTime="100"
+                boxClass="red"
             />
-        </Box>
+        </div>
     )
 }
 

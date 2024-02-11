@@ -1,20 +1,6 @@
 
 import { mediaQueries } from "../Layout";
 
-export const boxStyle = (colors) => ({
-    display:"flex", 
-    alignItems:"center", 
-    justifyContent:"center", 
-    border:"2px solid gray",
-    borderRadius:"5px",
-    background:`${colors.primary[400]}`,
-    overflow:"auto",
-    [mediaQueries.laptop] : {
-        overflow:"unset"
-    }
-});
-  
-
 export const List = (colors) => ({
     "& .MuiTableCell-root" : {
         fontSize: 16,

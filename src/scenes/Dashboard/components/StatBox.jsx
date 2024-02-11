@@ -7,7 +7,7 @@ import PieChart from "./PieChart";
 
 
 
-const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,subtitleColor }) => {
+const StatBox = ({ title, subtitle, labels,chartValues, icon, link,animationTime, boxClass}) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
@@ -43,10 +43,10 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
           {/* Box Body when Text*/}
           {subtitle &&
             <Typography
-              className={`subtitle-animation${animate ? ' subtitle-animation-fade-in' : ''}`}
+              className={`subtitle-animation${animate ? ' subtitle-animation-fade-in ' : ''}` + boxClass}
               fontSize={mobileScreen ? "15px" :isScreenLg ? "18px": "22px"} 
               fontWeight="bold" 
-              color={subtitleColor}
+              color={subtitle.color}
               display={"flex"} 
               justifyContent={mobileScreen ? "center" :"flex-start"} 
               alignItems={"center"} 
@@ -54,7 +54,7 @@ const StatBox = ({ title, labels,chartValues, icon, link,animationTime,subtitle,
               margin={mobileScreen ? "6px" :0}
             >
               {icon}
-              {subtitle}
+              {subtitle.count +" "+ (mobileScreen ? "" : subtitle.name)}
             </Typography>
           }
 

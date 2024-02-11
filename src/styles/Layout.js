@@ -1,3 +1,6 @@
+
+
+
 export const mediaQueries = {
     small: "@media (max-width: 600px)",
     medium: "@media (max-width: 900px)",
@@ -29,12 +32,52 @@ export const containerStyle = () => ({
     }
 })
 
-export const dashboardGrid = () => ({
+export const dashboardGrid = (colors) => ({
     display:"grid", 
     gridTemplateColumns:"repeat(12, 1fr)",
     gridTemplateRows:"repeat(6, 1fr)",
     gap:"10px",
     height:"100%",
+    "& > div":{
+        display:"flex", 
+        alignItems:"center", 
+        justifyContent:"center", 
+        border:"2px solid gray",
+        borderRadius:"5px",
+        background:`${colors.primary[400]}`,
+        overflow:"auto",
+        [mediaQueries.laptop] : {
+            overflow:"unset"
+        }
+    },
+    ".smallGrid":{
+        gridColumn: "span 3",
+        gridRow:"span 1",
+        "svg":{
+            fontSize: "30px"
+        },
+
+        ".red":{
+            color: colors.redAccent[400],
+            "svg":{
+                color:colors.redAccent[400]
+            }
+        },
+
+        ".green":{
+            color: colors.greenAccent[400],
+            "svg":{
+                color:colors.greenAccent[400]
+            }
+        },
+
+        ".blue":{
+            color: colors.blueAccent[400],
+            "svg":{
+                color:colors.blueAccent[400]
+            }
+        }
+    },
     [mediaQueries.laptop]: {
         gridTemplateColumns:"repeat(4, 1fr)",
         gridTemplateRows:"repeat(12, 1fr)",

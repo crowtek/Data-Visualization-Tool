@@ -61,7 +61,7 @@ const SalesQuantity = () => {
   };
 
   return (
-    <Box sx={{ ...boxStyle(colors), ...WeeklyOverviewGrid()}} >
+    <Box sx={{ ...WeeklyOverviewGrid()}} >
       <Box>
         <BarChart
           dataset={dataset}

@@ -16,7 +16,7 @@ const CountDamageCar = ({vehicleData}) => {
     },[vehicleData])
 
     return (
-        <Box gridColumn="span 3" gridRow="span 2" sx={boxStyle(colors)}>
+        <Box gridColumn="span 3" gridRow="span 2">
             <StatBox
                 title="Ladeeinheiten Übersicht"
                 labels={{first:"Volle LE", second:"Leere LE", third:"Teilbeladen LE"}}
