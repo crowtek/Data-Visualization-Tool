@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, Stack } from "@mui/material";
 
 const TableNavigation = ({ table, setTable }) => {
 
@@ -10,7 +10,7 @@ const TableNavigation = ({ table, setTable }) => {
 
   return (
     <Box sx={{ display: "flex", justifyContent: "flex-end", gap: 5, mb: "10px" }}>
-      <Box sx={{ display: "flex", justifyContent: "space-between", gap: 2 }}>
+      <Stack direction="row"  spacing={2}>
         <Button
           variant={table === "LEITSTAND" ? "contained" : "outlined"}
           onClick={handleTableChange}
@@ -29,9 +29,9 @@ const TableNavigation = ({ table, setTable }) => {
           variant={table === "ZULAUF" ? "contained" : "outlined"}
           onClick={handleTableChange}
         >
-          Zulauf
+          Intake
         </Button>
-      </Box>
+      </Stack>
     </Box>
   )
 }
