@@ -10,9 +10,9 @@ const LatestIncomingCarsList = ({ vehicleData }) => {
       <Table className="dashboardList">
         <TableHead>
           <TableRow > 
-            <TableCell>Eingang</TableCell>
-            <TableCell>Kennzeichen</TableCell>
-            <TableCell>Standort</TableCell>
+            <TableCell>Intake</TableCell>
+            <TableCell>License Plate</TableCell>
+            <TableCell>Parking Place</TableCell>
             <TableCell className="hiddeOnMobile">Relation</TableCell>
           </TableRow>
         </TableHead>
