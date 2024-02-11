@@ -30,6 +30,10 @@ export const dashboardGrid = (colors) => ({
             display:"none"
         },
     },
+    ".chartGrid":{
+        gridColumn: "span 3",
+        gridRow:"span 2",
+    },
     ".smallGrid":{
         gridColumn: "span 3",
         gridRow:"span 1",

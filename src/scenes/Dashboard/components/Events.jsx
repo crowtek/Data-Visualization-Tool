@@ -3,7 +3,6 @@ import StatBox from './StatBox';
 import EventIcon from '@mui/icons-material/Event';
 
 const CountEventsToday = ({events}) => {
-
     const currentDate = new Date().toLocaleDateString('en-CA')
     const todayEvents = useMemo(() => {
         return events.filter(event => event.date === currentDate)

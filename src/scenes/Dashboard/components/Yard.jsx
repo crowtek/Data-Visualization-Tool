@@ -1,5 +1,5 @@
 import StatBox from './StatBox';
-import { Box,useTheme } from "@mui/material";
+import { useTheme } from "@mui/material";
 import { tokens } from "../../../theme";
 
 const CarCount = ({ vehicleData,zulaufData,historyData }) => {
@@ -7,7 +7,7 @@ const CarCount = ({ vehicleData,zulaufData,historyData }) => {
     const colors = tokens(theme.palette.mode);
 
     return (
-        <Box gridColumn="span 3" gridRow="span 2" >
+        <div className="chartGrid" >
             <StatBox
                 title="Yard Overview"
                 values={
@@ -31,7 +31,7 @@ const CarCount = ({ vehicleData,zulaufData,historyData }) => {
                 }
                 animationTime={200}
             />
-        </Box>
+        </div>
     )
 }
 

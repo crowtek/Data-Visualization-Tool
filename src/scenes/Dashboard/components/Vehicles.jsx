@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import StatBox from './StatBox';
-import { Box,useTheme } from "@mui/material";
+import { useTheme } from "@mui/material";
 import { tokens } from "../../../theme";
 
 const CountDamageCar = ({vehicleData}) => {
@@ -15,7 +15,7 @@ const CountDamageCar = ({vehicleData}) => {
     },[vehicleData])
 
     return (
-        <Box gridColumn="span 3" gridRow="span 2">
+        <div className="chartGrid">
             <StatBox
                 title="Cargo Overview"
                 values={
@@ -39,7 +39,7 @@ const CountDamageCar = ({vehicleData}) => {
                 }
                 animationTime={400}
             />
-        </Box>
+        </div>
     )
 }
 
