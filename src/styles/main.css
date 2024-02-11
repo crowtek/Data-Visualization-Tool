@@ -63,12 +63,12 @@ body,
   opacity: 1;
   transform: translateY(0);
 }
-.subtitle-animation {
+.hide {
   opacity: 0;
   transform: translateX(20px);
   transition: opacity 1s, transform 1s;
 }
-.subtitle-animation-fade-in{
+.fade-in{
   opacity: 1;
   transform: translateX(0);
 }

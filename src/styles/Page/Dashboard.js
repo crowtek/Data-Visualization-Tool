@@ -57,6 +57,8 @@ export const dashboardGrid = (colors) => ({
             color:colors.blueAccent[400]
         }
     },
+    ".statBox":Statbox(colors),
+    
     [mediaQueries.laptop]: {
         gridTemplateColumns:"repeat(4, 1fr)",
         gridTemplateRows:"repeat(12, 1fr)",
@@ -75,6 +77,55 @@ export const dashboardGrid = (colors) => ({
     },
 
 }); 
+
+
+const Statbox = (colors) => ({
+    width:"100%",
+    padding: "15px",
+    overflow:"hidden",
+
+    ".statBox-title":{
+        display:"flex",
+        justifyContent:"space-between",
+        alignContent:"center",
+        fontSize:"22px",
+        fontWeight:"bold",
+        "svg":{
+            fontSize:"30px",
+            color: colors.primary[300]
+        },
+        [mediaQueries.laptop]:{
+            display:"none",
+        },
+        [mediaQueries.medium]:{
+            display:"none",
+        },  
+    },
+    
+    ".statBox-subtitle":{
+        display:"flex",
+        justifyContent:"flex-start",
+        alignItems:"center",
+        fontSize:"22px",
+        fontWeight:"bold",
+        gap:2,
+
+        "svg":{
+            fontSize:"30px",
+        },
+        [mediaQueries.laptop]:{
+            fontSize:"18px",
+        },
+        [mediaQueries.medium]:{
+            justifyContent:"center",
+            fontSize:"15px",
+            gap:1,
+            margin:"5px"
+        },  
+    },
+
+
+})
 
 export const List = (colors) => ({
     "& .MuiTableCell-root" : {
