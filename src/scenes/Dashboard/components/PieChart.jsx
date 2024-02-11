@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { PieChart } from '@mui/x-charts/PieChart';
 import { useTheme,useMediaQuery } from "@mui/material";
-import { tokens } from "../../../theme";
 
 const PieChartComponent = ({ values, animationTime }) => {
     const theme = useTheme();
@@ -20,7 +19,12 @@ const PieChartComponent = ({ values, animationTime }) => {
                 series={[
                     {
                         data: values.map((charElement, key) =>{
-                            return { label: charElement.label ,value: charElement.value, id: key, color: charElement.color, }
+                            return { 
+                                label: charElement.label ,
+                                value: charElement.value, 
+                                id: key, 
+                                color: charElement.color, 
+                            }
                         }),
                         innerRadius: laptopScreen ? 25: 30,
                         outerRadius: laptopScreen ? 45: 65,
