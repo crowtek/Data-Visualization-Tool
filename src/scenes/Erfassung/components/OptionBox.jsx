@@ -21,7 +21,7 @@ const OverviewBox = ({name, icon, onClick}) => {
              icon === "user" ? <NewUser sx={{color:colors.greenAccent[400]}}/> :
              icon === "relation" ? <NewRelation sx={{color:colors.yellowAccent[400]}} /> :
              icon === "event" ? <EventIcon sx={{color:colors.greenAccent[700]}} /> :
-             <LePlanung sx={{color:colors.grey[400]}}/>} 
+             <LePlanung sx={{color:colors.primary[200]}}/>} 
         </Box>
     )
 }

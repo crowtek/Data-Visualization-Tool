@@ -13,8 +13,8 @@ export const ErfassungLayout = () => ({
 })
 
 export const OverviewBoxStyle = (colors) => ({
-    height:"25vh",
-    width:"25vh",
+    height:"20vh",
+    width:"20vh",
 
     display: "flex",
     alignItems: "center",
@@ -33,12 +33,11 @@ export const OverviewBoxStyle = (colors) => ({
         background:colors.blueAccent[700]
     },
     "& > svg":{
-        height: "80px",
-        width: "80px",
+        height: "60px",
+        width: "60px",
     },
     "& > p":{
-
-        fontSize:"22px",
+        fontSize:"20px",
         fontWeight:"bold",
     },
 

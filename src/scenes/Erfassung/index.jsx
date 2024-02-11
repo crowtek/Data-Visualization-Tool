@@ -36,11 +36,11 @@ const Erfassung = () => {
 
     return (
         <Box sx={ErfassungLayout}>
-            <OverviewBox name="Neue Ladeeinheit" icon="cargo" onClick={() => openModal('showCargoModal')} />
-            <OverviewBox name="Neuer Benutzer" icon="user" onClick={() => openModal('showUserModal')} />
-            <OverviewBox name="Neue Relation" icon="relation" onClick={() => openModal('showRelationModal')} />
-            <OverviewBox name="Ladeeinheit Planen" icon="/" onClick={() => openModal('showIntakeModal')} />
-            <OverviewBox name="Event" icon="event" onClick={() => openModal('showEventModal')} />
+            <OverviewBox name="Add Cargo" icon="cargo" onClick={() => openModal('showCargoModal')} />
+            <OverviewBox name="Add User" icon="user" onClick={() => openModal('showUserModal')} />
+            <OverviewBox name="Add Relation" icon="relation" onClick={() => openModal('showRelationModal')} />
+            <OverviewBox name="Plan Cargo" icon="/" onClick={() => openModal('showIntakeModal')} />
+            <OverviewBox name="Add Event" icon="event" onClick={() => openModal('showEventModal')} />
 
             <CargoModal open={modals.showCargoModal} onClose={() => closeModal('showCargoModal')} />
             <UserModal open={modals.showUserModal} onClose={() => closeModal('showUserModal')} />
