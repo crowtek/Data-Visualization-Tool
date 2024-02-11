@@ -7,7 +7,7 @@ import PieChart from "./PieChart";
 
 
 
-const StatBox = ({ title, subtitle, labels,chartValues, icon, link,animationTime, boxClass}) => {
+const StatBox = ({ title, subtitle, values, labels,chartValues, icon, link,animationTime, boxClass}) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const isScreenLg = useMediaQuery(theme.breakpoints.down("lg"));
@@ -59,13 +59,11 @@ const StatBox = ({ title, subtitle, labels,chartValues, icon, link,animationTime
           }
 
           {/* Box Body when Pie chart*/}
-          {labels &&
+          {values &&
             <Box>
               <PieChart 
-                labels={labels} 
-                chartValues={chartValues} 
+                values={values}
                 animationTime={animationTime} 
-                isScreenSmall={mobileScreen}
               />
             </Box>
           }
