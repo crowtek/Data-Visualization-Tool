@@ -31,11 +31,11 @@ const NewUserForm = ({data}) => {
             (
                 <Box component="form" onSubmit={handleSubmit}>
                     <Stack spacing={3}>
-                        <Typography variant="h2" component="h2">Neuen Benutzer anlegen</Typography>
-                        <NameInput onChange={handleChange('name')}/>
-                        <EmailInput onChange={handleChange('email')}/>
-                        <PhoneNumberInput onChange={handleChange('phone')}/>
-                        <CustomerNameInput onChange={handleChange('customer')}/>
+                        <Typography variant="h2" component="h2">Add new User</Typography>
+                        <NameInput onChange={handleChange('name')} value={formData?.name ? formData.name : data?.name}/>
+                        <EmailInput onChange={handleChange('email')} value={formData?.email ? formData.email : data?.email}/>
+                        <PhoneNumberInput onChange={handleChange('phone')} value={formData?.phone ? formData.phone : data?.phone}/>
+                        <CustomerNameInput onChange={handleChange('customer')} value={formData?.customer ? formData.customer : data?.customer}/>
 
                         <Box sx={{display:"flex", justifyContent:data ? "space-between" : "flex-end"}}>
                             {data ? <Button variant="contained" color="error">Delete</Button> : ""}

@@ -1,6 +1,6 @@
 import { TextField } from '@mui/material';
 
-const NameInput = ({name,onChange}) => {
+const NameInput = ({value,onChange}) => {
     return (
         <TextField
             variant="outlined"
@@ -12,7 +12,7 @@ const NameInput = ({name,onChange}) => {
             name="username"
             autoComplete="username"
             autoFocus
-            value={name}
+            value={value}
             onChange={onChange}
         />
     )

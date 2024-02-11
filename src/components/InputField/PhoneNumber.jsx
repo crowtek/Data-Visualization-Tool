@@ -1,6 +1,6 @@
 import { TextField } from '@mui/material';
 
-const PhoneNumberInput = ({phoneNumber,onChange}) => {
+const PhoneNumberInput = ({value,onChange}) => {
     return (
         <TextField
             variant="outlined"
@@ -11,7 +11,7 @@ const PhoneNumberInput = ({phoneNumber,onChange}) => {
             name="phoneNumber"
             autoComplete="phoneNumber"
             autoFocus
-            value={phoneNumber}
+            value={value}
             onChange={onChange}
         />
     )
