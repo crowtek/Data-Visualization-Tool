@@ -54,7 +54,7 @@ const EventForm = ({eventData}) => {
 
                         <Box sx={{display:"flex", justifyContent:eventData ? "space-between" : "flex-end"}}>
                             {eventData ? <Button variant="contained" color="error">Delete</Button> : ""}
-                            <Button type="submit" variant="contained">Submit</Button>
+                            <Button type="submit" variant="contained" color="success">Submit</Button>
                         </Box>
                         
                     </Stack>

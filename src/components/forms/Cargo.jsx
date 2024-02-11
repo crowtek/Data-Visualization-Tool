@@ -52,7 +52,10 @@ const NewLadeeinheit = ({data}) => {
                         </Box>
                     </Box>
 
-                    <Button type="submit" variant="contained">Submit</Button>
+                    <Box sx={{display:"flex", justifyContent:data ? "space-between" : "flex-end"}}>
+                            {data ? <Button variant="contained" color="error">Delete</Button> : ""}
+                            <Button type="submit" variant="contained" color="success">Submit</Button>
+                        </Box>
                 </Box>
             ) :
             (            
