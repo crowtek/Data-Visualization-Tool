@@ -52,7 +52,11 @@ const EventForm = ({eventData}) => {
                         <ImportanceSelect onChange={handleChange('importance')} value={formData.importance ? formData.importance : eventData?.importance}/>
                         <EventInput onChange={handleChange('event')} value={formData.event ? formData.event : eventData?.name}/>
 
-                        <Button type="submit" variant="contained">Submit</Button>
+                        <Box sx={{display:"flex", justifyContent:eventData ? "space-between" : "flex-end"}}>
+                            {eventData ? <Button variant="contained" color="error">Delete</Button> : ""}
+                            <Button type="submit" variant="contained">Submit</Button>
+                        </Box>
+                        
                     </Stack>
                 </Box>
             
