@@ -2,7 +2,7 @@
 import { useMemo } from "react";
 
 import Table from "../../../components/Table/Table";
-import DeleteButton from "../../../components/Table/DeleteButton";
+import ModalButton from "../../../components/Table/ModalButton";
 import AccessLevelButton from '../../../components/Table/AccessLevelButton';
 
 const UserOverviewTable = ({ userData }) => {
@@ -16,7 +16,7 @@ const UserOverviewTable = ({ userData }) => {
                 field: "accessLevel", headerName: "Access Level", flex: 1,
                 renderCell: ({ row }) => <AccessLevelButton {...row} />
             },
-            { field: "options", headerName: "", renderCell: ({ row }) => <DeleteButton {...row} />, },
+            { field: "modal",headerName: "",flex: 0.2, renderCell: ({ row }) => <ModalButton {...row} table={"User"}/>,},
         ];
     }, []);
 

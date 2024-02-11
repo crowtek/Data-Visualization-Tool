@@ -7,7 +7,7 @@ import EmailInput from "../InputField/Email";
 import PhoneNumberInput from "../InputField/PhoneNumber";
 import CustomerNameInput from '../InputField/CustomerName';
 
-const NewUserForm = () => {
+const NewUserForm = ({data}) => {
     const [formData, setFormData] = useState({});
     const [isCheckIconVisible, setIsCheckIconVisible] = useState(false);
 
@@ -36,7 +36,11 @@ const NewUserForm = () => {
                         <EmailInput onChange={handleChange('email')}/>
                         <PhoneNumberInput onChange={handleChange('phone')}/>
                         <CustomerNameInput onChange={handleChange('customer')}/>
-                        <Button type="submit" variant="contained">Submit</Button>
+
+                        <Box sx={{display:"flex", justifyContent:data ? "space-between" : "flex-end"}}>
+                            {data ? <Button variant="contained" color="error">Delete</Button> : ""}
+                            <Button type="submit" variant="contained" color="success">Submit</Button>
+                        </Box>
                     </Stack>
                 </Box>
 
