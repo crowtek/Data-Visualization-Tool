@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import {useEffect,useState } from "react";
 import PieChart from "./PieChart";
 
-
-
 const StatBox = ({ title, subtitle, values, icon, link,animationTime, boxClass}) => {
   const theme = useTheme();
   const mobileScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -38,7 +36,6 @@ const StatBox = ({ title, subtitle, values, icon, link,animationTime, boxClass})
           {values &&
             <PieChart values={values} animationTime={animationTime} />
           } 
-
     </Box>
   );
 };

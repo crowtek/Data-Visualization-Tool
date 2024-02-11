@@ -1,18 +1,13 @@
-import { Box, useTheme,Table ,TableBody,TableCell,TableHead,TableRow} from "@mui/material";
-import { tokens } from "../../../theme";
-import { boxStyle, List,ListGrid } from "../../../styles/Page/Dashboard";
+import { Box,Table ,TableBody,TableCell,TableHead,TableRow} from "@mui/material";
 
 const LatestIncomingCarsList = ({ vehicleData }) => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-
   const sortedData = vehicleData.slice().sort((a, b) => {
     return new Date(b.incomingTime) - new Date(a.incomingTime);
   });
   
   return (
-    <Box className="bigGrid" sx={{ ...ListGrid() }}>
-      <Table sx={List(colors)}>
+    <Box className="dashboardList-container" >
+      <Table className="dashboardList">
         <TableHead>
           <TableRow > 
             <TableCell>Eingang</TableCell>

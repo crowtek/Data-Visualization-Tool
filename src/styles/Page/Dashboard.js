@@ -58,7 +58,8 @@ export const dashboardGrid = (colors) => ({
         }
     },
     ".statBox":Statbox(colors),
-    
+    ".dashboardList":List(colors),
+    ".dashboardList-container":ListGrid(colors),
     [mediaQueries.laptop]: {
         gridTemplateColumns:"repeat(4, 1fr)",
         gridTemplateRows:"repeat(12, 1fr)",
@@ -70,10 +71,6 @@ export const dashboardGrid = (colors) => ({
             gridColumn: "span 1",
             gridRow:"span 1",
         },
-        "& > div.bigGrid": {
-            gridColumn: "span 4",
-            gridRow:"span 8",
-        }
     },
 
 }); 
@@ -157,6 +154,11 @@ export const ListGrid = () => ({
     gridRow:"span 4",
     [mediaQueries.large] : {
         gridColumn: "span 12",
+    },
+    [mediaQueries.laptop]: {
+        gridColumn: "span 4",
+        gridRow:"span 8",
+        
     },
 });
 
