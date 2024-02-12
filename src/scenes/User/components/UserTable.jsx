@@ -21,7 +21,7 @@ const UserOverviewTable = ({ userData }) => {
     }, []);
 
     return (
-        <Table tableData={userData} tableColumns={columns}/>
+        <Table tableData={userData} tableColumns={columns} tableName={"user"}/>
     )
 }
 export default UserOverviewTable;

@@ -5,7 +5,7 @@ import Table from "../../../components/Table/Table";
 import ModalButton from "../../../components/Table/ModalButton";
 import VehicleStatus from "./VehicleStatus";
 
-const ZulaufTable = ({ userData }) => {
+const IntakeTable = ({ userData }) => {
   const columns = useMemo(() => {
     return [
       { field: "status", headerName: "Status",flex: 0.3,renderCell: ({ row: { status } }) => <VehicleStatus status={status}/>,},
@@ -22,7 +22,7 @@ const ZulaufTable = ({ userData }) => {
   },[])
 
   return (
-      <Table tableData={userData} tableColumns={columns}/>
+      <Table tableData={userData} tableColumns={columns} tableName={"intake"}/>
   )
 }
-export default ZulaufTable;
+export default IntakeTable;

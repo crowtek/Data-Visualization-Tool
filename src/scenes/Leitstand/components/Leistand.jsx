@@ -20,7 +20,7 @@ const LeitstandTable = ({ userData }) => {
   ],[]);
 
   return (
-    <Table tableData={userData} tableColumns={columns}/>
+    <Table tableData={userData} tableColumns={columns} tableName={"leitstand"}/>
   )
 }
 

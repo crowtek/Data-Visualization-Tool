@@ -5,10 +5,28 @@ import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { TableStyle } from "../../styles/components/TableStyle";
 
 
-const Table = ({ tableData, tableColumns }) => {
+const Table = ({ tableData, tableColumns, tableName }) => {
   const [loading, setLoading] = useState(true);
   const [rows, setRows] = useState([]);
+  const [filterModel, setFilterModel] = useState({
+    items: [],
+  })
 
+  // Save Filter
+  const filterName = tableName + "Filter";
+  const handleFilterModelChange = (newFilterModel) => {
+    setFilterModel(newFilterModel);
+    localStorage.setItem(filterName, JSON.stringify(newFilterModel));
+  };
+
+  useEffect(() => {
+    const savedFilterModal = localStorage.getItem(filterName);
+    if(savedFilterModal){
+      setFilterModel(JSON.parse(savedFilterModal));
+    }
+  }, []);
+
+  // add a loading to the Table
   useEffect(() => {
     const timer = setTimeout(() => {
       setRows(tableData);
@@ -27,6 +45,8 @@ const Table = ({ tableData, tableColumns }) => {
               autoPageSize
               disableRowSelectionOnClick
               loading={loading}
+              filterModel={filterModel}
+              onFilterModelChange={handleFilterModelChange}
               slots={{
                 toolbar: GridToolbar,
               }}

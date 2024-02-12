@@ -5,7 +5,7 @@ import { mockDataVehicles, mockDataVehiclesZulauf } from "../../data/mockData";
 import TableNavigation from "./components/TableNavigation";
 import Leitstand from "./components/Leistand";
 import History from "./components/History";
-import Zulauf from "./components/Zulauf";
+import Zulauf from "./components/Intake";
 
 const Leistand = () => {
   const [table, setTable] = useState("LEITSTAND");
