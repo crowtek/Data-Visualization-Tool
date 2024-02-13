@@ -6,7 +6,7 @@ const EventModal = ({ open, onClose,eventData }) => {
     return (
         <Modal open={open} onClose={onClose}>
             <Box sx={ModalStyle}>
-                <EventForm eventData={eventData}/>
+                <EventForm eventData={eventData} onClose={onClose}/>
             </Box>
         </Modal>
     )

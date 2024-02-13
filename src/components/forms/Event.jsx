@@ -13,7 +13,7 @@ import ImportanceSelect from '../Selects/Importance';
 import BasicTimePicker from '../Selects/Time';
 import DeleteEventButton from '../Button/DeleteEvent';
 
-const EventForm = ({eventData}) => {
+const EventForm = ({eventData, onClose}) => {
     dayjs.extend(customParseFormat);
     const parsedDate = dayjs(eventData?.day, "DD.MM.YYYY");
     const [formData, setFormData] = useState({date:parsedDate? parsedDate :dayjs()});
@@ -40,6 +40,7 @@ const EventForm = ({eventData}) => {
 
     const handleDeleteSuccess = () => {
         setFormData(...formData);
+        onClose();
     }
 
     return (
