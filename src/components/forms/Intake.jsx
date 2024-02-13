@@ -6,7 +6,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import dayjs from 'dayjs';
 
-import AnimatedCheckIcon from '../animations/CheckIcon';
+import AnimatedTruck from '../animations/Truck';
 import CargoInput from "../InputField/Cargo";
 import KennzeichenInput from "../InputField/Kennzeichen";
 import ParkPlace from "../InputField/ParkPlace";
@@ -16,7 +16,7 @@ import CountrySelect from "../Selects/Countries";
 import CustomerNameInput from "../InputField/CustomerName";
 import InfoInput from "../InputField/Info";
 
-const NewZulauf = () => {
+const IntakeForm = () => {
     const [formData, setFormData] = useState({date:dayjs()});
     const [isCheckIconVisible, setIsCheckIconVisible] = useState(false);
 
@@ -73,8 +73,7 @@ const NewZulauf = () => {
             ) :
             (            
                 <div className="CheckIconContainer">
-                    <AnimatedCheckIcon isVisible={isCheckIconVisible} />
-                    <Typography variant="h2" component="h2">Gespeichert</Typography>
+                    <AnimatedTruck isVisible={isCheckIconVisible} />
                 </div>
             )
             }   
@@ -83,4 +82,4 @@ const NewZulauf = () => {
     );
 };
 
-export default NewZulauf;
+export default IntakeForm;
