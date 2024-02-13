@@ -10,6 +10,7 @@ import customParseFormat from 'dayjs/plugin/customParseFormat';
 import AnimatedCheckIcon from '../animations/CheckIcon';
 import EventInput from "../InputField/Event";
 import ImportanceSelect from '../Selects/Importance';
+import BasicTimePicker from '../Selects/Time';
 
 const EventForm = ({eventData}) => {
     dayjs.extend(customParseFormat);
@@ -51,6 +52,7 @@ const EventForm = ({eventData}) => {
                         </LocalizationProvider>                
                         <ImportanceSelect onChange={handleChange('importance')} value={formData.importance ? formData.importance : eventData?.importance}/>
                         <EventInput onChange={handleChange('event')} value={formData.event ? formData.event : eventData?.name}/>
+                        <BasicTimePicker onChange={handleChange('time')} value={formData.time ? formData.time : eventData?.time} />
 
                         <Box sx={{display:"flex", justifyContent:eventData ? "space-between" : "flex-end"}}>
                             {eventData ? <Button variant="contained" color="error">Delete</Button> : ""}
