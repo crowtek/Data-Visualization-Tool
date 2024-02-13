@@ -9,7 +9,7 @@ import UserModal from '../../components/Modal/User';
 import RelationModal from '../../components/Modal/Relation';
 import IntakeModal from '../../components/Modal/Intake';
 import EventModal from '../../components/Modal/Event';
-import "../../components/animations/animation.css";
+import "../../components/animations/animation.scss";
 
 const Erfassung = () => {
     const [modals, setModals] = useState({

@@ -1,8 +1,7 @@
 import { useState } from 'react';
-
-import AnimatedCheckIcon from '../animations/CheckIcon';
 import { Box, Button,Typography } from '@mui/material';
 
+import AnimatedTruck from '../animations/Truck';
 import CargoInput from "../InputField/Cargo";
 import KennzeichenInput from "../InputField/Kennzeichen";
 import ParkPlaceInput from "../InputField/ParkPlace";
@@ -60,8 +59,7 @@ const NewLadeeinheit = ({data}) => {
             ) :
             (            
                 <div className="CheckIconContainer">
-                    <AnimatedCheckIcon isVisible={isCheckIconVisible} />
-                    <Typography variant="h2" component="h2">Gespeichert</Typography>
+                    <AnimatedTruck isVisible={isCheckIconVisible} />
                 </div>
             )
             }       
