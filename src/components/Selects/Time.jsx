@@ -8,7 +8,7 @@ const BasicTimePicker = ({value, handleChange}) => {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <TimePicker
-        label="Basic time picker"
+        label="Time"
         value={value}
         onChange={handleChange}
         renderInput={(params) => <TextField {...params} />}

@@ -11,6 +11,7 @@ import AnimatedCheckIcon from '../animations/CheckIcon';
 import EventInput from "../InputField/Event";
 import ImportanceSelect from '../Selects/Importance';
 import BasicTimePicker from '../Selects/Time';
+import DeleteEventButton from '../Button/DeleteEvent';
 
 const EventForm = ({eventData}) => {
     dayjs.extend(customParseFormat);
@@ -18,7 +19,6 @@ const EventForm = ({eventData}) => {
     const [formData, setFormData] = useState({date:parsedDate? parsedDate :dayjs()});
     const [isCheckIconVisible, setIsCheckIconVisible] = useState(false);
     
-    console.log(eventData)
     const handleSubmit = (event) => {
         event.preventDefault(); 
         setIsCheckIconVisible((isCheckIconVisible) => !isCheckIconVisible);
@@ -55,10 +55,9 @@ const EventForm = ({eventData}) => {
                         <BasicTimePicker onChange={handleChange('time')} value={formData.time ? formData.time : eventData?.time} />
 
                         <Box sx={{display:"flex", justifyContent:eventData ? "space-between" : "flex-end"}}>
-                            {eventData ? <Button variant="contained" color="error">Delete</Button> : ""}
-                            <Button type="submit" variant="contained" color="success">Submit</Button>
+                            {eventData ? <DeleteEventButton element={eventData.key}/> : ""}
+                            <Button type="submit" variant="outlined" color="success">Submit</Button>
                         </Box>
-                        
                     </Stack>
                 </Box>
             
