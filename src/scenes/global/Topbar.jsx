@@ -7,7 +7,7 @@ import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import SettingsModal from "../../components/Modal/Settings";
+// import SettingsModal from "../../components/Modal/Settings";
 import { headerStyle } from "../../styles/Layout";
 
 const Topbar = () => {
@@ -40,7 +40,7 @@ const Topbar = () => {
           <PersonOutlinedIcon />
         </IconButton>
       </Box>
-      <SettingsModal showModal={showModal} setShowModal={setShowModal}/>
+      {/* <SettingsModal showModal={showModal} setShowModal={setShowModal}/> */}
     </Box>
   );
 };
